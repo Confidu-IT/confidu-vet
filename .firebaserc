@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "confidu": "confidu-app"
+  },
+  "targets": {
+    "confidu-app": {
+      "hosting": {
+        "vet": [
+          "confidu-app"
+        ]
+      }
+    }
+  }
+}
