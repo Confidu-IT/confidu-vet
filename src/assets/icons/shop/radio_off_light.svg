@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="radio_off_light" transform="translate(-206 -104)">
+    <rect id="rectangle" width="24" height="24" transform="translate(206 104)" fill="none"/>
+    <path id="radio_off" d="M12,2A10,10,0,1,0,22,12,10.029,10.029,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8,8.024,8.024,0,0,1-8,8Z" transform="translate(206 104)" fill="#a7a7a7" fill-rule="evenodd"/>
+  </g>
+</svg>

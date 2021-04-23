@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74.57" height="246.504" viewBox="0 0 74.57 246.504">
+    <g id="Gruppe_3768" data-name="Gruppe 3768" transform="translate(74.071 0.134) rotate(90)">
+        <g id="Gruppe_3635" data-name="Gruppe 3635" transform="translate(0.1 0.533)">
+            <path id="Pfad_2023" data-name="Pfad 2023"
+                  d="M.1,5.324C2.888,4.68,25.517-1.54,51.578,1.248s47.4,8.151,55.66,8.9c8.258.643,30.994-7.507,45.365-2.788s26.811,21.771,26.811,21.771,10.081,1.394,19.09,2.681c9.116,1.18,46.866,4.933,46.866,7.185,0,2.359-38.287,4.183-47.4,4.612-9.116.536-18.553.858-18.553.858S167.081,61.413,152.6,66.239s-37.214-3.432-45.365-2.788-29.493,6.22-55.66,8.9S2.781,68.92.1,68.277"
+                  transform="translate(-0.1 -0.533)" fill="none" stroke="#8e8e8e" stroke-miterlimit="10"
+                  stroke-width="2"/>
+        </g>
+        <g id="Gruppe_3637" data-name="Gruppe 3637" transform="translate(52.114 1.248)">
+            <g id="Gruppe_3636" data-name="Gruppe 3636">
+                <path id="Pfad_2024" data-name="Pfad 2024"
+                      d="M149.625,61.991c-14.371,4.826-37.214-3.432-45.365-2.788s-29.493,6.22-55.66,8.9"
+                      transform="translate(-48.6 3)" fill="none" stroke="#33c5ff" stroke-miterlimit="10"
+                      stroke-width="2"/>
+                <path id="Pfad_2025" data-name="Pfad 2025"
+                      d="M48.6,1.2C74.768,3.881,96,9.351,104.26,10.1c8.258.643,30.994-7.507,45.365-2.788"
+                      transform="translate(-48.6 -1.2)" fill="none" stroke="#33c5ff" stroke-miterlimit="10"
+                      stroke-width="2"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Gruppe_21066" data-name="Gruppe 21066" transform="translate(-36 -498)">
+    <g id="Ellipse_2453" data-name="Ellipse 2453" transform="translate(36 498)" fill="none" stroke="#ffbc00" stroke-width="1.5">
+      <circle cx="12.5" cy="12.5" r="12.5" stroke="none"/>
+      <circle cx="12.5" cy="12.5" r="11.75" fill="none"/>
+    </g>
+    <g id="Gruppe_20860" data-name="Gruppe 20860" transform="translate(1961.547 -285.148)">
+      <circle id="Ellipse_2454" data-name="Ellipse 2454" cx="1.273" cy="1.273" r="1.273" transform="translate(-1911.256 796.874)" fill="#ffbc00"/>
+      <g id="Gruppe_20859" data-name="Gruppe 20859" transform="translate(-1917.879 791.59)">
+        <path id="Pfad_20694" data-name="Pfad 20694" d="M-1910.364,793.293v2.26a3.022,3.022,0,0,1-3.014,3.014h0a3.022,3.022,0,0,1-3.014-3.014v-2.26" transform="translate(1916.71 -792.928)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Rechteck_2718" data-name="Rechteck 2718" d="M.157,0H1.417A1.045,1.045,0,0,1,2.462,1.045v0A1.045,1.045,0,0,1,1.417,2.09H.157A.157.157,0,0,1,0,1.933V.157A.157.157,0,0,1,.157,0Z" transform="translate(0 -0.231)" fill="#ffbc00"/>
+        <path id="Rechteck_2719" data-name="Rechteck 2719" d="M1.045,0H2.306a.157.157,0,0,1,.157.157V1.933a.157.157,0,0,1-.157.157H1.045A1.045,1.045,0,0,1,0,1.045v0A1.045,1.045,0,0,1,1.045,0Z" transform="translate(4.202 -0.231)" fill="#ffbc00"/>
+      </g>
+      <path id="Pfad_20695" data-name="Pfad 20695" d="M-1897.591,820.195a2.266,2.266,0,0,1-2.259,2.259h0a2.266,2.266,0,0,1-2.26-2.259V818.5" transform="translate(-12.391 -21.146)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

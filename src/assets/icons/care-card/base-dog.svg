@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.003" height="26.028" viewBox="0 0 32.003 26.028">
+  <g id="Gruppe_13701" data-name="Gruppe 13701" transform="translate(-38.997 -334.822)">
+    <g id="Gruppe_10224" data-name="Gruppe 10224" transform="translate(488.538 405.824)">
+      <g id="Gruppe_10222" data-name="Gruppe 10222" transform="translate(-444.455 -70.002)">
+        <g id="Gruppe_10221" data-name="Gruppe 10221">
+          <g id="Gruppe_10219" data-name="Gruppe 10219">
+            <path id="Pfad_11095" data-name="Pfad 11095" d="M-433.478-52.592a5.691,5.691,0,0,1-5.721,5.477l-.317-.023a5.476,5.476,0,0,1-5-5.453,5.472,5.472,0,0,1,2.98-4.87,15.932,15.932,0,0,1-.8-5.006c0-6.661,3.909-7.534,8.732-7.534s8.732.873,8.732,7.534a15.935,15.935,0,0,1-.8,5.006,5.472,5.472,0,0,1,2.98,4.87,5.475,5.475,0,0,1-5.083,5.457l-.308.019a5.476,5.476,0,0,1-5.477-5.477" transform="translate(444.519 70.002)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+            <ellipse id="Ellipse_2102" data-name="Ellipse 2102" cx="3.221" cy="1.56" rx="3.221" ry="1.56" transform="translate(7.695 14.291)" fill="#ffbc00"/>
+          </g>
+        </g>
+        <path id="Pfad_11096" data-name="Pfad 11096" d="M-431.852-48.8V-47.5c0,.651-.8,1.185-1.778,1.185h0c-.978,0-1.778-.533-1.778-1.185V-48.8" transform="translate(444.664 70.339)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="Gruppe_10223" data-name="Gruppe 10223" transform="translate(-448.538 -66.295)">
+        <path id="Pfad_11097" data-name="Pfad 11097" d="M-441.652-66.352a10.443,10.443,0,0,0-4.745,4.567c-2.519,4.365-2.865,8.884-.769,10.094a3.028,3.028,0,0,0,2.713-.044" transform="translate(448.538 66.353)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="Pfad_11098" data-name="Pfad 11098" d="M-425.791-66.353a10.434,10.434,0,0,1,4.747,4.568c2.52,4.365,2.865,8.884.77,10.094a3.07,3.07,0,0,1-2.788-.075" transform="translate(448.9 66.353)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Gruppe_10225" data-name="Gruppe 10225" transform="translate(-0.248)">
+      <ellipse id="Ellipse_2103" data-name="Ellipse 2103" cx="1.548" cy="1.548" rx="1.548" ry="1.548" transform="translate(50.248 345.318)" fill="#ffbc00"/>
+      <ellipse id="Ellipse_2104" data-name="Ellipse 2104" cx="1.548" cy="1.548" rx="1.548" ry="1.548" transform="translate(57.442 345.318)" fill="#ffbc00"/>
+    </g>
+  </g>
+</svg>

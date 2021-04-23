@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.555" height="18.775" viewBox="0 0 20.555 18.775">
+    <g id="Gruppe_8945" data-name="Gruppe 8945" transform="translate(1.527 1.468)">
+        <g id="Gruppe_8892" data-name="Gruppe 8892" transform="translate(-0.5 -0.5)">
+            <path id="Pfad_9183" data-name="Pfad 9183" d="M.5,5.35A11.388,11.388,0,0,1,6.24.5"
+                  transform="translate(-0.5 -0.5)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+            <path id="Pfad_9184" data-name="Pfad 9184" d="M25.24,5.35A11.388,11.388,0,0,0,19.5.5"
+                  transform="translate(-6.74 -0.5)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+        </g>
+        <g id="Gruppe_8893" data-name="Gruppe 8893" transform="translate(1.53 1.76)">
+            <ellipse id="Ellipse_1926" data-name="Ellipse 1926" cx="7.22" cy="7.399" rx="7.22" ry="7.399"
+                     stroke-width="1.5" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-miterlimit="10" fill="none"/>
+            <path id="Pfad_9185" data-name="Pfad 9185" d="M12.71,5.47v4.755l2.439,2.537"
+                  transform="translate(-5.664 -2.066)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+        </g>
+    </g>
+</svg>

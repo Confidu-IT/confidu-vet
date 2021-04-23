@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62.463" height="96.552" viewBox="0 0 62.463 96.552">
+    <g id="Gruppe_10269" data-name="Gruppe 10269" transform="translate(605.275 358.728)">
+        <g id="Gruppe_10267" data-name="Gruppe 10267" transform="translate(-604.275 -357.728)">
+            <path id="Pfad_11548" data-name="Pfad 11548"
+                  d="M-580.362-286.355l-23.864.015-.046-71.349,60.41-.039.046,71.349-24.226.016"
+                  transform="translate(604.28 357.728)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2"/>
+            <g id="Gruppe_10266" data-name="Gruppe 10266" transform="translate(11.879 0.381)">
+                <line id="Linie_2732" data-name="Linie 2732" x2="0.045" y2="70.355" transform="translate(0 0.023)"
+                      fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Linie_2733" data-name="Linie 2733" x2="0.045" y2="70.355" transform="translate(36.67)"
+                      fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <line id="Linie_2734" data-name="Linie 2734" y1="0.008" x2="11.752" transform="translate(0 14.96)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2735" data-name="Linie 2735" y1="0.008" x2="11.752" transform="translate(0.009 28.851)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2736" data-name="Linie 2736" y1="0.008" x2="11.752" transform="translate(0.018 42.742)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2737" data-name="Linie 2737" y1="0.008" x2="11.752" transform="translate(0.027 56.633)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2738" data-name="Linie 2738" y1="0.007" x2="11.614" transform="translate(48.635 14.929)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2739" data-name="Linie 2739" y1="0.007" x2="11.614" transform="translate(48.644 28.82)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2740" data-name="Linie 2740" y1="0.007" x2="11.614" transform="translate(48.652 42.711)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2741" data-name="Linie 2741" y1="0.007" x2="11.614" transform="translate(48.661 56.602)"
+                  fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Gruppe_10268" data-name="Gruppe 10268" transform="translate(-580.176 -354.408)">
+            <rect id="Rechteck_2107" data-name="Rechteck 2107" width="11.795" height="91.207"
+                  transform="translate(0.18 0) rotate(0.113)" stroke-width="2" stroke="#02bdc2" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none"/>
+            <line id="Linie_2742" data-name="Linie 2742" x2="11.651" y2="0.023" transform="translate(0.251 14.929)"
+                  fill="none" stroke="#02bdc2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2743" data-name="Linie 2743" x2="11.651" y2="0.023" transform="translate(0.224 28.82)"
+                  fill="none" stroke="#02bdc2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2744" data-name="Linie 2744" x2="11.651" y2="0.023" transform="translate(0.196 42.711)"
+                  fill="none" stroke="#02bdc2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <line id="Linie_2745" data-name="Linie 2745" x2="11.651" y2="0.023" transform="translate(0.169 56.602)"
+                  fill="none" stroke="#02bdc2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+    </g>
+</svg>

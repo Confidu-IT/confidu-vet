@@ -1,12 +1,19 @@
 {
   "projects": {
-    "confidu": "confidu-app"
+    "confidu": "confidu-app",
+    "default": "confidu-app"
   },
   "targets": {
     "confidu-app": {
       "hosting": {
+        "production": [
+          "confidu-app"
+        ],
         "vet": [
           "confidu-app"
+        ],
+        "staging": [
+          "confidu-staging"
         ]
       }
     }

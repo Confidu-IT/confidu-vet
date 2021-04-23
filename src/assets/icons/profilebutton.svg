@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="94.188" height="94.188" viewBox="0 0 94.188 94.188">
+    <defs>
+        <filter id="Pfad_4179" x="0" y="0" width="94.188" height="94.188" filterUnits="userSpaceOnUse">
+            <feOffset dy="1" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity="0.2"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <clipPath id="clip-path">
+            <rect width="23" height="21" fill="none"/>
+        </clipPath>
+    </defs>
+    <g id="Gruppe_8117" data-name="Gruppe 8117" transform="translate(-133 -156)">
+        <g transform="matrix(1, 0, 0, 1, 133, 156)" filter="url(#Pfad_4179)">
+            <path id="Pfad_4179-2" data-name="Pfad 4179"
+                  d="M44.094,0A44.094,44.094,0,1,1,0,44.094,44.094,44.094,0,0,1,44.094,0Z" transform="translate(3 2)"
+                  fill="#a9a9a9"/>
+        </g>
+        <g id="ic_add_a_photo_24px" transform="translate(168 190)" clip-path="url(#clip-path)">
+            <path id="ic_add_a_photo_24px-2" data-name="ic_add_a_photo_24px"
+                  d="M3,4V1H5V4H8V6H5V9H3V6H0V4Zm3,6V7H9V4h7l1.83,2H21a2.006,2.006,0,0,1,2,2V20a2.006,2.006,0,0,1-2,2H5a2.006,2.006,0,0,1-2-2V10Zm7,9a5,5,0,1,0-5-5A5,5,0,0,0,13,19ZM9.8,14A3.2,3.2,0,1,0,13,10.8,3.2,3.2,0,0,0,9.8,14Z"
+                  transform="translate(0 -1)" fill="#fff"/>
+        </g>
+    </g>
+</svg>

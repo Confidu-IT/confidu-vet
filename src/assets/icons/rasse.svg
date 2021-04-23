@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+    <defs>
+        <filter id="Pfad_12341" x="0" y="0" width="69" height="69" filterUnits="userSpaceOnUse">
+            <feOffset dy="1" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity="0.2"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Gruppe_11906" data-name="Gruppe 11906" transform="translate(-33 -513)">
+        <g transform="matrix(1, 0, 0, 1, 33, 513)" filter="url(#Pfad_12341)">
+            <path id="Pfad_12341-2" data-name="Pfad 12341"
+                  d="M2,0H61a2,2,0,0,1,2,2V61a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0Z" transform="translate(3 2)"
+                  fill="#02bdc2"/>
+        </g>
+        <g id="Gruppe_11897" data-name="Gruppe 11897" transform="translate(46.4 530.5)">
+            <path id="Pfad_8298" data-name="Pfad 8298"
+                  d="M16.574,3.4l4.773,11.074a5.632,5.632,0,0,1-2.864,7.255l-.955.382a5.632,5.632,0,0,1-7.255-2.864L5.5,8.173"
+                  transform="translate(4.455 2.637)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-miterlimit="10" stroke-width="2"/>
+            <line id="Linie_2171" data-name="Linie 2171" y1="8.401" x2="3.628" transform="translate(19.884 23.984)"
+                  fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+            <path id="Pfad_8299" data-name="Pfad 8299"
+                  d="M25.993,18.065h0c3.246-.382,7.255-.955,9.928-1.527a3.38,3.38,0,0,0,2.673-2.1C39.167,12.91,39.931,11,40.5,9.474c.382-1.146-.382-1.718-2.1-2.1-2.482-.382-5.537-.955-9.164-1.527C27.521,2.791,24.657.5,19.693.5,13.2.5,10.337,4.7,8.046,9.664,6.519,13.292.6,23.22.6,23.22"
+                  fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+    </g>
+</svg>

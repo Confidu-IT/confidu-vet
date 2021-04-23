@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+    <defs>
+        <filter id="Pfad_12339" x="0" y="0" width="69" height="69" filterUnits="userSpaceOnUse">
+            <feOffset dy="1" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity="0.2"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Gruppe_11901" data-name="Gruppe 11901" transform="translate(-258 -335)">
+        <g transform="matrix(1, 0, 0, 1, 258, 335)" filter="url(#Pfad_12339)">
+            <path id="Pfad_12339-2" data-name="Pfad 12339"
+                  d="M2,0H61a2,2,0,0,1,2,2V61a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0Z" transform="translate(3 2)"
+                  fill="#33c5ff"/>
+        </g>
+        <g id="Gruppe_11892" data-name="Gruppe 11892" transform="translate(274.5 347.5)">
+            <circle id="Ellipse_1751" data-name="Ellipse 1751" cx="3.877" cy="3.877" r="3.877"
+                    transform="translate(26.756 22.879)" stroke-width="2" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" fill="none"/>
+            <g id="Gruppe_7764" data-name="Gruppe 7764" transform="translate(0.5 0.5)">
+                <path id="Pfad_8288" data-name="Pfad 8288"
+                      d="M24.465,2v8.987A12.11,12.11,0,0,1,12.482,22.969h0A12.11,12.11,0,0,1,.5,10.987V2"
+                      transform="translate(-0.5 0.643)" fill="none" stroke="#fff" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                <path id="Pfad_8289" data-name="Pfad 8289"
+                      d="M4.377,9.663H1.91A1.516,1.516,0,0,1,.5,8.253V1.91A1.516,1.516,0,0,1,1.91.5H4.377a1.516,1.516,0,0,1,1.41,1.41V8.253A1.516,1.516,0,0,1,4.377,9.663Z"
+                      transform="translate(-0.5 -0.5)" fill="none" stroke="#fff" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                <path id="Pfad_8290" data-name="Pfad 8290"
+                      d="M14.977,9.663H12.51a1.516,1.516,0,0,1-1.41-1.41V1.91A1.516,1.516,0,0,1,12.51.5h2.467a1.516,1.516,0,0,1,1.41,1.41V8.253A1.39,1.39,0,0,1,14.977,9.663Z"
+                      transform="translate(7.578 -0.5)" fill="none" stroke="#fff" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+            </g>
+            <path id="Pfad_8291" data-name="Pfad 8291"
+                  d="M25.374,21a9.025,9.025,0,0,1-8.987,8.987h0A9.025,9.025,0,0,1,7.4,21V14.3"
+                  transform="translate(5.259 10.517)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+    </g>
+</svg>

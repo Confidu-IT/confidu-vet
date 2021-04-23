@@ -1,0 +1,28 @@
+<svg id="ic_settings_24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path id="Pfad_1076" data-name="Pfad 1076" d="M0,0H24V24H0Z" fill="none"/>
+    <g id="Gruppe_10228" data-name="Gruppe 10228" transform="translate(6.747 54.846)">
+        <g id="Gruppe_9972" data-name="Gruppe 9972" transform="translate(-0.979 -45.074)">
+            <g id="Gruppe_9971" data-name="Gruppe 9971" transform="translate(0)">
+                <path id="Pfad_11526" data-name="Pfad 11526" d="M11.712-42.665l-.635,10.228H.525L-.106-42.605"
+                      transform="translate(0.106 42.665)" fill="none" stroke="#fff" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="1.5"/>
+            </g>
+        </g>
+        <path id="Pfad_11527" data-name="Pfad 11527" d="M-3.07-43.232l8-7.614,8,7.614" fill="none" stroke="#fff"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Pfad_11528" data-name="Pfad 11528"
+              d="M4.381-31.335v-4.621a2.687,2.687,0,0,1,2.743-2.611h0a2.688,2.688,0,0,1,2.743,2.611v4.621"
+              transform="translate(-2.194 -3.616)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="Gruppe_9973" data-name="Gruppe 9973" transform="translate(2.87 -45.666)">
+            <line id="Linie_2726" data-name="Linie 2726" x2="2.587" transform="translate(0.767 0.73)" fill="none"
+                  stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+            <path id="Pfad_11529" data-name="Pfad 11529" d="M10.869-42.043l-.767-.73.767-.73"
+                  transform="translate(-6.748 43.504)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="1.5"/>
+            <path id="Pfad_11530" data-name="Pfad 11530" d="M5.349-42.043l.767-.73-.767-.73"
+                  transform="translate(-5.349 43.504)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344" height="210" viewBox="0 0 344 210">
+    <g id="Gruppe_11901" data-name="Gruppe 11901" transform="translate(-8 -110)">
+        <g id="Gruppe_11899" data-name="Gruppe 11899">
+            <path id="Pfad_12334" data-name="Pfad 12334" d="M0,0H344V210H0Z" transform="translate(8 110)" fill="#fff"/>
+            <g id="Gruppe_5115" data-name="Gruppe 5115" transform="translate(62 139.672)">
+                <path id="Pfad_4399" data-name="Pfad 4399"
+                      d="M116.133,139.064c-14.668-14.668-20-37-24.114-40.672-4-3.667-46.339-6.334-62.119-.556"
+                      transform="translate(3.326 10.465)" fill="#fff" stroke="#8e8e8e" stroke-miterlimit="10"
+                      stroke-width="2"/>
+                <path id="Pfad_4400" data-name="Pfad 4400"
+                      d="M0,29.626c32.115-.889,85.9,2.556,94.233,4,29.559,5.223,31.559,8.557,39.671,7.668,8.112-.778,46.561-8.557,62.785-17C212.914,15.735,232.472.734,236.806.4c2.778-.222-25,27.892-37.671,34.337-21.891,11.224-59.118,19.113-60.341,20.669-1.222,1.667,7.445,6.779,8.557,18.336.556,5.667.667,30.226,2.667,45.672a177.739,177.739,0,0,0,6.556,28.114"
+                      transform="translate(0 0)" fill="#fff" stroke="#8e8e8e" stroke-miterlimit="10" stroke-width="2"/>
+                <path id="Pfad_4401" data-name="Pfad 4401"
+                      d="M68.2,28.8c1.333.111,2.556.222,3.778.222,7.223.556,12.557,1.111,14.78,1.445,3.889.667,7.334,1.333,10.446,2"
+                      transform="translate(7.587 3.159)" fill="#fff" stroke="#ffb03b" stroke-miterlimit="10"
+                      stroke-width="2"/>
+            </g>
+        </g>
+    </g>
+</svg>

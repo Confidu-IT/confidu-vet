@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+    <defs>
+        <filter id="Rechteck_2166" x="0" y="0" width="69" height="69" filterUnits="userSpaceOnUse">
+            <feOffset dy="1" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity="0.2"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Gruppe_11904" data-name="Gruppe 11904" transform="translate(-183 -424)">
+        <g transform="matrix(1, 0, 0, 1, 183, 424)" filter="url(#Rechteck_2166)">
+            <rect id="Rechteck_2166-2" data-name="Rechteck 2166" width="63" height="63" rx="2"
+                  transform="translate(3 2)" fill="#02bdc2"/>
+        </g>
+        <g id="Gruppe_11894" data-name="Gruppe 11894">
+            <path id="Pfad_9860" data-name="Pfad 9860"
+                  d="M37.382,25.557A15.077,15.077,0,0,0,40.6,16.822C40.6,7.856,31.634.5,20.6.5S.6,7.856.6,16.822s8.966,16.322,20,16.322A21.624,21.624,0,0,0,32.784,29.7l4.368,7.356Z"
+                  transform="translate(197.4 439.5)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+            <line id="Linie_2638" data-name="Linie 2638" x2="9.692" transform="translate(226.731 459.965) rotate(180)"
+                  fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                  stroke-width="2"/>
+            <line id="Linie_2639" data-name="Linie 2639" x2="16.564" transform="translate(226.731 453.621) rotate(180)"
+                  fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                  stroke-width="2"/>
+        </g>
+    </g>
+</svg>

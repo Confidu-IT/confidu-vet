@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.569" height="32.003" viewBox="0 0 27.569 32.003">
+  <g id="Heart" transform="translate(-167.061 688.957)">
+    <path id="Pfad_53" data-name="Pfad 53" d="M187.592-681.6a6.677,6.677,0,0,0-6.727,4.011,6.724,6.724,0,0,0-6.726-4.011c-5.181.167-9.4,6.936-2.215,14.123,6.726,6.729,8.9,7.478,8.9,7.478s2.215-.75,8.942-7.48C196.951-674.665,192.731-681.434,187.592-681.6Z" transform="translate(0 2.043)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Gruppe_359" data-name="Gruppe 359" transform="translate(179.109 -671.41)">
+      <circle id="Ellipse_21" data-name="Ellipse 21" cx="1.755" cy="1.755" r="1.755" fill="#ffbc00"/>
+    </g>
+    <path id="Pfad_54" data-name="Pfad 54" d="M177.309-673.185a.543.543,0,0,1,.5-.583.543.543,0,0,1,.583.5.414.414,0,0,1,0,.081v3.551a.543.543,0,0,1-.5.583.545.545,0,0,1-.583-.5c0-.026,0-.053,0-.081Z" transform="translate(2.969 4.575)" fill="#ffbc00"/>
+    <path id="Pfad_55" data-name="Pfad 55" d="M172.949-679.641v-1.965a6.348,6.348,0,0,1,6.346-6.351h.005a6.348,6.348,0,0,1,6.35,6.345v1.97" transform="translate(1.564 0)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

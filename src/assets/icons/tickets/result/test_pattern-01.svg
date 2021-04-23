@@ -1,0 +1,372 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 343.6 196.23">
+  <defs>
+    <style>.cls-1, .cls-11, .cls-12, .cls-6, .cls-7, .cls-8, .cls-9 {
+      fill: none;
+    }
+
+    .cls-2 {
+      clip-path: url(#clip-path);
+    }
+
+    .cls-3 {
+      clip-path: url(#clip-path-2);
+    }
+
+    .cls-4 {
+      fill: #f4f4f4;
+    }
+
+    .cls-11, .cls-5 {
+      opacity: 0.52;
+    }
+
+    .cls-11, .cls-12, .cls-6, .cls-7, .cls-8, .cls-9 {
+      stroke: #dfdfdf;
+    }
+
+    .cls-6 {
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+    }
+
+    .cls-12, .cls-7 {
+      stroke-miterlimit: 10;
+    }
+
+    .cls-11, .cls-12, .cls-7, .cls-8, .cls-9 {
+      stroke-width: 2px;
+    }
+
+    .cls-11, .cls-12, .cls-8, .cls-9 {
+      stroke-linecap: round;
+    }
+
+    .cls-11, .cls-8 {
+      stroke-linejoin: round;
+    }
+
+    .cls-10 {
+      fill: #dfdfdf;
+    }</style>
+    <clipPath id="clip-path" transform="translate(0.71 19.37)">
+      <rect class="cls-1" width="10" height="152"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(0.71 19.37)">
+      <rect class="cls-1" x="0.17" width="341.66" height="152"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <g class="cls-3">
+      <path id="Pfad_14844" data-name="Pfad 14844" class="cls-4" d="M.17-.25H342.88V152.84H.17Z"
+            transform="translate(0.71 19.37)"/>
+      <g id="Gruppe_14985" data-name="Gruppe 14985" class="cls-5">
+        <g id="Gruppe_14984" data-name="Gruppe 14984">
+          <path id="Rechteck_2585" data-name="Rechteck 2585" class="cls-6"
+                d="M18.28-6,35.76,1.53a7.89,7.89,0,0,1,4.13,10.35h0A7.89,7.89,0,0,1,29.54,16L12.06,8.5A7.88,7.88,0,0,1,7.93-1.85h0A7.88,7.88,0,0,1,18.28-6Z"
+                transform="translate(0.71 19.37)"/>
+          <line id="Linie_3541" data-name="Linie 3541" class="cls-7" x1="27.73" y1="17.14" x2="21.51" y2="31.62"/>
+        </g>
+        <path id="Pfad_14840" data-name="Pfad 14840" class="cls-7"
+              d="M25.75-2.92a10.42,10.42,0,0,1-.11-1.48,9.94,9.94,0,0,1,9.94-9.93h0A9.94,9.94,0,0,1,45.52-4.4h0A9.94,9.94,0,0,1,39.7,4.65"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3542" data-name="Linie 3542" class="cls-7" x1="32.31" y1="18.99" x2="43.14" y2="8.16"/>
+      </g>
+      <g id="Gruppe_14986" data-name="Gruppe 14986" class="cls-5">
+        <line id="Linie_3543" data-name="Linie 3543" class="cls-8" x1="69.74" y1="9.14" x2="69.74" y2="28.14"/>
+        <circle id="Ellipse_3071" data-name="Ellipse 3071" class="cls-8" cx="69.74" cy="31.91" r="3.16"/>
+        <path id="Pfad_14841" data-name="Pfad 14841" class="cls-8"
+              d="M74.67,5.23v-16A5.66,5.66,0,0,0,69-16.43a5.66,5.66,0,0,0-5.64,5.64v16a9.25,9.25,0,1,0,11.28,0Z"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3544" data-name="Linie 3544" class="cls-8" x1="78.84" y1="11.3" x2="81.91" y2="11.3"/>
+        <line id="Linie_3545" data-name="Linie 3545" class="cls-8" x1="78.84" y1="15.8" x2="80.4" y2="15.8"/>
+        <line id="Linie_3546" data-name="Linie 3546" class="cls-8" x1="78.84" y1="20.31" x2="81.91" y2="20.31"/>
+      </g>
+      <g id="Gruppe_14987" data-name="Gruppe 14987" class="cls-5">
+        <path id="Pfad_14843" data-name="Pfad 14843" class="cls-9"
+              d="M115.72-16.43A18.15,18.15,0,1,1,97.58,1.71a18.15,18.15,0,0,1,18.14-18.14Z"
+              transform="translate(0.71 19.37)"/>
+        <rect id="Rechteck_2586" data-name="Rechteck 2586" class="cls-10" x="114.76" y="18.39" width="3.35"
+              height="11.69"/>
+        <path id="Pfad_14842" data-name="Pfad 14842" class="cls-10"
+              d="M115.72-3.53a1.88,1.88,0,0,1-1.88-1.88,1.88,1.88,0,0,1,1.88-1.87,1.88,1.88,0,0,1,1.88,1.87,1.88,1.88,0,0,1-1.88,1.88Z"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14979-2" data-name="Gruppe 14979-2" class="cls-5">
+        <circle id="Ellipse_3067-2" data-name="Ellipse 3067-2" class="cls-8" cx="227.13" cy="26.09" r="3.77"/>
+        <g id="Gruppe_14978-2" data-name="Gruppe 14978-2">
+          <path id="Pfad_14834-2" data-name="Pfad 14834-2" class="cls-8"
+                d="M220.5-15.79v8.61A11.51,11.51,0,0,1,209,4.31h0A11.52,11.52,0,0,1,197.53-7.18v-8.61"
+                transform="translate(0.71 19.37)"/>
+          <rect id="Rechteck_2582-2" data-name="Rechteck 2582-2" class="cls-8" x="198.26" y="1" width="5.03"
+                height="8.71" rx="0.8"/>
+          <rect id="Rechteck_2583-2" data-name="Rechteck 2583-2" class="cls-8" x="216.16" y="1" width="5.03"
+                height="8.71" rx="0.8"/>
+        </g>
+        <path id="Pfad_14835-2" data-name="Pfad 14835-2" class="cls-8"
+              d="M226.41,11.25a8.64,8.64,0,0,1-8.61,8.61h0a8.64,8.64,0,0,1-8.61-8.61V4.79"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <path id="Pfad_14836-2" data-name="Pfad 14836-2" class="cls-11"
+            d="M284.49-5.63H271.75V-18.37H259V-5.63H246.26V7.12H259V19.86h12.74V7.12h12.74Z"
+            transform="translate(0.71 19.37)"/>
+      <g id="Gruppe_14981-2" data-name="Gruppe 14981-2" class="cls-5">
+        <path id="Pfad_14837-2" data-name="Pfad 14837-2" class="cls-8" d="M172.65-15h6.9V19.86H151.94V-15h6.54"
+              transform="translate(0.71 19.37)"/>
+        <rect id="Rechteck_2584-2" data-name="Rechteck 2584-2" class="cls-8" x="159.89" y="1" width="13.13"
+              height="6.01"/>
+        <g id="Gruppe_14980-2" data-name="Gruppe 14980-2">
+          <line id="Linie_3534-2" data-name="Linie 3534-2" class="cls-8" x1="158.6" y1="17.88" x2="167.88" y2="17.88"/>
+          <line id="Linie_3535-2" data-name="Linie 3535-2" class="cls-8" x1="158.6" y1="23.94" x2="174.32" y2="23.94"/>
+          <line id="Linie_3536-2" data-name="Linie 3536-2" class="cls-8" x1="158.6" y1="30" x2="174.32" y2="30"/>
+        </g>
+      </g>
+      <g id="Gruppe_14983-2" data-name="Gruppe 14983-2" class="cls-5">
+        <g id="Gruppe_14982-2" data-name="Gruppe 14982-2">
+          <circle id="Ellipse_3069-2" data-name="Ellipse 3069-2" class="cls-12" cx="312.4" cy="15.74" r="12.83"/>
+          <circle id="Ellipse_3070-2" data-name="Ellipse 3070-2" class="cls-12" cx="312.4" cy="15.74" r="9.8"/>
+        </g>
+        <path id="Pfad_14839-2" data-name="Pfad 14839-2" class="cls-12"
+              d="M322.19,4.18l14.05,12.6a3,3,0,0,1,0,4.15h0a2.93,2.93,0,0,1-4.15,0h0l-12.6-14"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14985-3" data-name="Gruppe 14985-3" class="cls-5">
+        <g id="Gruppe_14984-3" data-name="Gruppe 14984-3">
+          <path id="Rechteck_2585-3" data-name="Rechteck 2585-3" class="cls-6"
+                d="M18.28,96.73l17.48,7.51a7.89,7.89,0,0,1,4.13,10.35h0a7.88,7.88,0,0,1-10.35,4.12L12.06,111.2a7.86,7.86,0,0,1-4.13-10.34h0A7.88,7.88,0,0,1,18.28,96.73Z"
+                transform="translate(0.71 19.37)"/>
+          <line id="Linie_3541-3" data-name="Linie 3541-3" class="cls-7" x1="27.73" y1="119.85" x2="21.51" y2="134.33"/>
+        </g>
+        <path id="Pfad_14840-3" data-name="Pfad 14840-3" class="cls-7"
+              d="M25.75,99.78a10.17,10.17,0,0,1-.11-1.47,9.94,9.94,0,0,1,9.94-9.93h0a9.93,9.93,0,0,1,9.94,9.93h0a9.94,9.94,0,0,1-5.82,9"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3542-3" data-name="Linie 3542-3" class="cls-7" x1="32.31" y1="121.7" x2="43.14" y2="110.87"/>
+      </g>
+      <g id="Gruppe_14986-3" data-name="Gruppe 14986-3" class="cls-5">
+        <line id="Linie_3543-3" data-name="Linie 3543-3" class="cls-8" x1="69.74" y1="111.85" x2="69.74" y2="130.85"/>
+        <circle id="Ellipse_3071-3" data-name="Ellipse 3071-3" class="cls-8" cx="69.74" cy="134.62" r="3.16"/>
+        <path id="Pfad_14841-3" data-name="Pfad 14841-3" class="cls-8"
+              d="M74.67,107.94v-16a5.64,5.64,0,1,0-11.28,0v16a9.25,9.25,0,1,0,11.28,0Z"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3544-3" data-name="Linie 3544-3" class="cls-8" x1="78.84" y1="114" x2="81.91" y2="114"/>
+        <line id="Linie_3545-3" data-name="Linie 3545-3" class="cls-8" x1="78.84" y1="118.51" x2="80.4" y2="118.51"/>
+        <line id="Linie_3546-3" data-name="Linie 3546-3" class="cls-8" x1="78.84" y1="123.02" x2="81.91" y2="123.02"/>
+      </g>
+      <g id="Gruppe_14987-3" data-name="Gruppe 14987-3" class="cls-5">
+        <path id="Pfad_14843-3" data-name="Pfad 14843-3" class="cls-9"
+              d="M115.72,86.28a18.14,18.14,0,1,1-18.14,18.14,18.15,18.15,0,0,1,18.14-18.14Z"
+              transform="translate(0.71 19.37)"/>
+        <rect id="Rechteck_2586-3" data-name="Rechteck 2586-3" class="cls-10" x="114.76" y="121.1" width="3.35"
+              height="11.69"/>
+        <path id="Pfad_14842-3" data-name="Pfad 14842-3" class="cls-10"
+              d="M115.72,99.18a1.88,1.88,0,1,1,1.88-1.88,1.88,1.88,0,0,1-1.88,1.88Z" transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14979-4" data-name="Gruppe 14979-4" class="cls-5">
+        <circle id="Ellipse_3067-4" data-name="Ellipse 3067-4" class="cls-8" cx="227.13" cy="128.8" r="3.77"/>
+        <g id="Gruppe_14978-4" data-name="Gruppe 14978-4">
+          <path id="Pfad_14834-4" data-name="Pfad 14834-4" class="cls-8"
+                d="M220.5,86.91v8.62A11.51,11.51,0,0,1,209,107h0a11.52,11.52,0,0,1-11.49-11.49V86.91"
+                transform="translate(0.71 19.37)"/>
+          <rect id="Rechteck_2582-4" data-name="Rechteck 2582-4" class="cls-8" x="198.26" y="103.71" width="5.03"
+                height="8.71" rx="0.8"/>
+          <rect id="Rechteck_2583-4" data-name="Rechteck 2583-4" class="cls-8" x="216.16" y="103.71" width="5.03"
+                height="8.71" rx="0.8"/>
+        </g>
+        <path id="Pfad_14835-4" data-name="Pfad 14835-4" class="cls-8"
+              d="M226.41,114a8.64,8.64,0,0,1-8.61,8.62h0a8.64,8.64,0,0,1-8.61-8.62v-6.46"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <path id="Pfad_14836-4" data-name="Pfad 14836-4" class="cls-11"
+            d="M284.49,97.08H271.75V84.34H259V97.08H246.26v12.74H259v12.75h12.74V109.82h12.74Z"
+            transform="translate(0.71 19.37)"/>
+      <g id="Gruppe_14981-4" data-name="Gruppe 14981-4" class="cls-5">
+        <path id="Pfad_14837-4" data-name="Pfad 14837-4" class="cls-8" d="M172.65,87.68h6.9v34.89H151.94V87.68h6.54"
+              transform="translate(0.71 19.37)"/>
+        <rect id="Rechteck_2584-4" data-name="Rechteck 2584-4" class="cls-8" x="159.89" y="103.71" width="13.13"
+              height="6.01"/>
+        <g id="Gruppe_14980-4" data-name="Gruppe 14980-4">
+          <line id="Linie_3534-4" data-name="Linie 3534-4" class="cls-8" x1="158.6" y1="120.59" x2="167.88"
+                y2="120.59"/>
+          <line id="Linie_3535-4" data-name="Linie 3535-4" class="cls-8" x1="158.6" y1="126.65" x2="174.32"
+                y2="126.65"/>
+          <line id="Linie_3536-4" data-name="Linie 3536-4" class="cls-8" x1="158.6" y1="132.71" x2="174.32"
+                y2="132.71"/>
+        </g>
+      </g>
+      <g id="Gruppe_14983-4" data-name="Gruppe 14983-4" class="cls-5">
+        <g id="Gruppe_14982-4" data-name="Gruppe 14982-4">
+          <circle id="Ellipse_3069-4" data-name="Ellipse 3069-4" class="cls-12" cx="312.4" cy="118.45" r="12.83"/>
+          <circle id="Ellipse_3070-4" data-name="Ellipse 3070-4" class="cls-12" cx="312.4" cy="118.45" r="9.8"/>
+        </g>
+        <path id="Pfad_14839-4" data-name="Pfad 14839-4" class="cls-12"
+              d="M322.19,106.89l14.05,12.6a3,3,0,0,1,0,4.15h0a3,3,0,0,1-4.15,0h0l-12.6-14"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14979-6" data-name="Gruppe 14979-6" class="cls-5">
+        <circle id="Ellipse_3067-6" data-name="Ellipse 3067-6" class="cls-8" cx="62.41" cy="77.44" r="3.77"/>
+        <g id="Gruppe_14978-6" data-name="Gruppe 14978-6">
+          <path id="Pfad_14834-6" data-name="Pfad 14834-6" class="cls-8"
+                d="M55.78,35.56v8.62A11.51,11.51,0,0,1,44.3,55.66h0A11.51,11.51,0,0,1,32.81,44.18V35.56"
+                transform="translate(0.71 19.37)"/>
+          <rect id="Rechteck_2582-6" data-name="Rechteck 2582-6" class="cls-8" x="33.54" y="52.35" width="5.03"
+                height="8.71" rx="0.8"/>
+          <rect id="Rechteck_2583-6" data-name="Rechteck 2583-6" class="cls-8" x="51.44" y="52.35" width="5.03"
+                height="8.71" rx="0.8"/>
+        </g>
+        <path id="Pfad_14835-6" data-name="Pfad 14835-6" class="cls-8"
+              d="M61.69,62.6a8.63,8.63,0,0,1-8.61,8.61h0a8.63,8.63,0,0,1-8.61-8.61V56.14"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <path id="Pfad_14836-6" data-name="Pfad 14836-6" class="cls-11"
+            d="M119.77,45.73H107V33H94.29V45.73H81.54V58.47H94.29V71.21H107V58.47h12.74Z"
+            transform="translate(0.71 19.37)"/>
+      <g id="Gruppe_14981-6" data-name="Gruppe 14981-6" class="cls-5">
+        <path id="Pfad_14837-6" data-name="Pfad 14837-6" class="cls-8" d="M7.93,36.33h6.9V71.21H.34"
+              transform="translate(0.71 19.37)"/>
+        <polyline id="Rechteck_2584-6" data-name="Rechteck 2584-6" class="cls-8"
+                  points="1.12 52.35 8.3 52.35 8.3 58.36 1.12 58.36"/>
+        <g id="Gruppe_14980-6" data-name="Gruppe 14980-6">
+          <line id="Linie_3534-6" data-name="Linie 3534-6" class="cls-8" x1="1" y1="69.24" x2="3.16" y2="69.24"/>
+          <line id="Linie_3535-6" data-name="Linie 3535-6" class="cls-8" x1="1" y1="75.29" x2="9.6" y2="75.29"/>
+          <line id="Linie_3536-6" data-name="Linie 3536-6" class="cls-8" x1="1" y1="81.35" x2="9.6" y2="81.35"/>
+        </g>
+      </g>
+      <g id="Gruppe_14983-6" data-name="Gruppe 14983-6" class="cls-5">
+        <g id="Gruppe_14982-6" data-name="Gruppe 14982-6">
+          <circle id="Ellipse_3069-6" data-name="Ellipse 3069-6" class="cls-12" cx="147.68" cy="67.1" r="12.83"/>
+          <circle id="Ellipse_3070-6" data-name="Ellipse 3070-6" class="cls-12" cx="147.68" cy="67.1" r="9.8"/>
+        </g>
+        <path id="Pfad_14839-6" data-name="Pfad 14839-6" class="cls-12"
+              d="M157.47,55.53l14.05,12.6a3,3,0,0,1,0,4.15h0a2.94,2.94,0,0,1-4.15,0h0l-12.6-14.05"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14985-6" data-name="Gruppe 14985-6" class="cls-5">
+        <g id="Gruppe_14984-6" data-name="Gruppe 14984-6">
+          <path id="Rechteck_2585-6" data-name="Rechteck 2585-6" class="cls-6"
+                d="M196.56,45.38,214,52.89a7.87,7.87,0,0,1,4.13,10.34h0a7.88,7.88,0,0,1-10.35,4.13l-17.48-7.51a7.89,7.89,0,0,1-4.13-10.35h0A7.88,7.88,0,0,1,196.56,45.38Z"
+                transform="translate(0.71 19.37)"/>
+          <line id="Linie_3541-6" data-name="Linie 3541-6" class="cls-7" x1="206.01" y1="68.5" x2="199.8" y2="82.97"/>
+        </g>
+        <path id="Pfad_14840-6" data-name="Pfad 14840-6" class="cls-7"
+              d="M204,48.43a9.09,9.09,0,0,1-.11-1.47A9.94,9.94,0,0,1,213.86,37h0A9.94,9.94,0,0,1,223.8,47h0A9.94,9.94,0,0,1,218,56"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3542-6" data-name="Linie 3542-6" class="cls-7" x1="210.59" y1="70.34" x2="221.42" y2="59.52"/>
+      </g>
+      <g id="Gruppe_14986-6" data-name="Gruppe 14986-6" class="cls-5">
+        <line id="Linie_3543-6" data-name="Linie 3543-6" class="cls-8" x1="248.02" y1="60.49" x2="248.02" y2="79.5"/>
+        <circle id="Ellipse_3071-6" data-name="Ellipse 3071-6" class="cls-8" cx="248.02" cy="83.27" r="3.16"/>
+        <path id="Pfad_14841-6" data-name="Pfad 14841-6" class="cls-8"
+              d="M253,56.59v-16a5.65,5.65,0,1,0-11.29,0v16a9.26,9.26,0,1,0,11.29,0Z" transform="translate(0.71 19.37)"/>
+        <line id="Linie_3544-6" data-name="Linie 3544-6" class="cls-8" x1="257.13" y1="62.65" x2="260.19" y2="62.65"/>
+        <line id="Linie_3545-6" data-name="Linie 3545-6" class="cls-8" x1="257.13" y1="67.16" x2="258.69" y2="67.16"/>
+        <line id="Linie_3546-6" data-name="Linie 3546-6" class="cls-8" x1="257.13" y1="71.67" x2="260.19" y2="71.67"/>
+      </g>
+      <g id="Gruppe_14987-6" data-name="Gruppe 14987-6" class="cls-5">
+        <path id="Pfad_14843-6" data-name="Pfad 14843-6" class="cls-9"
+              d="M294,34.92a18.15,18.15,0,1,1-18.15,18.15A18.15,18.15,0,0,1,294,34.92Z"
+              transform="translate(0.71 19.37)"/>
+        <rect id="Rechteck_2586-6" data-name="Rechteck 2586-6" class="cls-10" x="293.04" y="69.75" width="3.35"
+              height="11.69"/>
+        <path id="Pfad_14842-6" data-name="Pfad 14842-6" class="cls-10"
+              d="M294,47.83A1.88,1.88,0,1,1,295.89,46,1.88,1.88,0,0,1,294,47.83Z" transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14979-8" data-name="Gruppe 14979-8" class="cls-5">
+        <circle id="Ellipse_3067-8" data-name="Ellipse 3067-8" class="cls-8" cx="62.41" cy="180.15" r="3.77"/>
+        <g id="Gruppe_14978-8" data-name="Gruppe 14978-8">
+          <path id="Pfad_14834-8" data-name="Pfad 14834-8" class="cls-8"
+                d="M55.78,138.27v8.61A11.51,11.51,0,0,1,44.3,158.37h0a11.52,11.52,0,0,1-11.49-11.49v-8.61"
+                transform="translate(0.71 19.37)"/>
+          <rect id="Rechteck_2582-8" data-name="Rechteck 2582-8" class="cls-8" x="33.54" y="155.06" width="5.03"
+                height="8.71" rx="0.8"/>
+          <rect id="Rechteck_2583-8" data-name="Rechteck 2583-8" class="cls-8" x="51.44" y="155.06" width="5.03"
+                height="8.71" rx="0.8"/>
+        </g>
+        <path id="Pfad_14835-8" data-name="Pfad 14835-8" class="cls-8"
+              d="M61.69,165.31a8.63,8.63,0,0,1-8.61,8.61h0a8.63,8.63,0,0,1-8.61-8.61v-6.46"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <path id="Pfad_14836-8" data-name="Pfad 14836-8" class="cls-11"
+            d="M119.77,148.44H107V135.69H94.29v12.75H81.54v12.74H94.29v12.74H107V161.18h12.74Z"
+            transform="translate(0.71 19.37)"/>
+      <g id="Gruppe_14981-8" data-name="Gruppe 14981-8" class="cls-5">
+        <path id="Pfad_14837-8" data-name="Pfad 14837-8" class="cls-8" d="M7.93,139h6.9v34.88H.33"
+              transform="translate(0.71 19.37)"/>
+        <polyline id="Rechteck_2584-8" data-name="Rechteck 2584-8" class="cls-8"
+                  points="1.17 155.06 8.3 155.06 8.3 161.07 1.17 161.07"/>
+        <g id="Gruppe_14980-8" data-name="Gruppe 14980-8">
+          <line id="Linie_3534-8" data-name="Linie 3534-8" class="cls-8" x1="1.05" y1="171.94" x2="3.16" y2="171.94"/>
+          <line id="Linie_3535-8" data-name="Linie 3535-8" class="cls-8" x1="1.05" y1="178" x2="9.6" y2="178"/>
+          <line id="Linie_3536-8" data-name="Linie 3536-8" class="cls-8" x1="1.05" y1="184.06" x2="9.6" y2="184.06"/>
+        </g>
+      </g>
+      <g id="Gruppe_14981-6-2" data-name="Gruppe 14981-6" class="cls-5">
+        <path id="Pfad_14837-6-2" data-name="Pfad 14837-6" class="cls-8" d="M341.74,71.21H328.22V36.33h6.54"
+              transform="translate(0.71 19.37)"/>
+        <polyline id="Rechteck_2584-6-2" data-name="Rechteck 2584-6" class="cls-8"
+                  points="342.3 58.36 336.17 58.36 336.17 52.35 342.3 52.35"/>
+        <g id="Gruppe_14980-6-2" data-name="Gruppe 14980-6">
+          <line id="Linie_3534-6-2" data-name="Linie 3534-6" class="cls-8" x1="334.88" y1="69.24" x2="342.16"
+                y2="69.24"/>
+          <line id="Linie_3535-6-2" data-name="Linie 3535-6" class="cls-8" x1="334.88" y1="75.29" x2="342.6"
+                y2="75.29"/>
+          <line id="Linie_3536-6-2" data-name="Linie 3536-6" class="cls-8" x1="334.88" y1="81.35" x2="342.6"
+                y2="81.35"/>
+        </g>
+      </g>
+      <g id="Gruppe_14981-8-2" data-name="Gruppe 14981-8" class="cls-5">
+        <path id="Pfad_14837-8-2" data-name="Pfad 14837-8" class="cls-8" d="M341.61,173.92H328.22V139h6.54"
+              transform="translate(0.71 19.37)"/>
+        <polyline id="Rechteck_2584-8-2" data-name="Rechteck 2584-8" class="cls-8"
+                  points="342.3 161.07 336.17 161.07 336.17 155.06 342.3 155.06"/>
+        <g id="Gruppe_14980-8-2" data-name="Gruppe 14980-8">
+          <line id="Linie_3534-8-2" data-name="Linie 3534-8" class="cls-8" x1="334.88" y1="171.94" x2="342.16"
+                y2="171.94"/>
+          <line id="Linie_3535-8-2" data-name="Linie 3535-8" class="cls-8" x1="334.88" y1="178" x2="342.6" y2="178"/>
+          <line id="Linie_3536-8-2" data-name="Linie 3536-8" class="cls-8" x1="334.88" y1="184.06" x2="342.6"
+                y2="184.06"/>
+        </g>
+      </g>
+      <g id="Gruppe_14983-8" data-name="Gruppe 14983-8" class="cls-5">
+        <g id="Gruppe_14982-8" data-name="Gruppe 14982-8">
+          <circle id="Ellipse_3069-8" data-name="Ellipse 3069-8" class="cls-12" cx="147.68" cy="169.81" r="12.83"/>
+          <circle id="Ellipse_3070-8" data-name="Ellipse 3070-8" class="cls-12" cx="147.68" cy="169.81" r="9.8"/>
+        </g>
+        <path id="Pfad_14839-8" data-name="Pfad 14839-8" class="cls-12"
+              d="M157.47,158.24l14.05,12.6a3,3,0,0,1,0,4.15h0a2.93,2.93,0,0,1-4.15,0h0l-12.6-14.05"
+              transform="translate(0.71 19.37)"/>
+      </g>
+      <g id="Gruppe_14985-8" data-name="Gruppe 14985-8" class="cls-5">
+        <g id="Gruppe_14984-8" data-name="Gruppe 14984-8">
+          <path id="Rechteck_2585-8" data-name="Rechteck 2585-8" class="cls-6"
+                d="M196.56,148.08,214,155.59a7.88,7.88,0,0,1,4.13,10.35h0a7.88,7.88,0,0,1-10.35,4.13l-17.48-7.51a7.89,7.89,0,0,1-4.13-10.35h0A7.89,7.89,0,0,1,196.56,148.08Z"
+                transform="translate(0.71 19.37)"/>
+          <line id="Linie_3541-8" data-name="Linie 3541-8" class="cls-7" x1="206.01" y1="171.21" x2="199.8"
+                y2="185.68"/>
+        </g>
+        <path id="Pfad_14840-8" data-name="Pfad 14840-8" class="cls-7"
+              d="M204,151.14a9.09,9.09,0,0,1-.11-1.47,9.94,9.94,0,0,1,9.93-9.94h0a9.94,9.94,0,0,1,9.93,9.94h0a10,10,0,0,1-5.82,9.05"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3542-8" data-name="Linie 3542-8" class="cls-7" x1="210.59" y1="173.05" x2="221.42" y2="162.22"/>
+      </g>
+      <g id="Gruppe_14986-8" data-name="Gruppe 14986-8" class="cls-5">
+        <line id="Linie_3543-8" data-name="Linie 3543-8" class="cls-8" x1="248.02" y1="163.2" x2="248.02" y2="182.21"/>
+        <circle id="Ellipse_3071-8" data-name="Ellipse 3071-8" class="cls-8" cx="248.02" cy="185.98" r="3.16"/>
+        <path id="Pfad_14841-8" data-name="Pfad 14841-8" class="cls-8"
+              d="M253,159.29v-16a5.65,5.65,0,1,0-11.29,0v16a9.26,9.26,0,1,0,11.29,0Z"
+              transform="translate(0.71 19.37)"/>
+        <line id="Linie_3544-8" data-name="Linie 3544-8" class="cls-8" x1="257.13" y1="165.36" x2="260.19" y2="165.36"/>
+        <line id="Linie_3545-8" data-name="Linie 3545-8" class="cls-8" x1="257.13" y1="169.87" x2="258.69" y2="169.87"/>
+        <line id="Linie_3546-8" data-name="Linie 3546-8" class="cls-8" x1="257.13" y1="174.38" x2="260.19" y2="174.38"/>
+      </g>
+      <g id="Gruppe_14987-8" data-name="Gruppe 14987-8" class="cls-5">
+        <path id="Pfad_14843-8" data-name="Pfad 14843-8" class="cls-9"
+              d="M294,137.63a18.15,18.15,0,1,1-18.15,18.15A18.15,18.15,0,0,1,294,137.63Z"
+              transform="translate(0.71 19.37)"/>
+        <rect id="Rechteck_2586-8" data-name="Rechteck 2586-8" class="cls-10" x="293.04" y="172.45" width="3.35"
+              height="11.69"/>
+        <path id="Pfad_14842-8" data-name="Pfad 14842-8" class="cls-10"
+              d="M294,150.54a1.88,1.88,0,1,1,1.88-1.88,1.88,1.88,0,0,1-1.88,1.88Z" transform="translate(0.71 19.37)"/>
+      </g>
+    </g>
+  </g>
+</svg>

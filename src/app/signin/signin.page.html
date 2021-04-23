@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <img [src]="logo" alt="" height="32">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeSm="8" offsetSm="2">
+        <ion-card>
+          <ion-card-content>
+            <h2>{{ 'SIGNUP_PAGE.SIGNIN' | translate }}</h2>
+            <form [formGroup]="signinForm">
+              <mat-form-field>
+                <mat-label>{{ 'SIGNUP_PAGE.EMAIL' | translate }}</mat-label>
+                <input matInput formControlName="name">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>{{'SIGNUP_PAGE.PASSWORD' | translate }}</mat-label>
+                <input type="password" matInput formControlName="password">
+              </mat-form-field>
+            </form>
+
+            <div class="error">
+              <span *ngIf="errorMsg">{{ errorMsg }}</span>
+            </div>
+
+            <ion-button
+              expand="full"
+              color="secondary"
+              routerDirection="forward"
+              (click)="onLogin()"
+              [disabled]="!signinForm.valid">
+              {{ 'SIGNUP_PAGE.SIGNIN' | translate }}
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+    <defs>
+        <filter id="Pfad_12335" x="0" y="0" width="69" height="69" filterUnits="userSpaceOnUse">
+            <feOffset dy="1" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1" result="blur"/>
+            <feFlood flood-opacity="0.2"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Gruppe_11891" data-name="Gruppe 11891" transform="translate(-108 -335)">
+        <g transform="matrix(1, 0, 0, 1, 108, 335)" filter="url(#Pfad_12335)">
+            <path id="Pfad_12335-2" data-name="Pfad 12335"
+                  d="M2,0H61a2,2,0,0,1,2,2V61a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0Z" transform="translate(3 2)"
+                  fill="#33c5ff"/>
+        </g>
+        <path id="Pfad_12336" data-name="Pfad 12336"
+              d="M33.618,7.432h0a6.193,6.193,0,0,0-1.682-5.285,5.656,5.656,0,0,0-7.928,0,5.656,5.656,0,0,0,0,7.928c.24.24.48.48.721.48L10.555,24.729c-.24-.24-.24-.48-.48-.721a5.656,5.656,0,0,0-7.928,0,5.656,5.656,0,0,0,0,7.928,5.571,5.571,0,0,0,5.285,1.441,5.422,5.422,0,0,0,1.441,5.285A5.606,5.606,0,1,0,16.8,30.735c-.24,0-.48-.24-.721-.24L30.495,16.081c.24.24.24.48.48.721A5.606,5.606,0,1,0,38.9,8.873,5.422,5.422,0,0,0,33.618,7.432Z"
+              transform="translate(122.475 348.475)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Gruppe_20810" data-name="Gruppe 20810" transform="translate(-299 -623.999)">
+    <g id="Gruppe_20559" data-name="Gruppe 20559" transform="translate(132.001 5.74)">
+      <g id="Gruppe_20545" data-name="Gruppe 20545" transform="translate(167 618.259)" opacity="0.498">
+        <circle id="Ellipse_2172" data-name="Ellipse 2172" cx="12.5" cy="12.5" r="12.5" transform="translate(0)" fill="#00b7ff"/>
+      </g>
+    </g>
+    <g id="Check_Icon-2" data-name="Check Icon-2" transform="translate(304.162 629.516)">
+      <rect id="Bounds-39" width="14" height="14" transform="translate(0.338 0.484)" fill="none"/>
+      <path id="Icon-39" d="M6.8,12,4.286,9.48l-.839.839L6.8,13.673l7.187-7.187-.839-.839Z" transform="translate(-1.301 -2.183)" fill="#fff" style="isolation: isolate"/>
+    </g>
+  </g>
+</svg>

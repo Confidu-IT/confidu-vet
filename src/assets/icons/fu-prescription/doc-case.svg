@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="197" height="163.309" viewBox="0 0 197 163.309">
+  <g id="Gruppe_14387" data-name="Gruppe 14387" transform="translate(-562.134 -1123.309)">
+    <g id="Gruppe_14384" data-name="Gruppe 14384" transform="translate(563.134 1110.658)">
+      <rect id="Rechteck_2554" data-name="Rechteck 2554" width="195" height="141.981" rx="11" transform="translate(0 32.979)" fill="none" stroke="#424242" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Pfad_13456" data-name="Pfad 13456" d="M571.314,1129.981v-10.554a8.771,8.771,0,0,1,8.77-8.77h33.2a8.855,8.855,0,0,1,8.66,7.382,7.885,7.885,0,0,1,.109,1.388v10.554" transform="translate(-499.184 -1097.007)" fill="none" stroke="#424242" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Gruppe_14386" data-name="Gruppe 14386" transform="translate(615.749 1170.653)">
+      <circle id="Ellipse_2753" data-name="Ellipse 2753" cx="44.886" cy="44.886" r="44.886" fill="#ffbc00"/>
+      <g id="Gruppe_14385" data-name="Gruppe 14385" transform="translate(28.501 28.501)">
+        <line id="Linie_3204" data-name="Linie 3204" y2="32.769" transform="translate(16.384)" fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="17"/>
+        <line id="Linie_3205" data-name="Linie 3205" x1="32.769" transform="translate(0 16.384)" fill="none" stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="17"/>
+      </g>
+    </g>
+  </g>
+</svg>

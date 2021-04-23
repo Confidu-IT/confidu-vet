@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.5" height="20.026" viewBox="0 0 26.5 20.026">
+    <g id="Gruppe_8986" data-name="Gruppe 8986" transform="translate(-3.246 -3.262)">
+        <g id="Gruppe_8948" data-name="Gruppe 8948" transform="translate(5.661 4.007)">
+            <path id="Pfad_9228" data-name="Pfad 9228"
+                  d="M90.8,16.59l.574,2.973a1.387,1.387,0,0,1-1.095,1.619l-.243.046a1.387,1.387,0,0,1-1.619-1.095"
+                  transform="translate(-72.887 -14.081)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-miterlimit="10" stroke-width="1.5"/>
+            <path id="Pfad_9229" data-name="Pfad 9229"
+                  d="M92.75,58.658V53.442A2.165,2.165,0,0,0,93.53,52c0-.018.61-2.4.61-2.4"
+                  transform="translate(-76.361 -40.16)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-miterlimit="10" stroke-width="1.5"/>
+            <path id="Pfad_9230" data-name="Pfad 9230"
+                  d="M26.926,69l-.046-2.375,2.875-3.868c2.434-.937,3.579,1.152,7.2,1.438L36.992,69"
+                  transform="translate(-23.977 -50.501)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-miterlimit="10" stroke-width="1.5"/>
+            <path id="Pfad_9231" data-name="Pfad 9231"
+                  d="M33.04,9.828c1.494.309,1.956-1.234,2.554-2.366.14-.266.01-.471-.419-.646-.584-.238-1.351-.541-2.214-.876a2.583,2.583,0,0,0-2.116-1.857c-1.618-.345-2.59.537-3.4,1.675A29.947,29.947,0,0,1,25.889,9.08l-1.04.823-9.768.474a2.511,2.511,0,0,0-1.807.894,4.137,4.137,0,0,0-.806,1.571c-.25.9.126,2.494,1.046,4.32L12.32,19.214l.142,3.292"
+                  transform="translate(-12.32 -4.007)" fill="none" stroke="#8e8e8e" stroke-linecap="round"
+                  stroke-miterlimit="10" stroke-width="1.5"/>
+        </g>
+        <path id="Pfad_9232" data-name="Pfad 9232" d="M8.243,18.309S3.36,18.227,4.074,14.06"
+              transform="translate(0 -8.049)" fill="none" stroke="#8e8e8e" stroke-linecap="round" stroke-miterlimit="10"
+              stroke-width="1.5"/>
+    </g>
+</svg>

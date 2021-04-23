@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="Gruppe_20975" data-name="Gruppe 20975" transform="translate(-283 -150)">
+    <path id="Pfad_20721" data-name="Pfad 20721" d="M16.5,0A16.5,16.5,0,1,1,0,16.5,16.5,16.5,0,0,1,16.5,0Z" transform="translate(283 150)" fill="#ffbc00"/>
+    <g id="Gruppe_21059" data-name="Gruppe 21059" transform="translate(699.544 -253.414)">
+      <g id="Gruppe_21056" data-name="Gruppe 21056" transform="translate(-405.458 415.178)">
+        <rect id="Rechteck_2828" data-name="Rechteck 2828" width="11.128" height="3.12" transform="translate(0 9.144)" fill="#fff"/>
+        <path id="Pfad_21492" data-name="Pfad 21492" d="M-401.67,425.752V422.01a4.306,4.306,0,0,1,4.294-4.294h0a4.306,4.306,0,0,1,4.294,4.294v3.742" transform="translate(402.94 -417.716)" fill="#fff" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Pfad_21493" data-name="Pfad 21493" d="M-398.722,423a2.664,2.664,0,0,1,2.656-2.656h0" transform="translate(401.946 -418.601)" fill="none" stroke="#ffbc00" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <line id="Linie_3290" data-name="Linie 3290" y1="3.245" transform="translate(-399.894 410.188)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+      <g id="Gruppe_21057" data-name="Gruppe 21057" transform="translate(-406.999 412.991)">
+        <line id="Linie_3291" data-name="Linie 3291" x1="2.295" y1="2.295" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Linie_3292" data-name="Linie 3292" y1="2.295" x2="2.295" transform="translate(11.916)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Gruppe_21058" data-name="Gruppe 21058" transform="translate(-409.14 420.065)">
+        <line id="Linie_3293" data-name="Linie 3293" x2="3.245" transform="translate(15.247)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Linie_3294" data-name="Linie 3294" x2="3.245" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+ion-title {
+  text-transform: capitalize;
+}
+
+mat-label {
+  color: var(--ion-color-medium) !important;
+  font-size: 14px;
+}
+
+ion-toolbar {
+  --background: none;
+}
+.toolbar {
+  background-color: #eee;
+
+  img {
+    display: block;
+    margin: auto;
+    height: 32px;
+  }
+}
+
+ion-button {
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 8px 0 16px;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+ion-card {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.error {
+  color: var(--ion-color-danger);
+  height: 22px;
+}

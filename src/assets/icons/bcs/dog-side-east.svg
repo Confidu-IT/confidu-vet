@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344" height="210" viewBox="0 0 344 210">
+    <g id="Gruppe_11893" data-name="Gruppe 11893" transform="translate(-8 -110)">
+        <path id="Pfad_12334" data-name="Pfad 12334" d="M0,0H344V210H0Z" transform="translate(8 110)" fill="#fff"/>
+        <g id="Gruppe_3629" data-name="Gruppe 3629" transform="translate(60.9 115.501)">
+            <g id="Gruppe_3629-2" data-name="Gruppe 3629" transform="translate(0.1 0.499)">
+                <path id="Pfad_2018" data-name="Pfad 2018"
+                      d="M.1,55.789C49.286,64.48,52.614,70.027,66.113,68.548c13.5-1.294,77.477-14.238,104.474-28.291S230.127,1.056,237.339.5c4.623-.37-41.6,46.412-62.684,57.137-36.242,18.676-98.187,31.8-100.221,34.578-1.479,2.034,5.547,7.027,10.355,16.827,1.849,3.7,4.328,8.321,4.883,13.5.37,2.774-.445,8.506-.26,15.717.555,16.827-2.838,42.344-.434,60.28"
+                      transform="translate(-0.1 -0.499)" fill="none" stroke="#8e8e8e" stroke-miterlimit="10"
+                      stroke-width="2"/>
+            </g>
+            <g id="Gruppe_3630" data-name="Gruppe 3630" transform="translate(84.788 109.043)">
+                <path id="Pfad_2019" data-name="Pfad 2019"
+                      d="M45.9,59.2c1.849,3.7,4.328,8.321,4.883,13.5.37,2.774-.445,8.506-.26,15.717"
+                      transform="translate(-45.9 -59.2)" fill="none" stroke="#ffb03b" stroke-miterlimit="10"
+                      stroke-width="2"/>
+            </g>
+        </g>
+    </g>
+</svg>

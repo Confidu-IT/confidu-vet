@@ -7,6 +7,16 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FirebaseModule} from './services/firebase.module';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// AoT requires an exported function for factories
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,10 +25,22 @@ import {FirebaseModule} from './services/firebase.module';
     BrowserModule,
     IonicModule.forRoot(),
     FirebaseModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    BrowserAnimationsModule
   ]
   ,
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    TranslateService,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

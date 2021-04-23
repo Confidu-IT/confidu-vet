@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Gruppe_21075" data-name="Gruppe 21075" transform="translate(-1199 8947.5)">
+    <g id="Ellipse_2755" data-name="Ellipse 2755" transform="translate(1199 -8947.5)" fill="none" stroke="#ffbc00" stroke-width="1.5">
+      <circle cx="12.5" cy="12.5" r="12.5" stroke="none"/>
+      <circle cx="12.5" cy="12.5" r="11.75" fill="none"/>
+    </g>
+    <g id="Gruppe_21074" data-name="Gruppe 21074" transform="translate(1275.491 -9333.282)">
+      <path id="Pfad_21495" data-name="Pfad 21495" d="M-60.831,395.7c-1.269,1.886,1.371,2.023.137,3.394" transform="translate(-3.929 -2.373)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Pfad_21496" data-name="Pfad 21496" d="M-57.6,391.8c-1.268,1.886,1.372,2.023.137,3.394" transform="translate(-5.469 -0.519)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <g id="Pfad_21497" data-name="Pfad 21497" transform="translate(-1.12 -5.603)" fill="none">
+        <path d="M-67.085,403.566v4.969a1.264,1.264,0,0,0,1.26,1.26h6.184a1.263,1.263,0,0,0,1.259-1.26v-4.969Z" stroke="none"/>
+        <path d="M -66.08500671386719 404.5660400390625 L -66.08500671386719 408.53515625 C -66.08500671386719 408.6759338378906 -65.96607208251953 408.7948608398438 -65.82528686523438 408.7948608398438 L -59.64147186279297 408.7948608398438 C -59.50096893310547 408.7948608398438 -59.38228607177734 408.6759338378906 -59.38228607177734 408.53515625 L -59.38228607177734 404.5660400390625 L -66.08500671386719 404.5660400390625 M -67.08500671386719 403.5660400390625 L -58.38228607177734 403.5660400390625 L -58.38228607177734 408.53515625 C -58.38228607177734 409.2276000976562 -58.94902038574219 409.7948608398438 -59.64147186279297 409.7948608398438 L -65.82528686523438 409.7948608398438 C -66.51826477050781 409.7948608398438 -67.08500671386719 409.2276000976562 -67.08500671386719 408.53515625 L -67.08500671386719 403.5660400390625 Z" stroke="none" fill="#ffbc00"/>
+      </g>
+      <g id="Gruppe_21073" data-name="Gruppe 21073" transform="translate(-69.436 398.488)">
+        <path id="Pfad_21498" data-name="Pfad 21498" d="M-50.513,404.567a1.459,1.459,0,0,1,1.459,1.46,1.459,1.459,0,0,1-1.459,1.459" transform="translate(60.358 -404.567)" fill="none" stroke="#ffbc00" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Pfad_21499" data-name="Pfad 21499" d="M-67.976,404.567a1.459,1.459,0,0,0-1.46,1.46,1.459,1.459,0,0,0,1.46,1.459" transform="translate(69.281 -404.567)" fill="none" stroke="#ffbc00" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="183.013" height="215.476" viewBox="0 0 183.013 215.476">
+  <g id="Gruppe_9198" data-name="Gruppe 9198" transform="translate(-637.659 -205.321)">
+    <g id="Ebene_2" data-name="Ebene 2" transform="translate(638.662 206.338)">
+      <g id="Gruppe_9192" data-name="Gruppe 9192" transform="translate(0 0)">
+        <path id="Pfad_9692" data-name="Pfad 9692"
+              d="M1172.767,832.336c1.163-8.5,1.747-13.452,1.747-13.452s7.785.9,21.923,0a101.238,101.238,0,0,0,28.754-5.83"
+              transform="translate(-1043.519 -618.014)" fill="none" stroke="#a7a7a7" stroke-miterlimit="10"
+              stroke-width="2"/>
+        <path id="Pfad_9693" data-name="Pfad 9693"
+              d="M951.6,297.131c-14.322.406-41.565-15.208-50.243-21.6s-8.268-15.223-12.378-25.728-9.955-16.038-13.914-27.387c-4.05-11.612-18.422-17.372-33.874-15.828-27.449,2.742-22.2,7.885-28.73,14.166-2.51,2.415-20.422,5.993-30.17,6.534-4.1.228-11.161.114-11.554,4.3-.73,7.784,12.449,23.411,16.56,25.237s21.35,4.8,32.769,7.994,15.986,15.337,16.5,28.126c.548,13.515,4.844,31.595,6.671,35.705s1.386,6.606,4.083,24.361c3.266,21.5,17.042,44.644,19.325,51.038.924,2.586,2.018,9.151,3.051,16.611"
+              transform="translate(-770.711 -206.338)" fill="none" stroke="#a7a7a7" stroke-miterlimit="10"
+              stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Ebene_4" data-name="Ebene 4" transform="translate(718.15 279.584)">
+      <ellipse id="Ellipse_2075" data-name="Ellipse 2075" cx="40.179" cy="24.777" rx="40.179" ry="24.777"
+               transform="matrix(0.661, -0.751, 0.751, 0.661, 0, 60.322)" fill="#33c5ff" stroke="rgba(0,0,0,0)"
+               stroke-width="2" opacity="0.15"/>
+    </g>
+    <g id="Ebene_3" data-name="Ebene 3" transform="translate(736.109 296.406)">
+      <g id="Gruppe_9197" data-name="Gruppe 9197" transform="translate(0 0)">
+        <path id="Pfad_9700" data-name="Pfad 9700"
+              d="M1074.662,539.652c6.692-4.331,6.967-13.037,7.587-19.994,1.246-14,1.618-16,7.715-21.2,9.839-8.386,14.349-12.483,19.107-11.888s12.908,3.785,15.147,8.309c5.311,10.735,7.691,14.544,3.388,17.972-7.564,6.026-12.856,6.987-18.492,11.278-6.982,5.317-18.006,15.281-18.021,20.655-.017,5.669-2.179.3-6.395-2C1079.28,539.818,1071.242,541.866,1074.662,539.652Z"
+              transform="translate(-1073.842 -486.516)" fill="none" stroke="#33c5ff" stroke-miterlimit="10"
+              stroke-width="2"/>
+        <path id="Pfad_9701" data-name="Pfad 9701" d="M1110.789,557.786c4.793-11.681,17.16-36.983,29.883-43.2"
+              transform="translate(-1098.911 -505.564)" fill="none" stroke="#33c5ff" stroke-miterlimit="10"
+              stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
