@@ -3,7 +3,6 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CommonService} from '../services/common.service';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
-import {environment} from '../../environments/environment';
 import {AngularFireAuth} from '@angular/fire/auth';
 
 
@@ -16,7 +15,6 @@ export class SigninPage implements OnInit {
   public logo = '../../assets/icons/logo_confid_2.svg';
   public signinForm: FormGroup;
   public errorMsg: any;
-  private baseUrl = environment.baseUrl;
 
   constructor(
     private commonService: CommonService,
@@ -46,35 +44,17 @@ export class SigninPage implements OnInit {
   }
 
   public onLogin(): void {
-   this.signInToBackend(
+   this.commonService.signInToBackend(
      this.signinForm.value.name, this.signinForm.value.password
    ).then(response => {
      if (response?.errors) {
        this.errorMsg = response.errors[0]?.title;
      } else {
-      const token = response.customToken;
-       localStorage.setItem('user_uid', token);
-       this.afAuth.signInWithCustomToken(token)
+       this.afAuth.signInWithCustomToken(response.customToken)
          .then(() => {
            this.router.navigateByUrl('/');
          });
      }
    });
-  }
-
-  private signInToBackend(user: string, pw: string) {
-    const headers = {
-      'Content-Type': 'application/json'
-    };
-    const body = JSON.stringify({ username: user, password: pw });
-    const url = `${this.baseUrl}/de/vet/login`;
-    return fetch(url, { method: 'POST', headers, body })
-      .then((resp) => {
-        if (!resp.ok) {
-          throw resp.json();
-        }
-        return resp.json();
-      })
-      .catch(e => e);
   }
 }

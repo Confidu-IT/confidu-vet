@@ -1,4 +1,8 @@
 {
+  "SIDE_NAV": {
+    "SIGNOUT": "Abmelden",
+    "HOME": "Home"
+  },
   "CREATE_PET_PAGE": {
     "CASTRATION_VALUES": {
       "TRUE": "Kastriert",

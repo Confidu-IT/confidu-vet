@@ -4,6 +4,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {AuthService} from './signin/auth.service';
 import {TranslateService} from '@ngx-translate/core';
 import {MenuController, Platform} from '@ionic/angular';
+import {CommonService} from './services/common.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ export class AppComponent {
     private afAuth: AngularFireAuth,
     private authService: AuthService,
     public translate: TranslateService,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    private commonService: CommonService
   ) {
     this.initializeApp();
     translate.addLangs(['en', 'de']);
@@ -29,16 +31,14 @@ export class AppComponent {
     translate.use(browserLang.match(/en|de/) ? browserLang : 'de');
   }
 
-  public toggleMenu(link: string) {
-    this.menuCtrl.close().then(() => {
-      return this.router.navigateByUrl(link);
-    });
-  }
-
   public onLogout(): void {
-    this.menuCtrl.close().then(() => {
-      this.authService.afAuth.signOut();
-    });
+    this.commonService.logOut()
+      .then(() => {
+        this.menuCtrl.close()
+          .then(() => {
+            this.router.navigateByUrl('/signin');
+          });
+      });
   }
 
   initializeApp() {

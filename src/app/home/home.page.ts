@@ -35,6 +35,9 @@ export class HomePage {
     this.subscription = this.userAuth.user$
       .subscribe(user => {
         console.log('user', user);
+        if(!user) {
+          this.router.navigateByUrl('/signin');
+        }
       });
   }
 

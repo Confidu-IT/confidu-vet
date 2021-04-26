@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="medium" menu="start" auto-hide="false"></ion-menu-button>
+    </ion-buttons>
     <ion-title>
       Blank
     </ion-title>
@@ -11,7 +14,9 @@
     <ion-row>
       <ion-col>
         <h1>Hello Confidu Vet!</h1>
-        <p>.......</p>
+        <div>
+          <a routerLink="/pet-care-card/foo/bar">Click me</a>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

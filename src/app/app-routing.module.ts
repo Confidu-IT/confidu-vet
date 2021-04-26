@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'signin',
     loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
   },
+  {
+    path: 'pet-care-card/:userId/:petId',
+    loadChildren: () => import('./pets/pet-care-card/pet-care-card.module').then( m => m.PetCareCardPageModule)
+  },
 ];
 
 @NgModule({
