@@ -12,11 +12,13 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col sizeSm="8" offsetSm="2">
         <h1>Hello Confidu Vet!</h1>
-        <div>
-          <a routerLink="/pet-care-card/foo/bar">Click me</a>
-        </div>
+        <ul>
+          <li *ngFor="let pet of pets" (click)="onClickLink(pet.userId, pet.petId)">
+            Click Me
+          </li>
+        </ul>
       </ion-col>
     </ion-row>
   </ion-grid>

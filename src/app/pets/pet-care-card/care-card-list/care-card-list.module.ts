@@ -4,21 +4,23 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PetCareCardPageRoutingModule } from './pet-care-card-routing.module';
+import { CareCardListPageRoutingModule } from './care-card-list-routing.module';
 
-import { PetCareCardPage } from './pet-care-card.page';
+import { CareCardListPage } from './care-card-list.page';
 import {TranslateModule} from '@ngx-translate/core';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MatExpansionModule,
     TranslateModule.forChild(),
-    PetCareCardPageRoutingModule
+    MatExpansionModule,
+    PdfViewerModule,
+    CareCardListPageRoutingModule
   ],
-  declarations: [PetCareCardPage]
+  declarations: [CareCardListPage]
 })
-export class PetCareCardPageModule {}
+export class CareCardListPageModule {}

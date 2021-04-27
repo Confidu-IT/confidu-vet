@@ -8,5 +8,251 @@
 </ion-header>
 
 <ion-content>
+  <div *ngIf="isLoading" class="ion-text-center">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
 
+  <div *ngIf="!isLoading" class="care-card-header">
+    <div class="care-card-header-image">
+      <img [src]="pet?.pet.image" alt="">
+    </div>
+    <div class="care-card-header-label">
+      <h2>{{ pet?.pet.name }}s<br>CareCard</h2>
+    </div>
+  </div>
+  <div class="spacer"></div>
+
+  <ion-grid *ngIf="!isLoading">
+    <ion-row class="ion-hide-md-up">
+      <ion-col size="12">
+
+        <mat-expansion-panel class="base-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <div class="panel-title-content">
+                <div class="img">
+                  <img [src]="baseDataImg" alt="">
+                </div>
+                <div class="label">
+                  {{ 'CARE_CARD_PAGE.BASE_DATA.TITLE' | translate }}
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="base-data">
+            <ul>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.NAME' | translate }}</div>
+                <div class="value">{{ pet?.pet.name }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.GENDER' | translate }}</div>
+                <div class="value">{{ pet?.pet.gender.label[this.language] }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.CASTRATION' | translate }}</div>
+                <div class="value">
+                  {{ pet?.pet.castration.label[this.language] }}
+                </div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.BREED' | translate }}</div>
+                <div class="value">{{ breed }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.BIRTHDAY' | translate }}</div>
+                <div class="value">{{ pet?.pet.birthday.seconds * 1000 | date: 'dd.MM.yyyy' }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.ID' | translate }}</div>
+                <div class="value">{{ pet?.pet.petIdent }}</div>
+              </li>
+            </ul>
+          </div>
+        </mat-expansion-panel>
+
+        <ng-container *ngIf="panels">
+          <ng-container *ngFor="let panel of panels">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="panel-title-content">
+                    <div class="img">
+                      <img [src]="panel?.icon" alt="">
+                    </div>
+                    <div class="label">
+                      {{ panel?.label }}
+                      <span *ngIf="panel?.signal" class="signal"></span>
+                    </div>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul *ngIf="panel.data" class="submenu">
+                <li (click)="onClickLink(el)" *ngFor="let el of panel.data">
+                  <div class="label">
+                    {{ el.label }}
+                  </div>
+                  <div class="value">
+                    <img [src]="el.icon" alt="" height="12" width="12">
+                    <p>{{ el.value }}</p>
+                  </div>
+                  <!--                  <img [src]="chevron" alt="" height="16" width="16">-->
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </li>
+              </ul>
+            </mat-expansion-panel>
+          </ng-container>
+        </ng-container>
+        <ion-card class="export">
+          <ion-card-content>
+            <h3>CareCard exportieren</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              labore et dolore magna
+            </p>
+            <ion-button
+              class="export-button"
+              color="secondary"
+              expand="full"
+            >
+              Exportoptionen
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="!isLoading" class="ion-hide-md-down">
+      <ion-col size="6">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <div class="panel-title-content">
+                <div class="img">
+                  <img [src]="baseDataImg" alt="">
+                </div>
+                <div class="label">
+                  {{ 'CARE_CARD_PAGE.BASE_DATA.TITLE' | translate }}
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="base-data">
+            <ul>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.NAME' | translate }}</div>
+                <div class="value">{{ pet?.pet.name }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.GENDER' | translate }}</div>
+                <div class="value">{{ pet?.pet.gender.label[this.language] }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.CASTRATION' | translate }}</div>
+                <div class="value">
+                  {{ pet?.pet.castration.label[this.language] }}
+                </div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.BREED' | translate }}</div>
+                <div class="value">{{ breed }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.BIRTHDAY' | translate }}</div>
+                <div class="value">{{ pet?.pet.birthday.seconds * 1000 | date: 'dd. MM. yyyy' }}</div>
+              </li>
+              <li>
+                <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.ID' | translate }}</div>
+                <div class="value">
+                  {{ pet?.pet.petIdent }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </mat-expansion-panel>
+
+        <div *ngIf="panels">
+          <ng-container *ngFor="let panel of panels; let i = index">
+
+            <mat-expansion-panel *ngIf="i < 3">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="panel-title-content">
+                    <div class="img">
+                      <img [src]="panel?.icon" alt="">
+                    </div>
+                    <div class="label">
+                      {{ panel?.label }}
+                      <span *ngIf="panel?.signal" class="signal"></span>
+                    </div>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul *ngIf="panel.data" class="submenu">
+                <li (click)="onClickLink(el)" *ngFor="let el of panel.data">
+                  <div class="label">
+                    {{ el.label }}
+                  </div>
+                  <div class="value">
+                    <img [src]="el.icon" alt="" height="12" width="12">
+                    <p>{{ el.value }}</p>
+                  </div>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </li>
+              </ul>
+            </mat-expansion-panel>
+          </ng-container>
+        </div>
+        <ion-card class="export">
+          <ion-card-content>
+            <h3>CareCard exportieren</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              labore et dolore magna
+            </p>
+            <ion-button
+              class="export-button"
+              color="secondary"
+              expand="full"
+            >
+              Exportoptionen
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <div *ngIf="panels">
+          <ng-container *ngFor="let panel of panels; let i = index">
+            <mat-expansion-panel *ngIf="i >= 3">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="panel-title-content">
+                    <div class="img">
+                      <img [src]="panel?.icon" alt="">
+                    </div>
+                    <div class="label">
+                      {{ panel?.label }}
+                      <span *ngIf="panel?.signal" class="signal"></span>
+                    </div>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul *ngIf="panel.data" class="submenu">
+                <li (click)="onClickLink(el)" *ngFor="let el of panel.data">
+                  <div class="label">
+                    {{ el.label }}
+                  </div>
+                  <div class="value">
+                    <img [src]="el.icon" alt="" height="12" width="12">
+                    <p>{{ el.value }}</p>
+                  </div>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </li>
+              </ul>
+            </mat-expansion-panel>
+          </ng-container>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

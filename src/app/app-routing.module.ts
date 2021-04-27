@@ -19,6 +19,11 @@ const routes: Routes = [
     path: 'pet-care-card/:userId/:petId',
     loadChildren: () => import('./pets/pet-care-card/pet-care-card.module').then( m => m.PetCareCardPageModule)
   },
+  {
+    path: 'pets/pet-care-card/:userId/:petId/:label/:key',
+    loadChildren: () => import('./pets/pet-care-card/care-card-list/care-card-list.module').then( m => m.CareCardListPageModule)
+  },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {AuthService} from './signin/auth.service';
 import {TranslateService} from '@ngx-translate/core';
 import {MenuController, Platform} from '@ionic/angular';
 import {CommonService} from './services/common.service';
@@ -18,7 +17,6 @@ export class AppComponent {
     private platform: Platform,
     private router: Router,
     private afAuth: AngularFireAuth,
-    private authService: AuthService,
     public translate: TranslateService,
     public menuCtrl: MenuController,
     private commonService: CommonService
@@ -39,6 +37,10 @@ export class AppComponent {
             this.router.navigateByUrl('/signin');
           });
       });
+  }
+
+  public toggleMenu(link: string) {
+    this.menuCtrl.close().then(() => this.router.navigateByUrl(link));
   }
 
   initializeApp() {

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Subscription} from 'rxjs';
-import {AuthService} from '../signin/auth.service';
 import {Router} from '@angular/router';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {FirebaseService} from '../services/firebase.service';
@@ -15,11 +14,12 @@ import {CommonService} from '../services/common.service';
 export class HomePage {
   public user: any;
   public language: string;
+  public pets: any[];
 
   private subscription: Subscription;
 
   constructor(
-    public userAuth: AuthService,
+    public userAuth: CommonService,
     private router: Router,
     private afAuth: AngularFireAuth,
     private firebaseService: FirebaseService,
@@ -38,7 +38,17 @@ export class HomePage {
         if(!user) {
           this.router.navigateByUrl('/signin');
         }
+        this.pets = [];
+        this.pets.push({petId: '128W4dJHV4Q8gyU2RoUI', userId: 'b3eae868d1554bc1b984f98bec63c667'});
       });
+  }
+
+  public onClickLink(userId: string, petId: string): void {
+    this.router.navigateByUrl(`/pet-care-card/${userId}/${petId}`);
+  }
+
+  ionViewWillLeave() {
+    this.pets = undefined;
   }
 
 }

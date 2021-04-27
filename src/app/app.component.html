@@ -7,7 +7,7 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item class="first" routerLink="/">
+        <ion-item class="first" (click)="toggleMenu('/')">
           <ion-icon name="home-outline" slot="start"></ion-icon>
           <ion-label>{{'SIDE_NAV.HOME' | translate }}</ion-label>
         </ion-item>

@@ -9,7 +9,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  private baseUrl = environment.baseUrl;
+
+  public user$: Observable<any | null>;
   public get language(): string {
     const browserLanguage = this.translateService.getBrowserLang();
     if (browserLanguage === 'de' || browserLanguage === 'dk' || browserLanguage === 'fr') {
@@ -18,11 +19,14 @@ export class CommonService {
     return 'de';
   }
 
+  private baseUrl = environment.baseUrl;
+
   constructor(
     private translateService: TranslateService,
     public afAuth: AngularFireAuth,
     private http: HttpClient
   ) {
+    this.user$ = this.afAuth.authState;
     this.translateService.setDefaultLang(this.language); // fallback
     this.translateService.use(this.translateService.getBrowserLang());
   }
@@ -62,6 +66,40 @@ export class CommonService {
       uid: user
     };
 
+    return this.http.post(url, body, { headers });
+  }
+
+  public getSecureLink(
+    path: string,
+    dir: string,
+    petId: string,
+    token: string
+  ): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/${dir}/get-url-from-path`;
+    console.log('url', url);
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': token
+    };
+    const body = {
+      path,
+      petId
+    };
+    return this.http.post(url, body, { headers });
+  }
+
+  public getContent(key: string, token: string, idPet, idUser): Observable<any> {
+    const baseUrl = environment.baseUrl;
+    const url = `${baseUrl}/${this.language}/carecard/${key}`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': token,
+      'sw-context-token': ''
+    };
+    const body = {
+      petId: idPet,
+      uid: idUser
+    };
     return this.http.post(url, body, { headers });
   }
 }
