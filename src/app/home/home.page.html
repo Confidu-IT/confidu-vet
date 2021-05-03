@@ -15,7 +15,7 @@
       <ion-col sizeSm="8" offsetSm="2">
         <h1>Hello Confidu Vet!</h1>
         <ul>
-          <li *ngFor="let pet of pets" (click)="onClickLink(pet.userId, pet.petId)">
+          <li *ngFor="let pet of pets" (click)="onClickLink(pet.userId, pet.petId, pet.appointmentId)">
             Click Me
           </li>
         </ul>

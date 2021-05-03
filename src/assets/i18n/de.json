@@ -512,6 +512,7 @@
     "DOSAGE": "Dosierung"
   },
   "CARE_CARD_PAGE": {
+    "TO_FORM": "Zum Formular",
     "NO_DATA": "Keine Angabe",
     "BASE_DATA": {
       "TITLE": "Stammdaten",
@@ -626,7 +627,7 @@
     "LABEL": "Tierarztbesuch"
   },
   "PRESCRIPTION_RESULT_PAGE": {
-    "TITLE": "Rechnunsgdaten",
+    "TITLE": "Rechnungsdaten",
     "ADD": "Hinzufügen",
     "ADD_MED": "Präparat eingeben",
     "DATE_TIME_BTNS_CANCEL": "Abbrechen",
@@ -1138,6 +1139,46 @@
       "INVOICE": "Tierarztrechnung hochladen",
       "OK_BUTTON": "Weiter",
       "CANCEL_BUTTON": "Abbrechen"
+    }
+  },
+  "VET_FORM": {
+    "HEADER_TEXT": "Bericht zur Telekonsultation",
+    "SAVE_BUTTON": "PROTOKOLL SPEICEHERN",
+    "THERAPY_INSTRUCTIONS": "Therapieanweisungen für Halter:innen ",
+    "ENTER_TEXT": "Bitte hier schreiben…",
+    "ADD": "Hinzufügen",
+    "ADD_MED": "Präparat eingeben",
+    "DATE_TIME_BTNS_CANCEL": "Abbrechen",
+    "DATE_TIME_BTNS_DONE": "Übernehmen",
+    "ADD_THERAPY": "Therapie eingeben",
+    "ADD_DIAGNOSIS": "Erkrankung eingeben",
+    "VET_VISIT": "Tierarztbesuch",
+    "PROGRESS": "Weiter",
+    "REPEAT": "Wiederholen",
+    "DIAG_CARD": {
+      "HEADLINE": "Diagnose/n",
+      "BODY_TEXT": "Bitte wählen Sie die Diagnose aus und fügen Sie sie der Auswahl hinzu. Wenn Sie mehrere Diagnosen festgestellt haben, können Sie diese ebenfalls hinzufügen."
+    },
+    "OWNER": {
+      "HEADLINE": "Besitzer:innenangaben",
+      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    },
+    "WEIGHT": {
+      "HEADLINE": "Gewicht des Tieres",
+      "LABEL": "Gewicht in Kilogramm eingeben",
+      "UNIT": "kg"
+    },
+    "MEDICATION": {
+      "HEADLINE": "Medikation",
+      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    },
+    "MONITORING": {
+      "HEADLINE": "Diagnostik und Monitoring",
+      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    },
+    "MANAGEMENT": {
+      "HEADLINE": "Management",
+      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     }
   }
 }

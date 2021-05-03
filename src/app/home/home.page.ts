@@ -39,12 +39,18 @@ export class HomePage {
           this.router.navigateByUrl('/signin');
         }
         this.pets = [];
-        this.pets.push({petId: '128W4dJHV4Q8gyU2RoUI', userId: 'b3eae868d1554bc1b984f98bec63c667'});
+        this.pets.push(
+          {
+            petId: 'cbCiQm9qzPl7ph6IDDG7',
+            userId: '7ee4c83a58544c12982848b09e867f08',
+            appointmentId: '583123790'
+          }
+          );
       });
   }
 
-  public onClickLink(userId: string, petId: string): void {
-    this.router.navigateByUrl(`/pet-care-card/${userId}/${petId}`);
+  public onClickLink(userId: string, petId: string, appointmentId: string): void {
+    this.router.navigateByUrl(`/pet-care-card/${userId}/${petId}/${appointmentId}`);
   }
 
   ionViewWillLeave() {

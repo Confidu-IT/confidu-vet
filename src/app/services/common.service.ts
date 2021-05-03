@@ -73,6 +73,7 @@ export class CommonService {
     path: string,
     dir: string,
     petId: string,
+    uid: string,
     token: string
   ): Observable<any> {
     const url = `${this.baseUrl}/${this.language}/${dir}/get-url-from-path`;
@@ -83,12 +84,13 @@ export class CommonService {
     };
     const body = {
       path,
-      petId
+      petId,
+      uid
     };
     return this.http.post(url, body, { headers });
   }
 
-  public getContent(key: string, token: string, idPet, idUser): Observable<any> {
+  public getCareCardlistContent(key: string, token: string, idPet, idUser): Observable<any> {
     const baseUrl = environment.baseUrl;
     const url = `${baseUrl}/${this.language}/carecard/${key}`;
     const headers = {
@@ -99,6 +101,42 @@ export class CommonService {
     const body = {
       petId: idPet,
       uid: idUser
+    };
+    return this.http.post(url, body, { headers });
+  }
+
+  public getCareCardDetailContent(params: any, user: any): Observable<any> {
+    const baseUrl = environment.baseUrl;
+    const url = `${baseUrl}/${this.language}/carecard/${params.key}/${params.list}`;
+
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': user.za
+    };
+    const body = {
+      petId: params.petId,
+      uid: params.userId,
+      venomKey: params.venom,
+      level3Id: params.level3Id
+    };
+    return this.http.post(url, body, { headers });
+  }
+
+  public getVetFormContent(params: any, user: any): Observable<any> {
+    const baseUrl = environment.baseUrl;
+    const url = `${baseUrl}/${this.language}/vet/forms`;
+
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': user.za
+    };
+    const body = {
+      petId: params.petId,
+      uid: params.userId,
+      venomKey: params.venom,
+      appointmentId: params.appointmentId
     };
     return this.http.post(url, body, { headers });
   }

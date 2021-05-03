@@ -72,4 +72,9 @@ export class PetCareCardPage {
     this.router.navigateByUrl(`pets/pet-care-card/${this.params.userId}/${this.params.petId}/${el.label}/${el.key}`);
   }
 
+  public goToForm(): void {
+    const url = `pets/vet-form/${this.params.userId}/${this.params.petId}/${this.params.appointmentId}`;
+    this.router.navigateByUrl(url);
+  }
+
 }

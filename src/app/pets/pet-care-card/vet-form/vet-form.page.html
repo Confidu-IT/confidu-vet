@@ -1,0 +1,196 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+    <ion-menu-button color="medium" menu="start" auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>vet-form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="isLoading" class="ion-text-center">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+  <ion-grid *ngIf="!isLoading">
+    <ion-row>
+      <ion-col>
+        <div class="vet-form-header">
+          <div class="vet-form-header-image">
+            <ion-img [src]="headerImage" alt=""></ion-img>
+          </div>
+          <div class="vet-form-header-description">
+            <h3>
+              {{ 'VET_FORM.HEADER_TEXT' | translate }}
+            </h3>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.DIAG_CARD.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.DIAG_CARD.BODY_TEXT' | translate }}</p>
+                <form [formGroup]="diagnosisForm">
+                  <mat-form-field>
+                    <mat-label>{{ 'VET_FORM.ADD_DIAGNOSIS' | translate }}</mat-label>
+                    <input [matAutocomplete]="auto"
+                           [maxlength]="'20'"
+                           autocomplete="off"
+                           formControlName="diagnosis"
+                           matInput
+                           type="text">
+
+                    <mat-autocomplete #auto="matAutocomplete"
+                                      [displayWith]="displayLabel"
+                                      [panelWidth]="300"
+                                      autoActiveFirstOption
+                    >
+                      <mat-option
+                        *ngFor="let option of (filteredDiagnosis | async)"
+                        (onSelectionChange)="onValueChange($event, 'diagnosis')"
+                        [value]="option">
+                        {{ option.name }}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </form>
+                <ion-button expand="full" color="secondary"
+                            [disabled]="!selectedDiagnosis"
+                            (click)="onAddElement('diag')"
+                >
+                  {{ 'VET_FORM.ADD' | translate }}
+                </ion-button>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ul *ngIf="diags">
+                  <li *ngFor="let el of diags" (click)="removeEl(el, 'diag')">
+                    <div class="name">- {{ el.name }}</div>
+                    <div class="trash-bin">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </div>
+                  </li>
+                </ul>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.OWNER.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.OWNER.BODY_TEXT' | translate }}</p>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-textarea rows="8" cols="20"
+                              [ngModel]="ownerText"
+                              placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+                ></ion-textarea>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card weight-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.WEIGHT.HEADLINE' | translate }}</h3>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <mat-form-field class="full med-input">
+                  <mat-label>{{ 'VET_FORM.WEIGHT.LABEL' | translate }}</mat-label>
+                  <input [(ngModel)]="petWeight"
+                         matInput
+                         step="any" type="number">
+                  <span matSuffix>{{ 'VET_FORM.WEIGHT.UNIT' | translate }}</span>
+                </mat-form-field>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h2>{{ 'VET_FORM.THERAPY_INSTRUCTIONS' | translate }}</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.MEDICATION.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.MEDICATION.BODY_TEXT' | translate }}</p>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-textarea rows="8" cols="20"
+                              [ngModel]="medicationText"
+                              placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+                ></ion-textarea>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col sizeXs="12" sizeSm="6">
+        <ion-card class="vet-form-card double-card">
+          <ion-card-content>
+            <h3>{{ 'VET_FORM.MONITORING.HEADLINE' | translate }}</h3>
+            <p class="body-text">{{ 'VET_FORM.MONITORING.BODY_TEXT' | translate }}</p>
+            <ion-textarea rows="8" cols="20"
+                          [ngModel]="monitoringText"
+                          placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+            ></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col sizeXs="12" sizeSm="6">
+        <ion-card class="vet-form-card double-card">
+          <ion-card-content>
+            <h3>{{ 'VET_FORM.MANAGEMENT.HEADLINE' | translate }}</h3>
+            <p class="body-text">{{ 'VET_FORM.MANAGEMENT.BODY_TEXT' | translate }}</p>
+            <ion-textarea rows="8" cols="20"
+                          [ngModel]="managementText"
+                          placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+            ></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col sizeXs="12" sizeSm="8" offsetSm="2">
+        <ion-button expand="full" color="secondary"
+                    (click)="onSaveDocument()"
+        >
+          {{ 'VET_FORM.SAVE_BUTTON' | translate }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

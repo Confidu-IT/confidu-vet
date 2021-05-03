@@ -114,8 +114,9 @@
               class="export-button"
               color="secondary"
               expand="full"
+              (click)="goToForm()"
             >
-              Exportoptionen
+              {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
             </ion-button>
           </ion-card-content>
         </ion-card>
@@ -124,6 +125,7 @@
 
     <ion-row *ngIf="!isLoading" class="ion-hide-md-down">
       <ion-col size="6">
+
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -214,8 +216,9 @@
               class="export-button"
               color="secondary"
               expand="full"
+              (click)="goToForm()"
             >
-              Exportoptionen
+              {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
             </ion-button>
           </ion-card-content>
         </ion-card>

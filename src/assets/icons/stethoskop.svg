@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="117" height="117" viewBox="0 0 117 117">
+  <g id="Gruppe_24880" data-name="Gruppe 24880" transform="translate(-1190.816 174)">
+    <g id="Gruppe_5135" data-name="Gruppe 5135" transform="translate(1190.816 -174)">
+      <g id="Gruppe_3318" data-name="Gruppe 3318" transform="translate(0 0)">
+        <g id="Ellipse_108" data-name="Ellipse 108" transform="translate(0 0)" fill="none" stroke="#21c0ff" stroke-width="3">
+          <circle cx="58.5" cy="58.5" r="58.5" stroke="none"/>
+          <circle cx="58.5" cy="58.5" r="57" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g id="Gruppe_9941" data-name="Gruppe 9941" transform="translate(1227.979 -141.276)">
+      <ellipse id="Ellipse_1751" data-name="Ellipse 1751" cx="4.999" cy="4.999" rx="4.999" ry="4.999" transform="translate(33.854 28.855)" fill="none" stroke="#21c0ff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <g id="Gruppe_7764" data-name="Gruppe 7764" transform="translate(0 0)">
+        <path id="Pfad_8288" data-name="Pfad 8288" d="M31.4,2V13.588a15.615,15.615,0,0,1-15.45,15.45h0A15.615,15.615,0,0,1,.5,13.588V2" transform="translate(-0.5 1.408)" fill="none" stroke="#21c0ff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Pfad_8289" data-name="Pfad 8289" d="M5.5,12.315H2.318A1.955,1.955,0,0,1,.5,10.5V2.318A1.955,1.955,0,0,1,2.318.5H5.5A1.955,1.955,0,0,1,7.316,2.318V10.5A1.955,1.955,0,0,1,5.5,12.315Z" transform="translate(-0.5 -0.5)" fill="none" stroke="#21c0ff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Pfad_8290" data-name="Pfad 8290" d="M16.1,12.315H12.918A1.955,1.955,0,0,1,11.1,10.5V2.318A1.955,1.955,0,0,1,12.918.5H16.1a1.955,1.955,0,0,1,1.818,1.818V10.5A1.792,1.792,0,0,1,16.1,12.315Z" transform="translate(12.984 -0.5)" fill="none" stroke="#21c0ff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+      <path id="Pfad_8291" data-name="Pfad 8291" d="M30.575,22.934A11.636,11.636,0,0,1,18.988,34.521h0A11.636,11.636,0,0,1,7.4,22.934V14.3" transform="translate(8.277 17.055)" fill="none" stroke="#21c0ff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

@@ -73,13 +73,17 @@ export class CareCardListPage {
         this.doManual = values.MANUAL;
       });
 
+
     this.subscription = this.userAuth.user$.pipe(
       tap(user => {
+        if (!user) {
+          this.router.navigateByUrl('/');
+        }
         this.user = user;
       }),
       switchMap(user => {
         this.user = user;
-        return this.commonService.getContent(this.key, this.user.za, this.petId, this.userId);
+        return this.commonService.getCareCardlistContent(this.key, this.user.za, this.petId, this.userId);
       })
     ). subscribe(data => {
       console.log('data', data);
@@ -96,10 +100,8 @@ export class CareCardListPage {
     });
   }
 
-  public onClickLink(list: string, key: string, venom: string, id: string): void {
-    const url = '';
-    // const url = `pets/pet-care-card-detail/${key}/${list}/${venom}/${id}/${this.label}`;
-    // console.log('url', url);
+  public onClickLink(list: string, key: string, venom: string, lvl3Id: string): void {
+    const url = `pets/pet-care-card-detail/${key}/${list}/${venom}/${this.userId}/${this.petId}/${lvl3Id}/${this.label}`;
     this.router.navigateByUrl(url);
   }
 
@@ -113,6 +115,7 @@ export class CareCardListPage {
       link,
       `user-docs`,
       this.petId,
+      this.userId,
       this.user.za
     ).subscribe(data => {
       if (data) {
