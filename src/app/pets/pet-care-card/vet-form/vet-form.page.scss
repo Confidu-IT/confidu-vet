@@ -1,4 +1,8 @@
+* {
+  color: rgba(0,0,0,.87);
+}
 .vet-form {
+
   &-header {
     display: flex;
     align-items: center;
@@ -16,7 +20,7 @@
     }
 
     &-description h3 {
-      color: rgb(102, 102, 102);
+      //color: rgb(102, 102, 102);
       font-size: 25px;
       margin: 0;
       padding-left: 32px;
@@ -61,7 +65,7 @@
 
     .body-text {
       font-size: 20px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     ion-textarea {
@@ -124,7 +128,7 @@
 }
 
 h2 {
-  color: rgb(180,180,180);
+  color: rgb(115,115,115);
   font-size: 26px;
   font-weight: 500;
   margin: 32px 24px 8px;
@@ -153,10 +157,17 @@ mat-form-field {
 }
 
 mat-label {
-  color: #cecece;
+  color: #aaa;
   font-size: 20px;
   //line-height: 20px;
   //padding-bottom: 20px;
+}
+
+
+mat-expansion-panel-header {
+  font-size: 22px;
+  font-weight: bold;
+  height: 120px;
 }
 
 ion-item {
@@ -176,4 +187,40 @@ ion-datetime {
 .no-border {
   border-bottom: none;
   margin-bottom: 0;
+}
+
+
+.user-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: flex;
+    .label {
+      font-weight: 500;
+      padding-right: 32px;
+    }
+
+    .lower-case {
+      text-transform: lowercase;
+    }
+  }
+}
+
+.description-list {
+  list-style: none;
+  margin-top: 0 !important;
+  padding-left: 0;
+
+  li {
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 6px;
+
+    span {
+      color: #000;
+    }
+  }
 }

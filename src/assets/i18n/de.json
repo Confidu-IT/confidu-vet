@@ -1147,6 +1147,7 @@
     "THERAPY_INSTRUCTIONS": "Therapieanweisungen für Halter:innen ",
     "ENTER_TEXT": "Bitte hier schreiben…",
     "ADD": "Hinzufügen",
+    "CHOOSE": "Auswählen",
     "ADD_MED": "Präparat eingeben",
     "DATE_TIME_BTNS_CANCEL": "Abbrechen",
     "DATE_TIME_BTNS_DONE": "Übernehmen",
@@ -1179,6 +1180,28 @@
     "MANAGEMENT": {
       "HEADLINE": "Management",
       "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    },
+    "URGENCY": {
+      "HEADLINE": "Dringlichkeit"
+    },
+    "THERAPY": {
+      "HEADLINE": "Therapiemöglichkeit"
+    },
+    "FEEDING": {
+      "HEADLINE": "Fütterung",
+      "FOOD_LABEL": "Futter wählen",
+      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    },
+    "USER": {
+      "HEADLINE": "Halter:innendaten",
+      "PET": "Haustier",
+      "BIRTHDAY": "geb."
+    },
+    "PRODUCTS": {
+      "HEADLINE": "Produkte",
+      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "CHOOSE_CATEGORY": "Kategorie auswählen",
+      "CHOOSE_PRODUCT": "Produkt auswählen"
     }
   }
 }

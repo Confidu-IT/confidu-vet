@@ -30,6 +30,35 @@
 
     <ion-row>
       <ion-col>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ 'VET_FORM.USER.HEADLINE' | translate }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ion-row>
+            <ion-col size="12" sizeSm="6">
+              <ul class="user-list">
+                <li>
+                  <div class="label">{{ 'VET_FORM.USER.PET' | translate }}:</div>
+                  <div class="text">
+                    <span>{{ pet?.name }}, </span>
+                    <span>{{ pet?.species.label.de }}, </span>
+                    <span class="lower-case">{{ pet?.gender.label.de }}, </span>
+                    <span class="lower-case">{{ pet?.castration.label.de }}, </span>
+                    <span>{{ 'VET_FORM.USER.BIRTHDAY' | translate }} </span>
+                    <span>{{ pet?.birthday | date:'dd.mm.yyyy' }} </span>
+                  </div>
+                </li>
+              </ul>
+            </ion-col>
+          </ion-row>
+        </mat-expansion-panel>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
         <ion-card class="vet-form-card">
           <ion-card-content>
             <ion-row>
@@ -78,6 +107,41 @@
                 </ul>
               </ion-col>
             </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col sizeXs="12" sizeSm="6">
+        <ion-card class="vet-form-card double-card">
+          <ion-card-content>
+            <h3>{{ 'VET_FORM.URGENCY.HEADLINE' | translate }}</h3>
+            <mat-form-field>
+              <mat-label>{{ 'VET_FORM.CHOOSE' | translate }}</mat-label>
+              <mat-select
+                (selectionChange)="onPickUrgeny($event)">
+                <mat-option *ngFor="let item of urgencies" [value]="item">
+                  {{ item.label }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col sizeXs="12" sizeSm="6">
+        <ion-card class="vet-form-card double-card">
+          <ion-card-content>
+            <h3>{{ 'VET_FORM.THERAPY.HEADLINE' | translate }}</h3>
+            <mat-form-field>
+              <mat-label>{{ 'VET_FORM.CHOOSE' | translate }}</mat-label>
+              <mat-select
+                (selectionChange)="onPickTherapy($event)">
+                <mat-option *ngFor="let item of therapies" [value]="item">
+                  {{ item.label }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -141,6 +205,49 @@
               <ion-col sizeXs="12" sizeSm="6">
                 <h3>{{ 'VET_FORM.MEDICATION.HEADLINE' | translate }}</h3>
                 <p class="body-text">{{ 'VET_FORM.MEDICATION.BODY_TEXT' | translate }}</p>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-textarea rows="8" cols="20"
+                              [ngModel]="medicationText"
+                              placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+                ></ion-textarea>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.FEEDING.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.FEEDING.BODY_TEXT' | translate }}</p>
+                <mat-form-field>
+                  <mat-label>{{ 'VET_FORM.FEEDING.FOOD_LABEL' | translate }}</mat-label>
+                  <mat-select
+                    (selectionChange)="onPickFood($event)">
+                    <mat-option *ngFor="let item of food" [value]="item">
+                      {{ item.label }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <ul class="description-list" *ngIf="selectedFood" (click)="toggleFoodDescription()">
+                  <ng-container *ngIf="!longFoodDesc">
+                    <li *ngFor="let el of selectedFood.body">
+                      {{el | truncate:100}}
+                    </li>
+                  </ng-container>
+                  <ng-container *ngIf="longFoodDesc">
+                    <li *ngFor="let el of selectedFood.body">
+                      {{el}}
+                    </li>
+                  </ng-container>
+                </ul>
               </ion-col>
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"

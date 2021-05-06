@@ -12,11 +12,32 @@ export class FirebaseService {
   public medicationCollection: AngularFirestoreCollection;
   public findingsCollection: AngularFirestoreCollection;
   public diagnosisCollection: AngularFirestoreCollection;
+  public categoriesCollection: AngularFirestoreCollection;
+  public productsCollection: AngularFirestoreCollection;
 
 
   constructor(
     private afs: AngularFirestore
   ) { }
+
+  public getCategories(language: string, species: string): Observable<any[]> {
+    this.categoriesCollection =
+      this.afs.collection(
+        `sw-products-categorized/${language}/${species}`, ref => ref.orderBy('name', 'asc')
+      );
+    return this.categoriesCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => a.payload.doc.data()))
+    );
+  }
+
+  public getProductsToCategory(language: string, species: string, productKey: string): Observable<any[]> {
+    this.productsCollection = this.afs.collection(
+      `default-diseases-to-medication/${language}/${species}/${productKey}/data`
+    );
+    return this.productsCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => a.payload.doc.data()))
+    );
+  }
 
   public getScanDB(language: string, collection: string, species?: string): Observable<any[]> {
     if (collection === 'medication') {

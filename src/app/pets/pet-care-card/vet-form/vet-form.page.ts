@@ -26,11 +26,15 @@ export class VetFormPage {
   public diagnosis: any;
   public selectedDiagnosis: any;
 
-  public therapyForm: FormGroup;
-  public theraps = [];
-  public filteredTherapy: Observable<any[]>;
-  public therapy: any;
+  // public therapyForm: FormGroup;
+  // public theraps = [];
+  // public filteredTherapy: Observable<any[]>;
+  // public therapy: any;
+
+  public therapies: any;
+  public urgencies: any;
   public selectedTherapy: any;
+  public selectedUrgency: any;
 
   public findingsForm: FormGroup;
   public finds = [];
@@ -49,12 +53,20 @@ export class VetFormPage {
   public medicationText: string;
   public monitoringText: string;
   public managementText: string;
+  public feedingText: string;
+  public longFoodDesc = false;
+
+  public food: any;
+  public selectedFood: any;
+
+  public categories: any;
+  public products: any;
+  public selectedProduct: any;
 
   private subscription: Subscription;
   private readonly routeSub: Subscription;
   private params: any;
   private language: string;
-  private petId: string;
   private vetVisit: string;
 
 
@@ -81,16 +93,6 @@ export class VetFormPage {
             updateOn: 'change'
           })
         });
-        this.therapyForm = new FormGroup({
-          therapy: new FormControl(null, {
-            updateOn: 'change'
-          })
-        });
-        this.findingsForm = new FormGroup({
-          finding: new FormControl(null, {
-            updateOn: 'change'
-          })
-        });
       });
   }
 
@@ -112,24 +114,37 @@ export class VetFormPage {
         this.user = user;
       }),
       switchMap(() => this.commonService.getVetFormContent(this.params, this.user))
-    ).subscribe(data => {
-      console.log('data', data);
+    ).subscribe(result => {
+      console.log('result', result);
+      this.pet = result?.data?.pet;
+      this.food = result?.data?.diet?.data?.list;
+      this.therapies = result?.data?.teleTherapy?.data;
+      this.urgencies = result?.data?.urgency?.data;
 
-
-      //change this
-
-      this.pet = {
-        pet: {
-          species: {
-            value: 'dog'
-          }
-        }
-      };
       this.fetchMedications();
       this.fetchDiagnosis();
       this.isLoading = false;
     });
 
+  }
+
+  public onSaveDocument(): void {}
+
+  public onPickFood(event): void {
+    this.selectedFood = event.value;
+  }
+
+  public onPickUrgeny(event): void {
+    this.selectedUrgency = event.value;
+  }
+
+  public onPickTherapy(event): void {
+    this.selectedTherapy = event.value;
+  }
+
+  public toggleFoodDescription(): void {
+    this.longFoodDesc = this.longFoodDesc === false;
+    console.log('this.longFoodDesc', this.longFoodDesc);
   }
 
   public onAddElement(type: string): void {
@@ -145,20 +160,6 @@ export class VetFormPage {
       this.selectedDiagnosis = undefined;
       this.diagnosisForm.patchValue({ diagnosis: '' });
       console.log('diags', this.diags);
-    }
-
-    if (type === 'therapy') {
-      this.theraps.push(this.selectedTherapy);
-      this.selectedTherapy = undefined;
-      this.therapyForm.patchValue({ therapy: '' });
-      console.log('theraps', this.theraps);
-    }
-
-    if (type === 'findings') {
-      this.finds.push(this.selectedFinding);
-      this.selectedFinding = undefined;
-      this.findingsForm.patchValue({ finding: '' });
-      console.log('finds', this.finds);
     }
 
   }
@@ -193,12 +194,6 @@ export class VetFormPage {
     if (type === 'diag') {
       this.diags = this.diags.filter((value) => value !== el);
     }
-    if (type === 'therapy') {
-      this.theraps = this.theraps.filter((value) => value !== el);
-    }
-    if (type === 'findings') {
-      this.finds = this.finds.filter((value) => value !== el);
-    }
   }
 
   private _filter(name: string) {
@@ -207,7 +202,7 @@ export class VetFormPage {
   }
 
   private fetchMedications(): void {
-    this.firebaseService.getScanDB(this.language, 'medication', this.pet.pet.species.value)
+    this.firebaseService.getScanDB(this.language, 'medication', this.pet.species.value)
       .subscribe(med => {
         this.medications = med;
         if (this.medications?.length > 0) {
@@ -222,7 +217,7 @@ export class VetFormPage {
   }
 
   private fetchDiagnosis(): void {
-    this.firebaseService.getScanDB(this.language, 'diagnosis', this.pet.pet.species.value)
+    this.firebaseService.getScanDB(this.language, 'diagnosis', this.pet.species.value)
       .subscribe(data => {
         this.diagnosis = data;
         if (this.diagnosis?.length > 0) {
@@ -236,14 +231,12 @@ export class VetFormPage {
       });
   }
 
-  public onSaveDocument(): void {}
+
 
 
   ionViewWillLeave() {
     this.meds = undefined;
     this.diags = undefined;
-    this.theraps = undefined;
-    this.finds = undefined;
 
     if (this.subscription) {
       this.subscription.unsubscribe();

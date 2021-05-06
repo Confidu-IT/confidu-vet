@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {TranslateModule} from '@ngx-translate/core';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {TruncatePipe} from '../../../pipes/truncate.pipe';
 
 @NgModule({
   imports: [
@@ -28,6 +29,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ReactiveFormsModule,
     VetFormPageRoutingModule
   ],
-  declarations: [VetFormPage]
+  declarations: [
+    VetFormPage,
+    TruncatePipe,
+  ],
+  exports: [
+    TruncatePipe
+  ]
 })
 export class VetFormPageModule {}

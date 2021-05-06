@@ -37,8 +37,20 @@ ion-button {
   font-size: 20px;
 }
 
+// vet form
+
 .vet-form-card {
   .mat-form-field {
     font-size: 20px;
   }
+}
+
+
+
+.mat-expansion-indicator::after {
+  padding: 5px !important;
+}
+
+.mat-expansion-panel-content {
+  font-size: 20px !important;
 }
