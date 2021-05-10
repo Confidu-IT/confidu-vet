@@ -24,6 +24,7 @@ export class PetCareCardPage {
   private subscription: Subscription;
   private readonly routeSub: Subscription;
   private params: any;
+  breed: any;
 
   constructor(
     private translateService: TranslateService,

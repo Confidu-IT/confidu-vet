@@ -140,4 +140,24 @@ export class CommonService {
     };
     return this.http.post(url, body, { headers });
   }
+
+  public submitForm(
+    params: any,
+    user: any,
+    appointmentID: string,
+    result: any
+  ): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/vet/forms/submit`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': user.za
+    };
+    const body = {
+      appointmentId: appointmentID,
+      petId: params.petId,
+      uid: params.userId,
+      data: result
+    };
+    return this.http.post(url, body, {headers});
+  }
 }

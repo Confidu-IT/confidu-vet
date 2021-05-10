@@ -12,7 +12,7 @@
   <div *ngIf="isLoading" class="ion-text-center">
     <ion-spinner color="primary"></ion-spinner>
   </div>
-  <ion-grid *ngIf="!isLoading">
+  <ion-grid *ngIf="!isLoading" class="vet-form">
     <ion-row>
       <ion-col>
         <div class="vet-form-header">
@@ -40,6 +40,12 @@
             <ion-col size="12" sizeSm="6">
               <ul class="user-list">
                 <li>
+                  <div class="label">{{ 'VET_FORM.USER.OWNER' | translate }}:</div>
+                  <div class="text">
+                    {{ owner?.firstName }} {{ owner?.lastName }}
+                  </div>
+                </li>
+                <li>
                   <div class="label">{{ 'VET_FORM.USER.PET' | translate }}:</div>
                   <div class="text">
                     <span>{{ pet?.name }}, </span>
@@ -49,6 +55,16 @@
                     <span>{{ 'VET_FORM.USER.BIRTHDAY' | translate }} </span>
                     <span>{{ pet?.birthday | date:'dd.mm.yyyy' }} </span>
                   </div>
+                </li>
+                <li *ngIf="owner?.images">
+                  <div class="label">
+                    {{ 'VET_FORM.USER.ATTACHMENTS' | translate }}:
+                  </div>
+                  <ul class="attachment-list">
+                    <li class="f" *ngFor="let file of owner?.images">
+
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </ion-col>
@@ -76,7 +92,7 @@
                            type="text">
 
                     <mat-autocomplete #auto="matAutocomplete"
-                                      [displayWith]="displayLabel"
+                                      [displayWith]="displayLabelDiag"
                                       [panelWidth]="300"
                                       autoActiveFirstOption
                     >
@@ -158,7 +174,8 @@
               </ion-col>
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
-                              [ngModel]="ownerText"
+                              auto-grow="true"
+                              (ionChange)="ownerText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
               </ion-col>
@@ -193,6 +210,57 @@
 
     <ion-row>
       <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.PRODUCTS.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.PRODUCTS.BODY_TEXT' | translate }}</p>
+                <mat-form-field>
+                  <mat-label>{{ 'VET_FORM.PRODUCTS.CHOOSE_CATEGORY' | translate }}</mat-label>
+                  <mat-select
+                    (selectionChange)="onPickCategory($event)">
+                    <mat-option *ngFor="let item of categories" [value]="item">
+                      {{ item.categoryName }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <form [formGroup]="productsForm">
+                  <mat-form-field>
+                    <mat-label>{{ 'VET_FORM.PRODUCTS.CHOOSE_PRODUCT' | translate }}</mat-label>
+                    <mat-select
+                      (selectionChange)="onValueChange($event, 'product')">
+                      <mat-option *ngFor="let item of products" [value]="item">
+                        {{ item.medName }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </form>
+                <ion-button expand="full" color="secondary"
+                            [disabled]="!selectedProduct"
+                            (click)="onAddElement('product')"
+                >
+                  {{ 'VET_FORM.ADD' | translate }}
+                </ion-button>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ul *ngIf="diags">
+                  <li *ngFor="let el of prods" (click)="removeEl(el, 'product')">
+                    <div class="name">- {{ el.medName }}</div>
+                    <div class="trash-bin">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </div>
+                  </li>
+                </ul>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
         <h2>{{ 'VET_FORM.THERAPY_INSTRUCTIONS' | translate }}</h2>
       </ion-col>
     </ion-row>
@@ -208,7 +276,8 @@
               </ion-col>
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
-                              [ngModel]="medicationText"
+                              auto-grow="true"
+                              (ionChange)="medicationText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
               </ion-col>
@@ -251,7 +320,52 @@
               </ion-col>
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
-                              [ngModel]="medicationText"
+                              auto-grow="true"
+                              (ionChange)="foodText = $event.target['value']"
+                              placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+                ></ion-textarea>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.ACTIVITY.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.ACTIVITY.BODY_TEXT' | translate }}</p>
+                <mat-form-field>
+                  <mat-label>{{ 'VET_FORM.ACTIVITY.ACTIVITY_LABEL' | translate }}</mat-label>
+                  <mat-select
+                    (selectionChange)="onPickActivity($event)">
+                    <mat-option *ngFor="let item of activities" [value]="item">
+                      {{ item.label }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <ul class="description-list" *ngIf="selectedActivity" (click)="toggleActivityDescription()">
+                  <ng-container *ngIf="!longActivityDesc">
+                    <li *ngFor="let el of selectedActivity.body">
+                      {{el | truncate:100}}
+                    </li>
+                  </ng-container>
+                  <ng-container *ngIf="longActivityDesc">
+                    <li *ngFor="let el of selectedActivity.body">
+                      {{el}}
+                    </li>
+                  </ng-container>
+                </ul>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-textarea rows="8" cols="20"
+                              auto-grow="true"
+                              (ionChange)="activityText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
               </ion-col>
@@ -268,7 +382,8 @@
             <h3>{{ 'VET_FORM.MONITORING.HEADLINE' | translate }}</h3>
             <p class="body-text">{{ 'VET_FORM.MONITORING.BODY_TEXT' | translate }}</p>
             <ion-textarea rows="8" cols="20"
-                          [ngModel]="monitoringText"
+                          auto-grow="true"
+                          (ionChange)="monitoringText = $event.target['value']"
                           placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
             ></ion-textarea>
           </ion-card-content>
@@ -280,9 +395,38 @@
             <h3>{{ 'VET_FORM.MANAGEMENT.HEADLINE' | translate }}</h3>
             <p class="body-text">{{ 'VET_FORM.MANAGEMENT.BODY_TEXT' | translate }}</p>
             <ion-textarea rows="8" cols="20"
-                          [ngModel]="managementText"
+                          auto-grow="true"
+                          (ionChange)="managementText = $event.target['value']"
                           placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
             ></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                <div class="footer">
+                  <div class="cons-nr">
+                    <span>{{ 'VET_FORM.FOOTER.CONS_NUMBER' | translate }}</span>
+                    {{ owner?.appointmentID }}
+                  </div>
+                  <div class="vet">
+                    <span>{{ 'VET_FORM.FOOTER.VET' | translate }}</span>
+                    {{ vet?.firstName }} {{ vet?.lastName }}
+                  </div>
+                  <div class="date">
+                    <span>{{ 'VET_FORM.FOOTER.DATE' | translate }}</span>
+                    {{ owner?.appointmentDate }}, {{ owner?.appointmentTime }}-{{ owner?.appointmentEndTime }} {{
+                    'VET_FORM.FOOTER.TIME' | translate }}
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -297,7 +441,6 @@
         </ion-button>
       </ion-col>
     </ion-row>
-
 
   </ion-grid>
 </ion-content>

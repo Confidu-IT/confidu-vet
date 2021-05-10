@@ -1143,7 +1143,7 @@
   },
   "VET_FORM": {
     "HEADER_TEXT": "Bericht zur Telekonsultation",
-    "SAVE_BUTTON": "PROTOKOLL SPEICEHERN",
+    "SAVE_BUTTON": "PROTOKOLL SPEICHERN",
     "THERAPY_INSTRUCTIONS": "Therapieanweisungen für Halter:innen ",
     "ENTER_TEXT": "Bitte hier schreiben…",
     "ADD": "Hinzufügen",
@@ -1157,12 +1157,12 @@
     "PROGRESS": "Weiter",
     "REPEAT": "Wiederholen",
     "DIAG_CARD": {
-      "HEADLINE": "Diagnose/n",
-      "BODY_TEXT": "Bitte wählen Sie die Diagnose aus und fügen Sie sie der Auswahl hinzu. Wenn Sie mehrere Diagnosen festgestellt haben, können Sie diese ebenfalls hinzufügen."
+      "HEADLINE": "Diagnose",
+      "BODY_TEXT": "Wählen Sie eine oder mehrere Diagnosen aus und fügen Sie sie der Auswahl hinzu."
     },
     "OWNER": {
       "HEADLINE": "Besitzer:innenangaben",
-      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "BODY_TEXT": "Geben Sie die Anamnesedaten und Untersuchungsbefunde ein."
     },
     "WEIGHT": {
       "HEADLINE": "Gewicht des Tieres",
@@ -1171,37 +1171,52 @@
     },
     "MEDICATION": {
       "HEADLINE": "Medikation",
-      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "BODY_TEXT": "Tragen Sie die Behandlungsanweisungen zu den ausgewählten Präparaten ein, die über die Dosis und Anwendungsdauer hinausgehen (diese werden im Medikamentenplan angezeigt)."
     },
     "MONITORING": {
       "HEADLINE": "Diagnostik und Monitoring",
-      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "BODY_TEXT": "Beschreiben Sie das weitere Vorgehen bezüglich medizinischer Tests. Erläutern Sie zudem, wenn auf bestimmte Symptome geachtet werden sollen und was bei deren Auftreten getan werden soll. Management: Geben Sie weitere Hinweise, was neben den oben genannten Maßnahmen getan werden kann, um dem Patienten zu helfen. Hier können z.B. die Themen Pflege und Haltung angesprochen werden. Tickets: Wählen Sie Erinnerungen für den/die Besitzer:in aus."
     },
     "MANAGEMENT": {
       "HEADLINE": "Management",
-      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "BODY_TEXT": ""
     },
     "URGENCY": {
-      "HEADLINE": "Dringlichkeit"
+      "HEADLINE": "Dringlichkeit",
+      "BODY_TEXT": "Stufen Sie ein, wie dringlich der Handlungsbedarf ist."
     },
     "THERAPY": {
-      "HEADLINE": "Therapiemöglichkeit"
+      "HEADLINE": "Therapiemöglichkeit",
+      "BODY_TEXT": "Wählen Sie aus, ob Zuhause behandelt werden kann oder eine Tierarztpraxis aufgesucht werden sollte."
     },
     "FEEDING": {
       "HEADLINE": "Fütterung",
       "FOOD_LABEL": "Futter wählen",
-      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      "BODY_TEXT": "Wählen Sie eine spezielle Diät aus und ergänzen Sie diese gegebenenfalls mit Fütterungsanweisungen. Wenn die vorbelegten Diäten nicht passen, können Sie durch Auswählen von „Spezielle Diät“ zu einer Fütterungsberatung raten."
+    },
+    "ACTIVITY": {
+      "HEADLINE": "Aktivität",
+      "ACTIVITY_LABEL": "Aktivitätsgrad",
+      "BODY_TEXT": "Passen Sie das Aktivitätslevel entsprechend der Diagnose an. Geben Sie ergänzend Hinweise, wenn gewünscht."
     },
     "USER": {
-      "HEADLINE": "Halter:innendaten",
+      "HEADLINE": "Halter:innenangaben",
+      "OWNER": "Halter:in",
       "PET": "Haustier",
-      "BIRTHDAY": "geb."
+      "BIRTHDAY": "geb.",
+      "ATTACHMENTS": "Anlagen"
     },
     "PRODUCTS": {
       "HEADLINE": "Produkte",
-      "BODY_TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "BODY_TEXT": "Wählen Sie die für die Behandlung benötigten Medikamente, Medizintests, Ergänzungsfuttermittel und weitere Produkte aus. Die Medikamente sind entsprechend der Anwendung und Dosierung gekennzeichnet, wenn es über eine einmalige Anwendung hinausgeht. Die benötigte Menge wird auf Grundlage der Körpermasse ermittelt.",
       "CHOOSE_CATEGORY": "Kategorie auswählen",
       "CHOOSE_PRODUCT": "Produkt auswählen"
+    },
+    "FOOTER": {
+      "CONS_NUMBER": "Konsultationsnr:",
+      "VET": "Tierarzt:",
+      "DATE": "Termin:",
+      "TIME": "Uhr"
     }
   }
 }

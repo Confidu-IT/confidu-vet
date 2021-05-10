@@ -1,8 +1,8 @@
-* {
-  color: rgba(0,0,0,.87);
-}
+//* {
+//  color: rgba(0,0,0,.87);
+//}
 .vet-form {
-
+  color: rgba(0,0,0,.87);
   &-header {
     display: flex;
     align-items: center;
@@ -196,6 +196,7 @@ ion-datetime {
 
   li {
     display: flex;
+    margin-bottom: 16px;
     .label {
       font-weight: 500;
       padding-right: 32px;
@@ -203,6 +204,23 @@ ion-datetime {
 
     .lower-case {
       text-transform: lowercase;
+    }
+  }
+}
+
+.attachment-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 8px;
+
+    .label {
+      font-weight: 500;
+      width: 115px;
+    }
+    span {
+      margin-right: 6px;
     }
   }
 }
@@ -222,5 +240,16 @@ ion-datetime {
     span {
       color: #000;
     }
+  }
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 21px;
+
+  span {
+    font-weight: 500;
   }
 }

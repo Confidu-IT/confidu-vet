@@ -23,7 +23,7 @@ export class FirebaseService {
   public getCategories(language: string, species: string): Observable<any[]> {
     this.categoriesCollection =
       this.afs.collection(
-        `sw-products-categorized/${language}/${species}`, ref => ref.orderBy('name', 'asc')
+        `sw-products-categorized/${language}/${species}`, ref => ref.orderBy('categoryName', 'asc')
       );
     return this.categoriesCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => a.payload.doc.data()))
@@ -32,7 +32,7 @@ export class FirebaseService {
 
   public getProductsToCategory(language: string, species: string, productKey: string): Observable<any[]> {
     this.productsCollection = this.afs.collection(
-      `default-diseases-to-medication/${language}/${species}/${productKey}/data`
+      `sw-products-categorized/${language}/${species}/${productKey}/data`
     );
     return this.productsCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => a.payload.doc.data()))
