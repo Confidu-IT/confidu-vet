@@ -3,11 +3,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {TranslateService} from '@ngx-translate/core';
 import {CommonService} from '../../../services/common.service';
-import {ModalController} from '@ionic/angular';
-import {HttpClient} from '@angular/common/http';
 import {Subscription} from 'rxjs';
 import {switchMap, tap} from 'rxjs/operators';
 import {environment} from '../../../../environments/environment';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-care-card-list',
@@ -23,7 +22,7 @@ export class CareCardListPage {
   public listOpen = false;
   public imageZoom: boolean;
   public enlargedImg: string;
-  public enlargedPdf: string;
+  public enlargedPdf: any;
   public isImg: boolean;
   public isPdf: boolean;
   public doUpload: string;
@@ -50,6 +49,7 @@ export class CareCardListPage {
     private translateService: TranslateService,
     private commonService: CommonService,
     private router: Router,
+    private sanitizer: DomSanitizer
   ) {
     this.routeSub = this.activatedRoute.params
       .subscribe(params => {
@@ -125,7 +125,7 @@ export class CareCardListPage {
         const x = str.search('pdf');
         if (x !== -1) {
           this.isPdf = true;
-          this.enlargedPdf = data.url;
+          this.enlargedPdf = this.sanitizer.bypassSecurityTrustResourceUrl(data.url);
         } else {
           this.isImg = true;
           this.enlargedImg = data.url;

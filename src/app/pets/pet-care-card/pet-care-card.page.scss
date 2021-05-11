@@ -237,7 +237,8 @@ mat-panel-title {
 
 @media only screen and (min-width: 768px) {
   mat-expansion-panel {
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
+    padding-bottom: 0 !important;
   }
   mat-panel-title {
     font-size: 19px;
@@ -282,6 +283,17 @@ mat-panel-title {
   }
   .export-button {
     font-size: 16px;
+  }
+
+  mat-expansion-panel {
+    padding-bottom: unset;
+  }
+
+  mat-expansion-panel-header {
+    font-size: 22px;
+    font-weight: bold;
+    height: 120px;
+    margin-top: 0 !important;
   }
 }
 

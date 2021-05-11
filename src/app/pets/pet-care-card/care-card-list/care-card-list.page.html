@@ -2,7 +2,7 @@
   <ion-toolbar *ngIf="!imageZoom">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
-      <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
+      <ion-menu-button auto-hide="false" menu="start"></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
       <img [src]="logo" alt="" height="60">
@@ -10,7 +10,7 @@
   </ion-toolbar>
 
   <div *ngIf="imageZoom" class="image-toolbar">
-    <div class="close-button" (click)="closeImage()">
+    <div (click)="closeImage()" class="close-button">
       x
     </div>
   </div>
@@ -18,9 +18,10 @@
 
 <ion-content>
   <ion-grid>
-    <ion-spinner color="primary" *ngIf="isLoading"></ion-spinner>
+    <ion-spinner *ngIf="isLoading" color="primary"></ion-spinner>
+
     <ion-row>
-      <ion-col sizeSm="8" offsetSm="2" class="ion-padding" *ngIf="!isLoading && !imageZoom">
+      <ion-col *ngIf="!isLoading && !imageZoom" class="ion-padding" size="12" sizeMd="6">
         <div class="explanation">
           <img [src]="careCard?.image" alt="" width="32">
           <div>
@@ -28,18 +29,19 @@
             <p *ngFor="let text of careCard?.text" class="explanation-text">{{ text }}</p>
           </div>
         </div>
-
-        <div class="results" *ngIf="careCard?.currentList?.length < 1">
+      </ion-col>
+      <ion-col *ngIf="!isLoading && !imageZoom" class="ion-padding" size="12" sizeMd="6">
+        <div *ngIf="careCard?.currentList?.length < 1" class="results">
           <div class="no-result">
-            <img class="signal" [src]="careCard?.cc_signal" alt="" width="24">
+            <img [src]="careCard?.cc_signal" alt="" class="signal" width="24">
             <div>{{ careCard?.result }}</div>
           </div>
         </div>
 
-        <ul class="results" *ngIf="careCard?.currentList?.length > 0">
-          <li *ngFor="let result of careCard?.currentList"
-              (click)="onClickLink('currentList', result.level1_cc_key, result.venomKey,result.level3Id)">
-            <img class="signal" [src]="careCard?.cc_signal" alt="" width="24">
+        <ul *ngIf="careCard?.currentList?.length > 0" class="results">
+          <li (click)="onClickLink('currentList', result.level1_cc_key, result.venomKey,result.level3Id)"
+              *ngFor="let result of careCard?.currentList">
+            <img [src]="careCard?.cc_signal" alt="" class="signal" width="24">
             <div class="result">
               <div class="result-text">
                 <span *ngIf="result.label">{{ result.label }} </span>
@@ -51,8 +53,8 @@
           </li>
         </ul>
 
-        <div class="history-container" *ngIf="careCard?.terminatedList.length > 0">
-          <div class="history-container-header" (click)="openList()">
+        <div *ngIf="careCard?.terminatedList.length > 0" class="history-container">
+          <div (click)="openList()" class="history-container-header">
             <span>{{ 'CARE_CARD_LIST_PAGE.HISTORY' | translate }}</span>
             <ion-icon *ngIf="!listOpen" name="chevron-down-outline"></ion-icon>
             <ion-icon *ngIf="listOpen" name="chevron-up-outline"></ion-icon>
@@ -71,9 +73,9 @@
                   <span *ngIf="result.valB"><br>{{ result.valB }}</span>
 
                   <ng-container *ngIf="result.findings">
-                    <div class="doc"
+                    <div (click)="onOpenDocument(doc.docs[0])"
                          *ngFor="let doc of result.findings"
-                         (click)="onOpenDocument(doc.docs[0])">
+                         class="doc">
                         <span><img [src]="paperclip" alt="" height="18">
                           {{ 'CARE_CARD_LIST_PAGE.FINDING_PDF' | translate }}</span>
 
@@ -81,9 +83,9 @@
                   </ng-container>
 
                 </div>
-                <div *ngIf="result.level3Id"
-                     class="arrow-right"
-                     (click)="onClickLink('terminatedList', result.level1_cc_key, result.venomKey,result.level3Id)">
+                <div (click)="onClickLink('terminatedList', result.level1_cc_key, result.venomKey,result.level3Id)"
+                     *ngIf="result.level3Id"
+                     class="arrow-right">
                   <img [src]="chevron" alt="" height="22" width="22">
                 </div>
               </li>
@@ -91,13 +93,13 @@
           </ng-container>
         </div>
       </ion-col>
-
-      <ion-col *ngIf="imageZoom" sizeSm="8" offsetSm="2">
-        <img *ngIf="isImg" class="zoomed-image" [src]="enlargedImg" alt="">
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="imageZoom" offsetSm="2" sizeSm="8">
+        <img *ngIf="isImg" [src]="enlargedImg" alt="" class="zoomed-image">
         <ng-container *ngIf="isPdf">
-          <pdf-viewer [src]="enlargedPdf"
-                      [original-size]="false"
-          ></pdf-viewer>
+          <object [data]="enlargedPdf" type="application/pdf">
+          </object>
         </ng-container>
       </ion-col>
     </ion-row>

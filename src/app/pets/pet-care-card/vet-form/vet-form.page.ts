@@ -7,6 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {FirebaseService} from '../../../services/firebase.service';
 import {map, startWith, switchMap, tap} from 'rxjs/operators';
 import {environment} from '../../../../environments/environment';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vet-form',
@@ -16,6 +17,8 @@ import {environment} from '../../../../environments/environment';
 export class VetFormPage {
   public headerImage = '../../../../assets/icons/stethoskop.svg';
   public logo = environment.logo;
+  public iconPath = '../../../../assets/icons/care-card';
+  public paperclip = `${this.iconPath}/clip.svg`;
 
   public diagnosisForm: FormGroup;
   public diags = [];
@@ -64,6 +67,12 @@ export class VetFormPage {
 
   public answer: any;
 
+  public imageZoom: boolean;
+  public enlargedImg: string;
+  public enlargedPdf: any;
+  public isImg: boolean;
+  public isPdf: boolean;
+
   private subscription: Subscription;
   private readonly routeSub: Subscription;
   private params: any;
@@ -76,7 +85,8 @@ export class VetFormPage {
     private activatedRoute: ActivatedRoute,
     private commonService: CommonService,
     private firebaseService: FirebaseService,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private sanitizer: DomSanitizer
   ) {
     this.routeSub = this.activatedRoute.params
       .subscribe(params => {
@@ -222,6 +232,36 @@ export class VetFormPage {
         managementText: null
       };
     });
+  }
+
+  public onOpenDocument(link: string) {
+    console.log('link', link);
+    this.commonService.getSecureLink(
+      link,
+      `user-docs`,
+      this.params.petId,
+      this.params.userId,
+      this.user.za
+    ).subscribe(data => {
+      if (data) {
+        const str = data.url;
+        const x = str.search('pdf');
+        if (x !== -1) {
+          this.isPdf = true;
+          this.enlargedPdf = this.sanitizer.bypassSecurityTrustResourceUrl(data.url);
+        } else {
+          this.isImg = true;
+          this.enlargedImg = data.url;
+        }
+        this.imageZoom = true;
+      }
+    });
+
+  }
+
+  public closeImage(): void {
+    this.imageZoom = false;
+    this.enlargedImg = null;
   }
 
   public onPickFood(event): void {

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar *ngIf="!imageZoom">
     <ion-buttons slot="start">
     <ion-back-button defaultHref="/"></ion-back-button>
     <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
@@ -8,13 +8,19 @@
       <img [src]="logo" alt="" height="60">
     </ion-title>
   </ion-toolbar>
+
+  <div *ngIf="imageZoom" class="image-toolbar">
+    <div class="close-button" (click)="closeImage()">
+      x
+    </div>
+  </div>
 </ion-header>
 
 <ion-content>
   <div *ngIf="isLoading" class="ion-text-center">
     <ion-spinner color="primary"></ion-spinner>
   </div>
-  <ion-grid *ngIf="!isLoading" class="vet-form">
+  <ion-grid *ngIf="!isLoading && !imageZoom" class="vet-form">
     <ion-row>
       <ion-col>
         <div class="vet-form-header">
@@ -63,8 +69,11 @@
                     {{ 'VET_FORM.USER.ATTACHMENTS' | translate }}:
                   </div>
                   <ul class="attachment-list">
-                    <li class="f" *ngFor="let file of owner?.images">
-
+                    <li class="f" *ngFor="let file of owner?.images" (click)="onOpenDocument(file)">
+                       <span>
+                          <img [src]="paperclip" alt="" height="18">
+                         {{ 'CARE_CARD_LIST_PAGE.FINDING_PDF' | translate }}
+                        </span>
                     </li>
                   </ul>
                 </li>
@@ -444,5 +453,17 @@
       </ion-col>
     </ion-row>
 
+  </ion-grid>
+
+  <ion-grid *ngIf="imageZoom">
+    <ion-row>
+      <ion-col offsetSm="2" sizeSm="8">
+        <img *ngIf="isImg" [src]="enlargedImg" alt="" class="zoomed-image">
+        <ng-container *ngIf="isPdf">
+          <object [data]="enlargedPdf" type="application/pdf">
+          </object>
+        </ng-container>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>

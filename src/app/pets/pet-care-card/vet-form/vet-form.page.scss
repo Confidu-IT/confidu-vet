@@ -210,17 +210,24 @@ ion-datetime {
 
 .attachment-list {
   list-style: none;
+  margin-bottom: 0;
   padding-left: 0;
 
   li {
-    margin-bottom: 8px;
+    cursor: pointer;
+    margin-bottom: 12px;
 
     .label {
       font-weight: 500;
       width: 115px;
     }
+
+    img {
+      padding-right: 8px;
+    }
     span {
-      margin-right: 6px;
+      font-size: 16px;
+      //margin-right: 6px;
     }
   }
 }
@@ -252,4 +259,36 @@ ion-datetime {
   span {
     font-weight: 500;
   }
+}
+
+object {
+  height: 100vh;
+  width: 100%;
+}
+
+.zoomed-image {
+  max-width: 100%;
+}
+
+.image-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .close-button {
+    color: rgb(102,102,102);
+    font-size: 24px;
+    padding-right: 16px;
+    width: 28px;
+  }
+
+  .del-button {
+    padding-right: 8px;
+  }
+}
+
+.image-toolbar {
+  background: #fff;
+  border-bottom: 1px solid #cecece;
+  height: 65px;
 }
