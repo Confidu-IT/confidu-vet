@@ -525,3 +525,60 @@ ion-grid {
 .bcs {
   margin-bottom: 8px;
 }
+
+
+@media (min-width: 720px) {
+  .result-header-description {
+    h3 {
+      font-size: 25px;
+    }
+    .date {
+      font-size: 20px;
+    }
+
+  }
+
+  ion-card {
+    margin-bottom: 12px;
+  }
+
+  ion-card-content {
+    font-size: 18px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+
+    h4 {
+      font-size: 20px;
+    }
+
+    .text-body {
+      font-size: 18px;
+    }
+  }
+
+  .result-param-header {
+    .title {
+      font-size: 20px;
+    }
+  }
+
+  .chevrons {
+    ion-icon {
+      font-size: 22px;
+    }
+  }
+
+  .explanation-slider-content {
+    margin-top: 60px;
+
+    img {
+      height: 125px;
+    }
+
+    p {
+      height: 150px;
+      margin-top: 24px;
+      font-size: 18px;
+    }
+  }
+}

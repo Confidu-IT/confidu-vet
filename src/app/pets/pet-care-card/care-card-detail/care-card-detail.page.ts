@@ -27,6 +27,7 @@ export class CareCardDetailPage {
   public listOpenMedication = [];
   public listOpenMedicalTests = [];
   public explSliderOpen = false;
+  public logo = environment.logo;
 
   public slideOptions = {
     initialSlide: 0,

@@ -7,6 +7,7 @@ import {ModalController} from '@ionic/angular';
 import {HttpClient} from '@angular/common/http';
 import {Subscription} from 'rxjs';
 import {switchMap, tap} from 'rxjs/operators';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-care-card-list',
@@ -27,6 +28,7 @@ export class CareCardListPage {
   public isPdf: boolean;
   public doUpload: string;
   public doManual: string;
+  public logo = environment.logo;
 
   private subscription: Subscription;
   private readonly routeSub: Subscription;

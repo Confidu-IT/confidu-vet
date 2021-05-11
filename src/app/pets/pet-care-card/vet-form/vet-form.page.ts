@@ -6,6 +6,7 @@ import {CommonService} from '../../../services/common.service';
 import {TranslateService} from '@ngx-translate/core';
 import {FirebaseService} from '../../../services/firebase.service';
 import {map, startWith, switchMap, tap} from 'rxjs/operators';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-vet-form',
@@ -14,6 +15,7 @@ import {map, startWith, switchMap, tap} from 'rxjs/operators';
 })
 export class VetFormPage {
   public headerImage = '../../../../assets/icons/stethoskop.svg';
+  public logo = environment.logo;
 
   public diagnosisForm: FormGroup;
   public diags = [];

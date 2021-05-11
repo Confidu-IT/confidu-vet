@@ -5,6 +5,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {FirebaseService} from '../services/firebase.service';
 import {TranslateService} from '@ngx-translate/core';
 import {CommonService} from '../services/common.service';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomePage {
   public user: any;
   public language: string;
   public pets: any[];
+  public logo = environment.logo;
 
   private subscription: Subscription;
 

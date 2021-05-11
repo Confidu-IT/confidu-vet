@@ -173,3 +173,23 @@ h2 {
   border-bottom: 1px solid #cecece;
   height: 44px;
 }
+
+@media (min-width: 720px) {
+  .headline {
+    font-size: 22px;
+  }
+
+  .results {
+    font-size: 18px;
+  }
+
+  .result-date {
+    font-size: 16px;
+  }
+
+  .explanation-text {
+    margin: 0 0 20px 20px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}

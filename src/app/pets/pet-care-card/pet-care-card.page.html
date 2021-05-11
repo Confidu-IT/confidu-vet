@@ -1,9 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button color="medium" menu="start" auto-hide="false"></ion-menu-button>
+      <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>pet-care-card</ion-title>
+    <ion-title class="ion-text-center">
+      <img [src]="logo" alt="" height="60">
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -61,7 +63,7 @@
               </li>
               <li>
                 <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.BIRTHDAY' | translate }}</div>
-                <div class="value">{{ pet?.pet.birthday.seconds * 1000 | date: 'dd.MM.yyyy' }}</div>
+                <div class="value">{{ pet?.pet.birthday | date: 'dd. MM. yyyy' }}</div>
               </li>
               <li>
                 <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.ID' | translate }}</div>
@@ -103,23 +105,14 @@
             </mat-expansion-panel>
           </ng-container>
         </ng-container>
-        <ion-card class="export">
-          <ion-card-content>
-            <h3>CareCard exportieren</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              labore et dolore magna
-            </p>
-            <ion-button
-              class="export-button"
-              color="secondary"
-              expand="full"
-              (click)="goToForm()"
-            >
-              {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
-            </ion-button>
-          </ion-card-content>
-        </ion-card>
+        <ion-button
+          class="export-button"
+          color="secondary"
+          expand="full"
+          (click)="goToForm()"
+        >
+          {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
+        </ion-button>
       </ion-col>
     </ion-row>
 
@@ -161,7 +154,7 @@
               </li>
               <li>
                 <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.BIRTHDAY' | translate }}</div>
-                <div class="value">{{ pet?.pet.birthday.seconds * 1000 | date: 'dd. MM. yyyy' }}</div>
+                <div class="value">{{ pet?.pet.birthday | date: 'dd. MM. yyyy' }}</div>
               </li>
               <li>
                 <div class="label">{{ 'CARE_CARD_PAGE.BASE_DATA.LIST.ID' | translate }}</div>
@@ -205,23 +198,14 @@
             </mat-expansion-panel>
           </ng-container>
         </div>
-        <ion-card class="export">
-          <ion-card-content>
-            <h3>CareCard exportieren</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              labore et dolore magna
-            </p>
-            <ion-button
-              class="export-button"
-              color="secondary"
-              expand="full"
-              (click)="goToForm()"
-            >
-              {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
-            </ion-button>
-          </ion-card-content>
-        </ion-card>
+        <ion-button
+          class="export-button"
+          color="secondary"
+          expand="full"
+          (click)="goToForm()"
+        >
+          {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
+        </ion-button>
       </ion-col>
       <ion-col size="6">
         <div *ngIf="panels">

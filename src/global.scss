@@ -37,6 +37,16 @@ ion-button {
   font-size: 20px;
 }
 
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: #fff;
+}
+
+//::ng-deep .toolbar-title {
+//  display: flex;
+//  justify-content: center;
+//}
+
 // vet form
 
 .vet-form-card {

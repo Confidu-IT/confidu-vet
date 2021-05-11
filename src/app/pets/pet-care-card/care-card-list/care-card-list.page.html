@@ -2,9 +2,11 @@
   <ion-toolbar *ngIf="!imageZoom">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
-      <ion-menu-button color="medium" menu="start" auto-hide="false"></ion-menu-button>
+      <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ careCard?.headline }}</ion-title>
+    <ion-title class="ion-text-center">
+      <img [src]="logo" alt="" height="60">
+    </ion-title>
   </ion-toolbar>
 
   <div *ngIf="imageZoom" class="image-toolbar">
@@ -45,7 +47,7 @@
               </div>
               <div class="result-date">{{ careCard?.cc_date }} {{ result?.eventDate | date: 'dd.MM.yyyy' }}</div>
             </div>
-            <img [src]="chevron" alt="" height="16" width="16">
+            <img [src]="chevron" alt="" height="22" width="22">
           </li>
         </ul>
 
@@ -72,7 +74,7 @@
                     <div class="doc"
                          *ngFor="let doc of result.findings"
                          (click)="onOpenDocument(doc.docs[0])">
-                        <span><img [src]="paperclip" alt="" height="14">
+                        <span><img [src]="paperclip" alt="" height="18">
                           {{ 'CARE_CARD_LIST_PAGE.FINDING_PDF' | translate }}</span>
 
                     </div>
@@ -82,7 +84,7 @@
                 <div *ngIf="result.level3Id"
                      class="arrow-right"
                      (click)="onClickLink('terminatedList', result.level1_cc_key, result.venomKey,result.level3Id)">
-                  <img [src]="chevron" alt="" height="16" width="16">
+                  <img [src]="chevron" alt="" height="22" width="22">
                 </div>
               </li>
             </ul>

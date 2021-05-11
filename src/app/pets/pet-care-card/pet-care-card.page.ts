@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {of, Subscription} from 'rxjs';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {switchMap, tap} from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-pet-care-card',
@@ -20,11 +21,18 @@ export class PetCareCardPage {
   public baseDataImg: string;
   public iconPath = '../../../../assets/icons/care-card';
   public chevron = `${this.iconPath}/chevron-forward-outline.svg`;
+  public isCastrated: boolean;
+  public castrationLabel: string;
+  public hasId: boolean;
+  public noId: string;
+  public noData: string;
+  public breed: any;
+  public logo = environment.logo;
 
   private subscription: Subscription;
   private readonly routeSub: Subscription;
   private params: any;
-  breed: any;
+
 
   constructor(
     private translateService: TranslateService,
@@ -36,7 +44,6 @@ export class PetCareCardPage {
   ) {
     this.routeSub = this.activatedRoute.params
       .subscribe(params => {
-        console.log('params', params);
         this.params = params;
       });
   }
@@ -64,6 +71,14 @@ export class PetCareCardPage {
     ).subscribe(content => {
       console.log('content', content);
       this.panels = content.data;
+      this.pet = content.pet;
+      console.log('pet', this.pet)
+      const species = this.pet.pet.species.value === 'dog' ? 'hermann_gelb' : 'paula_gelb';
+      // eslint-disable-next-line no-eval
+      this.isCastrated = eval(this.pet.pet.castration.value);
+      this.hasId = this.pet.pet.petIdent;
+      this.breed = this.language === 'de' ? this.pet.pet.breed.data.name_de : this.pet.pet.breed.data.name_en;
+      this.baseDataImg = `${this.iconPath}/${species}.svg`;
       this.isLoading = false;
     });
   }
