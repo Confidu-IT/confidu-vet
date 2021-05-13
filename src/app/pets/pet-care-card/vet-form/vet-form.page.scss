@@ -193,13 +193,20 @@ ion-datetime {
 .user-list {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0;
 
   li {
     display: flex;
-    margin-bottom: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+
     .label {
       font-weight: 500;
-      padding-right: 32px;
+      width: 160px;
+    }
+
+    .text {
+
     }
 
     .lower-case {
@@ -215,7 +222,7 @@ ion-datetime {
 
   li {
     cursor: pointer;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     .label {
       font-weight: 500;

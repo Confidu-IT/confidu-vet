@@ -20,7 +20,14 @@
   <div *ngIf="isLoading" class="ion-text-center">
     <ion-spinner color="primary"></ion-spinner>
   </div>
-  <ion-grid *ngIf="!isLoading && !imageZoom" class="vet-form">
+  <ion-grid *ngIf="showEndState">
+    <ion-row>
+      <ion-col>
+        <h1>Bingo!</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="!isLoading && !imageZoom && !showEndState" class="vet-form">
     <ion-row>
       <ion-col>
         <div class="vet-form-header">
@@ -45,7 +52,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <ion-row>
-            <ion-col size="12" sizeSm="6">
+            <ion-col>
               <ul class="user-list">
                 <li>
                   <div class="label">{{ 'VET_FORM.USER.OWNER' | translate }}:</div>
@@ -63,6 +70,11 @@
                     <span>{{ 'VET_FORM.USER.BIRTHDAY' | translate }} </span>
                     <span>{{ pet?.birthday | date:'dd.mm.yyyy' }} </span>
                   </div>
+                </li>
+                <li *ngIf="owner?.notes" (click)="toggleAnnotations()">
+                  <div class="label">{{ 'VET_FORM.ANNOTATIONS' | translate }}:</div>
+                  <div class="text" *ngIf="!longAnnotations">{{ owner?.notes | truncate:100 }}</div>
+                  <div class="text" *ngIf="longAnnotations">{{ owner?.notes }}</div>
                 </li>
                 <li *ngIf="owner?.images">
                   <div class="label">
@@ -186,6 +198,7 @@
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
                               auto-grow="true"
+                              [(ngModel)]="ownerText"
                               (ionChange)="ownerText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
@@ -288,6 +301,7 @@
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
                               auto-grow="true"
+                              [(ngModel)]="medicationText"
                               (ionChange)="medicationText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
@@ -332,6 +346,7 @@
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
                               auto-grow="true"
+                              [(ngModel)]="foodText"
                               (ionChange)="foodText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
@@ -376,6 +391,7 @@
               <ion-col sizeXs="12" sizeSm="6">
                 <ion-textarea rows="8" cols="20"
                               auto-grow="true"
+                              [(ngModel)]="activityText"
                               (ionChange)="activityText = $event.target['value']"
                               placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
                 ></ion-textarea>
@@ -394,6 +410,7 @@
             <p class="body-text">{{ 'VET_FORM.MONITORING.BODY_TEXT' | translate }}</p>
             <ion-textarea rows="8" cols="20"
                           auto-grow="true"
+                          [(ngModel)]="monitoringText"
                           (ionChange)="monitoringText = $event.target['value']"
                           placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
             ></ion-textarea>
@@ -407,6 +424,7 @@
             <p class="body-text">{{ 'VET_FORM.MANAGEMENT.BODY_TEXT' | translate }}</p>
             <ion-textarea rows="8" cols="20"
                           auto-grow="true"
+                          [(ngModel)]="managementText"
                           (ionChange)="managementText = $event.target['value']"
                           placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
             ></ion-textarea>
@@ -447,6 +465,7 @@
       <ion-col sizeXs="12" sizeSm="8" offsetSm="2">
         <ion-button expand="full" color="secondary"
                     (click)="onSaveDocument()"
+                    [disabled]="!petWeight || !diagnosis"
         >
           {{ 'VET_FORM.SAVE_BUTTON' | translate }}
         </ion-button>

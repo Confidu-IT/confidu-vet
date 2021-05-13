@@ -19,6 +19,7 @@ export class VetFormPage {
   public logo = environment.logo;
   public iconPath = '../../../../assets/icons/care-card';
   public paperclip = `${this.iconPath}/clip.svg`;
+  public showEndState = false;
 
   public diagnosisForm: FormGroup;
   public diags = [];
@@ -37,6 +38,7 @@ export class VetFormPage {
   public pet: any;
   public vet: any;
   public owner: any;
+  public longAnnotations = false;
 
   public ownerText: string;
   public petWeight: string | number;
@@ -212,6 +214,7 @@ export class VetFormPage {
       this.owner.appointmentID,
       this.answer
     ).subscribe(response => {
+      this.showEndState = true;
       this.answer = {
         diagnosis: null,
         urgency: null,
@@ -290,6 +293,10 @@ export class VetFormPage {
   }
 
   public toggleActivityDescription(): void {
+    this.longActivityDesc = this.longActivityDesc === false;
+  }
+
+  public toggleAnnotations(): void {
     this.longActivityDesc = this.longActivityDesc === false;
   }
 
@@ -377,6 +384,7 @@ export class VetFormPage {
   }
 
   ionViewWillLeave() {
+    this.showEndState = false;
     this.diags = undefined;
     this.prods = [];
     this.cates = [];

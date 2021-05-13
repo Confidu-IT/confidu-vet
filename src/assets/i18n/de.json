@@ -1146,6 +1146,7 @@
     "SAVE_BUTTON": "PROTOKOLL SPEICHERN",
     "THERAPY_INSTRUCTIONS": "Therapieanweisungen für Halter:innen ",
     "ENTER_TEXT": "Bitte hier schreiben…",
+    "ANNOTATIONS": "Bemerkungen",
     "ADD": "Hinzufügen",
     "CHOOSE": "Auswählen",
     "ADD_MED": "Präparat eingeben",
@@ -1157,7 +1158,7 @@
     "PROGRESS": "Weiter",
     "REPEAT": "Wiederholen",
     "DIAG_CARD": {
-      "HEADLINE": "Diagnose",
+      "HEADLINE": "Diagnose*",
       "BODY_TEXT": "Wählen Sie eine oder mehrere Diagnosen aus und fügen Sie sie der Auswahl hinzu."
     },
     "OWNER": {
@@ -1165,7 +1166,7 @@
       "BODY_TEXT": "Geben Sie die Anamnesedaten und Untersuchungsbefunde ein."
     },
     "WEIGHT": {
-      "HEADLINE": "Gewicht des Tieres",
+      "HEADLINE": "Gewicht des Tieres*",
       "LABEL": "Gewicht in Kilogramm eingeben",
       "UNIT": "kg"
     },
