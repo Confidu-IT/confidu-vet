@@ -6,18 +6,23 @@
   "targets": {
     "confidu-app": {
       "hosting": {
-        "production": [
-          "confidu-app"
-        ],
         "vet": [
-          "confidu-app",
           "vet"
         ],
         "staging": [
           "confidu-staging"
         ],
-        "confidu-app": [
+        "production": [
+          "confidu-app"
+        ],
+        "confidu-vet": [
           "confidu-vet"
+        ],
+        "confidu-vet-test": [
+          "confidu-vet-test"
+        ],
+        "confidu-vet-staging": [
+          "confidu-vet-staging"
         ]
       }
     }

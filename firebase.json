@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "production",
+      "target": "confidu-vet-test",
       "public": "www",
       "ignore": [
         "firebase.json",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "target": "staging",
+      "target": "confidu-vet-staging",
       "public": "www",
       "ignore": [
         "firebase.json",
