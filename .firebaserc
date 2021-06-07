@@ -10,10 +10,14 @@
           "confidu-app"
         ],
         "vet": [
-          "confidu-app"
+          "confidu-app",
+          "vet"
         ],
         "staging": [
           "confidu-staging"
+        ],
+        "confidu-app": [
+          "confidu-vet"
         ]
       }
     }

@@ -27,7 +27,7 @@
       ]
     },
     {
-      "target": "vet",
+      "target": "confidu-vet",
       "public": "www",
       "ignore": [
         "firebase.json",

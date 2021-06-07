@@ -81,10 +81,10 @@
                     {{ 'VET_FORM.USER.ATTACHMENTS' | translate }}:
                   </div>
                   <ul class="attachment-list">
-                    <li class="f" *ngFor="let file of owner?.images" (click)="onOpenDocument(file)">
+                    <li class="f" *ngFor="let file of owner?.images; let i = index" (click)="onOpenDocument(file)">
                        <span>
                           <img [src]="paperclip" alt="" height="18">
-                         {{ 'CARE_CARD_LIST_PAGE.FINDING_PDF' | translate }}
+                         {{ 'VET_FORM.ATTACHMENT' | translate }} {{ i + 1 }}
                         </span>
                     </li>
                   </ul>
