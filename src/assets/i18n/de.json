@@ -405,6 +405,10 @@
     "TITLE": "Anleitung"
   },
   "HOME_PAGE": {
+    "OPEN_REQUESTS": "Offene Anfragen",
+    "APPROVAL_REQUEST": "Freigabeanfrage für Medikamente",
+    "ORDER_DATE": "Datum der Bestellung",
+    "ORDER_NR": "Bestell-Nr.",
     "CARE_CARD": "CareCard",
     "COINS": "Confi-Coins",
     "BENEFITS": "Erfolge",

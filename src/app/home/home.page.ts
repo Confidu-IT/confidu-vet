@@ -6,6 +6,7 @@ import {FirebaseService} from '../services/firebase.service';
 import {TranslateService} from '@ngx-translate/core';
 import {CommonService} from '../services/common.service';
 import {environment} from '../../environments/environment';
+import {switchMap, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,15 @@ export class HomePage {
   public language: string;
   public pets: any[];
   public logo = environment.logo;
+  public iconPath = '../../../../assets/icons';
+  public chevron = `${this.iconPath}/care-card/chevron-forward-outline.svg`;
+  public pillImg = `${this.iconPath}/home/med.svg`;
+  public pageImg = `${this.iconPath}/home/request.svg`;
+  public result: any;
+  public isLoading: boolean;
 
   private subscription: Subscription;
+
 
   constructor(
     public userAuth: CommonService,
@@ -30,33 +38,36 @@ export class HomePage {
   ) {}
 
   ionViewWillEnter() {
+    this.isLoading = true;
     this.language = this.commonService.language;
     this.translateService.setDefaultLang(this.language); // fallback
     this.translateService.use(this.translateService.getBrowserLang());
 
-    this.subscription = this.userAuth.user$
-      .subscribe(user => {
-        console.log('user', user);
-        if(!user) {
-          this.router.navigateByUrl('/signin');
-        }
-        this.pets = [];
-        this.pets.push(
-          {
-            petId: 'KikS5p6RnkTisnIIm3hI',
-            userId: 'd1209ad49db54e549fefa057b23b7968',
-            appointmentId: '589165557'
+    this.subscription = this.userAuth.user$.pipe(
+      tap(user => user),
+      switchMap(user => {
+          if(!user) {
+            this.router.navigateByUrl('/signin');
           }
-          );
-      });
+          this.user = user;
+          return this.commonService.getHomePageContent(this.user.za);
+      })
+    ).subscribe(data => {
+      console.log('data', data);
+      this.result = data;
+      this.isLoading = false;
+    });
   }
 
-  public onClickLink(userId: string, petId: string, appointmentId: string): void {
-    this.router.navigateByUrl(`/pet-care-card/${userId}/${petId}/${appointmentId}`);
+  public onClickRequest() {
+    console.log('click');
   }
+
 
   ionViewWillLeave() {
-    this.pets = undefined;
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
 }

@@ -54,6 +54,16 @@ export class CommonService {
       });
   }
 
+  public getHomePageContent(token: string): Observable<any> {
+    const baseUrl = environment.baseUrl;
+    const url = `${baseUrl}/${this.language}/vet/orders`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': token,
+    };
+    return this.http.get(url, { headers });
+  }
+
   public getCareCardContent(pet: string, user: string, token: string): Observable<any> {
     const baseUrl = environment.baseUrl;
     const url = `${baseUrl}/${this.language}/carecard`;
