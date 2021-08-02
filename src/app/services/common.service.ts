@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Observable} from 'rxjs';
@@ -11,6 +11,7 @@ import {HttpClient} from '@angular/common/http';
 export class CommonService {
 
   public user$: Observable<any | null>;
+
   public get language(): string {
     const browserLanguage = this.translateService.getBrowserLang();
     if (browserLanguage === 'de' || browserLanguage === 'dk' || browserLanguage === 'fr') {
@@ -35,9 +36,9 @@ export class CommonService {
     const headers = {
       'Content-Type': 'application/json'
     };
-    const body = JSON.stringify({ username: user, password: pw });
+    const body = JSON.stringify({username: user, password: pw});
     const url = `${this.baseUrl}/${this.language}/vet/login`;
-    return fetch(url, { method: 'POST', headers, body })
+    return fetch(url, {method: 'POST', headers, body})
       .then((resp) => {
         if (!resp.ok) {
           throw resp.json();
@@ -54,19 +55,26 @@ export class CommonService {
       });
   }
 
-  public getHomePageContent(token: string): Observable<any> {
-    const baseUrl = environment.baseUrl;
-    const url = `${baseUrl}/${this.language}/vet/orders`;
+  public getData(token: string, length: string | number, page: string | number): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/vet/orders?limit=${length}&page=${page}`;
     const headers = {
       'Content-Type': 'application/json',
       'firebase-context-token': token,
     };
-    return this.http.get(url, { headers });
+    return this.http.get(url, {headers});
+  }
+
+  public getReleaseRequest(token: string, id: string): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/vet/orders/${id}`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': token,
+    };
+    return this.http.get(url, {headers});
   }
 
   public getCareCardContent(pet: string, user: string, token: string): Observable<any> {
-    const baseUrl = environment.baseUrl;
-    const url = `${baseUrl}/${this.language}/carecard`;
+    const url = `${this.baseUrl}/${this.language}/carecard`;
     const headers = {
       'Content-Type': 'application/json',
       'firebase-context-token': token,
@@ -76,7 +84,7 @@ export class CommonService {
       uid: user
     };
 
-    return this.http.post(url, body, { headers });
+    return this.http.post(url, body, {headers});
   }
 
   public getSecureLink(
@@ -97,12 +105,11 @@ export class CommonService {
       petId,
       uid
     };
-    return this.http.post(url, body, { headers });
+    return this.http.post(url, body, {headers});
   }
 
   public getCareCardlistContent(key: string, token: string, idPet, idUser): Observable<any> {
-    const baseUrl = environment.baseUrl;
-    const url = `${baseUrl}/${this.language}/carecard/${key}`;
+    const url = `${this.baseUrl}/${this.language}/carecard/${key}`;
     const headers = {
       'Content-Type': 'application/json',
       'firebase-context-token': token,
@@ -112,12 +119,11 @@ export class CommonService {
       petId: idPet,
       uid: idUser
     };
-    return this.http.post(url, body, { headers });
+    return this.http.post(url, body, {headers});
   }
 
   public getCareCardDetailContent(params: any, user: any): Observable<any> {
-    const baseUrl = environment.baseUrl;
-    const url = `${baseUrl}/${this.language}/carecard/${params.key}/${params.list}`;
+    const url = `${this.baseUrl}/${this.language}/carecard/${params.key}/${params.list}`;
 
 
     const headers = {
@@ -130,12 +136,11 @@ export class CommonService {
       venomKey: params.venom,
       level3Id: params.level3Id
     };
-    return this.http.post(url, body, { headers });
+    return this.http.post(url, body, {headers});
   }
 
   public getVetFormContent(params: any, user: any): Observable<any> {
-    const baseUrl = environment.baseUrl;
-    const url = `${baseUrl}/${this.language}/vet/forms`;
+    const url = `${this.baseUrl}/${this.language}/vet/forms`;
 
 
     const headers = {
@@ -148,7 +153,7 @@ export class CommonService {
       venomKey: params.venom,
       appointmentId: params.appointmentId
     };
-    return this.http.post(url, body, { headers });
+    return this.http.post(url, body, {headers});
   }
 
   public submitForm(

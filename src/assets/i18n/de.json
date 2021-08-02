@@ -45,7 +45,7 @@
     "PET_SPOT_TEXT": {
       "CANCEL_BUTTON": "Abbrechen",
       "SWELLING": "Schwellung/Beule/Knoten",
-      "STIFFNESS":"Steifheit",
+      "STIFFNESS": "Steifheit",
       "MUSCULAR_DYSTROPHY": "Muskelschwund",
       "FLATULENCE": "Blähungen",
       "DIARRHAE": "Durchfall",
@@ -351,7 +351,6 @@
         }
       }
     },
-
     "CANCEL": "Abbrechen",
     "CONFIRM": "Übernehmen",
     "POSTPONE_TASK": "Termin verschieben",
@@ -461,7 +460,7 @@
     "PROGRESS": "Weiter"
   },
   "SIGNUP_PAGE": {
-    "SIGNUP":"Erstelle dein neues CONFIDU-Konto",
+    "SIGNUP": "Erstelle dein neues CONFIDU-Konto",
     "NO_ACCOUNT": {
       "PART_1": "Du hast noch kein Konto?",
       "PART_2": "Lege jetzt ein Konto an."
@@ -582,7 +581,6 @@
       "NOTES": "Deine Notizen (150 Zeichen)",
       "CHARS": "150 Zeichen",
       "BUTTON": "Hinzufügen",
-
       "MEDS": {
         "TIME": "Uhr",
         "DAYS": "Tage",
@@ -907,7 +905,6 @@
     "AHEAD_TEXT": "Termine können bis zu 2 Tage im Voraus gebucht werden. Wähle den Tag und die Uhrzeit aus, an dem du mit einem Tierarzt sprechen möchtest.",
     "FIRST_NAME": "Vorname *",
     "LAST_NAME": "Nachnahme *",
-
     "PHONE": "Tel.",
     "MODAL_HEADER": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
     "CANCEL": "Abbrechen",
@@ -1031,7 +1028,7 @@
   },
   "DISEASE_MODAL_PAGE": {
     "CANCEL": "Abbrechen",
-    "CONFIRM":  "Übernehmen",
+    "CONFIRM": "Übernehmen",
     "MED": {
       "NAME": "Wirkstoff oder Präparatname",
       "DAILY": "täglich",
@@ -1048,7 +1045,6 @@
       "NOTES": "Deine Notizen (150 Zeichen)",
       "CHARS": "150 Zeichen",
       "BUTTON": "Hinzufügen",
-
       "MEDS": {
         "TIME": "Uhr",
         "DAYS": "Tage",
@@ -1106,7 +1102,9 @@
     "CHANGE_PET": "Tier wechseln",
     "REG_SUCCESS": "Registrierung erfolgreich",
     "ASSIGNMENT": [
-      "Produkt", "wurde", "erfolgreich zugeordnet."
+      "Produkt",
+      "wurde",
+      "erfolgreich zugeordnet."
     ]
   },
   "NAVIGATION": {
@@ -1224,5 +1222,17 @@
       "DATE": "Termin:",
       "TIME": "Uhr"
     }
+  },
+  "RELEASE_PAGE": {
+    "REQUEST": "Freigabeanfrage für Medikamente",
+    "DIAG": "Diagnose",
+    "PET_INFO": "Informationen zum Tier",
+    "OWNER_DATA": "Besitzer:innenangaben",
+    "MEDS": "Medikamente",
+    "VET": "Tierarzt",
+    "ORDERED": "gekauft",
+    "NOT_ORDERED": "nicht gekauft",
+    "CANCEL": "Ablehnen",
+    "CONFIRM": "Freigeben"
   }
 }

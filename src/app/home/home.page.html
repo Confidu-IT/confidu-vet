@@ -29,7 +29,7 @@
                   <h2>{{ 'HOME_PAGE.OPEN_REQUESTS' | translate }}</h2>
                 </div>
               </li>
-              <li *ngFor="let item of result?.data">
+              <li *ngFor="let item of result?.data" (click)="onClickRequest(item.id)">
                 <div class="image">
                   <img [src]="pillImg" width="32" alt="">
                 </div>
@@ -43,7 +43,7 @@
                   </div>
                 </div>
 
-                <div class="arrow" (click)="onClickRequest()">
+                <div class="arrow">
                   <img [src]="chevron" width="32" alt="">
                 </div>
               </li>
@@ -51,14 +51,23 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
-<!--      <ion-col sizeSm="8" offsetSm="2">-->
-<!--        <h1>Hello Confidu Vet!</h1>-->
-<!--        <ul>-->
-<!--          <li *ngFor="let pet of pets" (click)="onClickLink(pet.userId, pet.petId, pet.appointmentId)">-->
-<!--            Click Me-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </ion-col>-->
+      <!--      <ion-col sizeSm="8" offsetSm="2">-->
+      <!--        <h1>Hello Confidu Vet!</h1>-->
+      <!--        <ul>-->
+      <!--          <li *ngFor="let pet of pets" (click)="onClickLink(pet.userId, pet.petId, pet.appointmentId)">-->
+      <!--            Click Me-->
+      <!--          </li>-->
+      <!--        </ul>-->
+      <!--      </ion-col>-->
     </ion-row>
   </ion-grid>
 </ion-content>
+
+<ion-footer>
+  <mat-paginator [length]="openRequestsTotal"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="pageEvent = getServerData($event)"
+                 aria-label="Select page">
+  </mat-paginator>
+</ion-footer>

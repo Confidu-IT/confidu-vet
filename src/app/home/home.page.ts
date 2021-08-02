@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {Router} from '@angular/router';
 import {AngularFireAuth} from '@angular/fire/auth';
@@ -7,6 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {CommonService} from '../services/common.service';
 import {environment} from '../../environments/environment';
 import {switchMap, tap} from 'rxjs/operators';
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,10 @@ export class HomePage {
   public pageImg = `${this.iconPath}/home/request.svg`;
   public result: any;
   public isLoading: boolean;
+  public pageEvent: PageEvent;
+  public openRequestsTotal: number;
+  public pageSizeOptions: number[] = [5, 10, 25, 100];
+  public pageSize = 10;
 
   private subscription: Subscription;
 
@@ -35,7 +40,8 @@ export class HomePage {
     private firebaseService: FirebaseService,
     private translateService: TranslateService,
     private commonService: CommonService,
-  ) {}
+  ) {
+  }
 
   ionViewWillEnter() {
     this.isLoading = true;
@@ -43,26 +49,36 @@ export class HomePage {
     this.translateService.setDefaultLang(this.language); // fallback
     this.translateService.use(this.translateService.getBrowserLang());
 
+    this.fetchData(this.pageSize, 1);
+  }
+
+  public getServerData(event) {
+    const page = event.pageIndex + 1;
+    const limit = event.pageSize;
+    this.fetchData(limit, page);
+  }
+
+  public onClickRequest(id: string) {
+    this.router.navigateByUrl(`releases/${id}`);
+  }
+
+  private fetchData(limit, page) {
     this.subscription = this.userAuth.user$.pipe(
       tap(user => user),
       switchMap(user => {
-          if(!user) {
-            this.router.navigateByUrl('/signin');
-          }
-          this.user = user;
-          return this.commonService.getHomePageContent(this.user.za);
+        if (!user) {
+          this.router.navigateByUrl('/signin');
+        }
+        this.user = user;
+        return this.commonService.getData(this.user.za, limit, page);
       })
     ).subscribe(data => {
       console.log('data', data);
+      this.openRequestsTotal = data?.meta?.total;
       this.result = data;
       this.isLoading = false;
     });
   }
-
-  public onClickRequest() {
-    console.log('click');
-  }
-
 
   ionViewWillLeave() {
     if (this.subscription) {

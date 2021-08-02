@@ -1,0 +1,148 @@
+.vet-form {
+  color: rgba(0, 0, 0, .87);
+
+  &-header {
+    display: flex;
+    align-items: center;
+    //padding: 32px 32px 16px;
+    padding-left: 32px;
+    padding-top: 10px;
+    margin: -16px -16px 0;
+    height: 200px;
+    background: url('../../assets/icons/form_bg.svg');
+
+    &-image {
+      height: 117px;
+      max-height: 100%;
+      width: 117px;
+    }
+
+    &-description h3 {
+      //color: rgb(102, 102, 102);
+      font-size: 25px;
+      margin: 0;
+      padding-left: 32px;
+    }
+  }
+
+  &-card {
+    margin: 12px;
+
+    &.weight-card {
+      ion-card-content {
+        padding: 0 24px;
+      }
+
+      h3 {
+        margin: 32px 0 0;
+      }
+    }
+
+    &.double-card {
+
+    }
+
+    &.first-card {
+      margin-top: -16px;
+    }
+
+    ion-card-content {
+      padding: 24px;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-top: 8px;
+    }
+
+    .body-text {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .top {
+      margin-bottom: 0;
+    }
+
+    ion-textarea {
+      border: 1px solid #aaa;
+      font-size: 16px;
+      margin-left: 16px;
+    }
+
+    p {
+      line-height: 1.3;
+    }
+
+    //form {
+    //  margin-top: -4px;
+    //}
+
+    ul {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #cecece;
+      font-size: 20px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+
+      .question {
+        margin-right: 64px;
+        width: 85%;
+      }
+
+      .answer {
+        font-weight: 700;
+        width: 15%;
+      }
+    }
+
+    li:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+
+  }
+}
+
+.vet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .vet, .buttons {
+    width: 50%;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  ion-button {
+    width: calc(50% - 16px);
+  }
+
+  .release-button {
+    margin-left: 32px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
