@@ -52,10 +52,10 @@ export class HomePage {
     this.fetchData(this.pageSize, 1);
   }
 
-  public getServerData(event) {
+  public getServerData(event): any {
     const page = event.pageIndex + 1;
     const limit = event.pageSize;
-    this.fetchData(limit, page);
+    return this.fetchData(limit, page);
   }
 
   public onClickRequest(id: string) {
