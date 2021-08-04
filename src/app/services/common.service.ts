@@ -55,11 +55,25 @@ export class CommonService {
       });
   }
 
+  public sendApprovalOrDenial(token: string, id: string, req: string, obj: any): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/vet/orders/${id}/save-content`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': token,
+    };
+    const body = {
+      data: obj,
+      type: req
+    };
+
+    return this.http.post(url, body, {headers});
+  }
+
   public getData(token: string, length: string | number, page: string | number): Observable<any> {
     const url = `${this.baseUrl}/${this.language}/vet/orders?limit=${length}&page=${page}`;
     const headers = {
       'Content-Type': 'application/json',
-      'firebase-context-token': token,
+      'firebase-context-token': token
     };
     return this.http.get(url, {headers});
   }

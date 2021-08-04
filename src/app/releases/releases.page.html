@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
       <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
@@ -107,7 +108,7 @@
 
                 <ion-button color="secondary"
                             class="release-button"
-                            (click)="onRelease()">
+                            (click)="onApprove()">
                   {{ 'RELEASE_PAGE.CONFIRM' | translate }}
                 </ion-button>
               </div>

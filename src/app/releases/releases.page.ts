@@ -62,14 +62,25 @@ export class ReleasesPage {
       this.result = res.data;
       console.log('this.result', this.result);
       this.isLoading = false;
-      console.log('this.isLoading', this.isLoading);
     });
   }
 
-  public onRelease(): void {
+  public onApprove(): void {
+    this.commonService.sendApprovalOrDenial(this.user.za, this.params.id, 'complete', this.result)
+      .subscribe(data => {
+        if (data) {
+          this.router.navigateByUrl('/');
+        }
+      });
   }
 
   public onDeny(): void {
+    this.commonService.sendApprovalOrDenial(this.user.za, this.params.id, 'cancel', this.result)
+      .subscribe(data => {
+        if (data) {
+          this.router.navigateByUrl('/');
+        }
+      });
   }
 
   ionViewWillLeave() {
