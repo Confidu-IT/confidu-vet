@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Observable, Subscription} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -19,6 +19,7 @@ export class VetFormPage {
   public logo = environment.logo;
   public iconPath = '../../../../assets/icons/care-card';
   public paperclip = `${this.iconPath}/clip.svg`;
+  public successImg = `${this.iconPath}/form_success.svg`;
   public showEndState = false;
 
   public diagnosisForm: FormGroup;
@@ -138,7 +139,6 @@ export class VetFormPage {
       this.activities = result?.data?.activity?.data?.list;
       this.therapies = result?.data?.teleTherapy?.data;
       this.urgencies = result?.data?.urgency?.data;
-
       this.answer = {
         diagnosis: null,
         urgency: null,
@@ -304,13 +304,13 @@ export class VetFormPage {
     if (type === 'diag') {
       this.diags.push(this.selectedDiagnosis);
       this.selectedDiagnosis = undefined;
-      this.diagnosisForm.patchValue({ diagnosis: '' });
+      this.diagnosisForm.patchValue({diagnosis: ''});
     }
 
     if (type === 'product') {
       this.prods.push(this.selectedProduct);
       this.selectedProduct = undefined;
-      this.productsForm.patchValue({ product: '' });
+      this.productsForm.patchValue({product: ''});
     }
 
   }

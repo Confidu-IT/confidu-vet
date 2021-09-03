@@ -1221,6 +1221,11 @@
       "VET": "Tierarzt:",
       "DATE": "Termin:",
       "TIME": "Uhr"
+    },
+    "SUCCESS": {
+      "HEADER": "Das Protokoll wurde erfolgreich gespeichert! ",
+      "BODY": "Alle Daten wurden an die CareCard des Patienten gesendet und die Angaben aktualisiert. ",
+      "BUTTON": "Zurück zur Startseite"
     }
   },
   "RELEASE_PAGE": {

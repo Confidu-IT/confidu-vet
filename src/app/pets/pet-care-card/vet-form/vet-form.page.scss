@@ -2,7 +2,8 @@
 //  color: rgba(0,0,0,.87);
 //}
 .vet-form {
-  color: rgba(0,0,0,.87);
+  color: rgba(0, 0, 0, .87);
+
   &-header {
     display: flex;
     align-items: center;
@@ -39,7 +40,7 @@
         margin: 32px 0 0;
       }
 
-      mat-form-field{
+      mat-form-field {
         margin-left: 16px;
         width: calc(100% - 16px);
       }
@@ -128,7 +129,7 @@
 }
 
 h2 {
-  color: rgb(115,115,115);
+  color: rgb(115, 115, 115);
   font-size: 26px;
   font-weight: 500;
   margin: 32px 24px 8px;
@@ -163,12 +164,17 @@ mat-label {
   //padding-bottom: 20px;
 }
 
+mat-expansion-panel, mat-panel-title {
+  color: #666;
+}
+
 
 mat-expansion-panel-header {
   font-size: 22px;
   font-weight: bold;
   height: 120px;
 }
+
 
 ion-item {
   --background: #fff;
@@ -213,6 +219,10 @@ ion-datetime {
       text-transform: lowercase;
     }
   }
+
+  li:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .attachment-list {
@@ -232,6 +242,7 @@ ion-datetime {
     img {
       padding-right: 8px;
     }
+
     span {
       font-size: 16px;
       //margin-right: 6px;
@@ -283,7 +294,7 @@ object {
   align-items: center;
 
   .close-button {
-    color: rgb(102,102,102);
+    color: rgb(102, 102, 102);
     font-size: 24px;
     padding-right: 16px;
     width: 28px;
@@ -298,4 +309,35 @@ object {
   background: #fff;
   border-bottom: 1px solid #cecece;
   height: 65px;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 25%;
+  width: 50%;
+
+  img {
+    display: flex;
+    align-self: center;
+    margin-top: 46px;
+  }
+
+  &-header {
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 46px;
+    text-align: center;
+  }
+
+  &-body {
+    font-size: 19px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  &-button {
+    margin: 46px 0;
+  }
 }

@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar *ngIf="!imageZoom">
     <ion-buttons slot="start">
-    <ion-back-button defaultHref="/"></ion-back-button>
-    <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
       <img [src]="logo" alt="" height="60">
@@ -20,13 +20,27 @@
   <div *ngIf="isLoading" class="ion-text-center">
     <ion-spinner color="primary"></ion-spinner>
   </div>
+
   <ion-grid *ngIf="showEndState">
     <ion-row>
       <ion-col>
-        <h1>Bingo!</h1>
+        <ion-card>
+          <ion-card-content>
+            <div class="success">
+              <img [src]="successImg" alt="" height="100" width="100">
+              <h1 class="success-header">{{ 'VET_FORM.SUCCESS.HEADER' | translate }}</h1>
+              <p class="success-body">{{ 'VET_FORM.SUCCESS.BODY' | translate }}</p>
+              <ion-button class="success-button" expand="full" color="secondary"
+                          routerLink="/">
+                {{ 'VET_FORM.SUCCESS.BUTTON' | translate }}
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
+
   <ion-grid *ngIf="!isLoading && !imageZoom && !showEndState" class="vet-form">
     <ion-row>
       <ion-col>
