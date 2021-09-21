@@ -213,33 +213,34 @@ export class VetFormPage {
     }
 
     console.log('this.answer', this.answer);
-    // this.commonService.submitForm(
-    //   this.params,
-    //   this.user,
-    //   this.owner.appointmentID,
-    //   this.answer
-    // ).subscribe(response => {
-    //   this.showEndState = true;
-    //   this.answer = {
-    //     diagnosis: null,
-    //     urgency: null,
-    //     therapy: null,
-    //     ownerText: null,
-    //     petWeight: null,
-    //     products: null,
-    //     medicationText: null,
-    //     diet: {
-    //       type: null,
-    //       text: null
-    //     },
-    //     activity: {
-    //       type: null,
-    //       text: null
-    //     },
-    //     monitoringText: null,
-    //     managementText: null
-    //   };
-    // });
+    this.commonService.submitForm(
+      this.params,
+      this.user,
+      this.owner.appointmentID,
+      this.answer
+    ).subscribe(response => {
+      this.showEndState = true;
+      this.answer = {
+        diagnosis: null,
+        urgency: null,
+        therapy: null,
+        ownerText: null,
+        petWeight: null,
+        products: null,
+        medicationText: null,
+        ticketText: null,
+        diet: {
+          type: null,
+          text: null
+        },
+        activity: {
+          type: null,
+          text: null
+        },
+        monitoringText: null,
+        managementText: null
+      };
+    });
   }
 
   public onOpenDocument(link: string) {
