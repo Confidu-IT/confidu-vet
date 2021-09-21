@@ -44,6 +44,7 @@ export class VetFormPage {
   public ownerText: string;
   public petWeight: string | number;
   public medicationText: string;
+  public ticketText: string;
   public monitoringText: string;
   public managementText: string;
   public feedingText: string;
@@ -147,6 +148,7 @@ export class VetFormPage {
         petWeight: null,
         products: null,
         medicationText: null,
+        ticketText: null,
         diet: {
           type: null,
           text: null
@@ -197,6 +199,9 @@ export class VetFormPage {
     if (this.medicationText) {
       this.answer.medicationText = this.medicationText;
     }
+    if (this.ticketText) {
+      this.answer.ticketText = this.ticketText;
+    }
     if (this.monitoringText) {
       this.answer.monitoringText = this.monitoringText;
     }
@@ -208,33 +213,33 @@ export class VetFormPage {
     }
 
     console.log('this.answer', this.answer);
-    this.commonService.submitForm(
-      this.params,
-      this.user,
-      this.owner.appointmentID,
-      this.answer
-    ).subscribe(response => {
-      this.showEndState = true;
-      this.answer = {
-        diagnosis: null,
-        urgency: null,
-        therapy: null,
-        ownerText: null,
-        petWeight: null,
-        products: null,
-        medicationText: null,
-        diet: {
-          type: null,
-          text: null
-        },
-        activity: {
-          type: null,
-          text: null
-        },
-        monitoringText: null,
-        managementText: null
-      };
-    });
+    // this.commonService.submitForm(
+    //   this.params,
+    //   this.user,
+    //   this.owner.appointmentID,
+    //   this.answer
+    // ).subscribe(response => {
+    //   this.showEndState = true;
+    //   this.answer = {
+    //     diagnosis: null,
+    //     urgency: null,
+    //     therapy: null,
+    //     ownerText: null,
+    //     petWeight: null,
+    //     products: null,
+    //     medicationText: null,
+    //     diet: {
+    //       type: null,
+    //       text: null
+    //     },
+    //     activity: {
+    //       type: null,
+    //       text: null
+    //     },
+    //     monitoringText: null,
+    //     managementText: null
+    //   };
+    // });
   }
 
   public onOpenDocument(link: string) {

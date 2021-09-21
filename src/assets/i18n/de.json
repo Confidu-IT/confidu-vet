@@ -1179,7 +1179,7 @@
     },
     "MONITORING": {
       "HEADLINE": "Diagnostik und Monitoring",
-      "BODY_TEXT": "Beschreiben Sie das weitere Vorgehen bezüglich medizinischer Tests. Erläutern Sie zudem, wenn auf bestimmte Symptome geachtet werden sollen und was bei deren Auftreten getan werden soll. Management: Geben Sie weitere Hinweise, was neben den oben genannten Maßnahmen getan werden kann, um dem Patienten zu helfen. Hier können z.B. die Themen Pflege und Haltung angesprochen werden. Tickets: Wählen Sie Erinnerungen für den/die Besitzer:in aus."
+      "BODY_TEXT": "Beschreiben Sie das weitere Vorgehen bezüglich medizinischer Tests. Erläutern Sie zudem, wenn auf bestimmte Symptome geachtet werden sollen und was bei deren Auftreten getan werden soll. Management: Geben Sie weitere Hinweise, was neben den oben genannten Maßnahmen getan werden kann, um dem Patienten zu helfen. Hier können z.B. die Themen Pflege und Haltung angesprochen werden."
     },
     "MANAGEMENT": {
       "HEADLINE": "Management",
@@ -1215,6 +1215,11 @@
       "BODY_TEXT": "Wählen Sie die für die Behandlung benötigten Medikamente, Medizintests, Ergänzungsfuttermittel und weitere Produkte aus. Die Medikamente sind entsprechend der Anwendung und Dosierung gekennzeichnet, wenn es über eine einmalige Anwendung hinausgeht. Die benötigte Menge wird auf Grundlage der Körpermasse ermittelt.",
       "CHOOSE_CATEGORY": "Kategorie auswählen",
       "CHOOSE_PRODUCT": "Produkt auswählen"
+    },
+    "TICKET": {
+      "HEADLINE": "Aufgaben",
+      "BODY_TEXT": "Erstellen Sie eine Erinnerung für den/die Besitzer:in (z.B. für eine neue Terminvereinbarung oder Nachuntersuchung in der Tierarztpraxis). Sie wird immer am Tag nach der Videokonsultation angezeigt. Geben Sie ggf. im Text einen Zeitraum oder ein Datum an.",
+      "LENGTH": "150 Zeichen"
     },
     "FOOTER": {
       "CONS_NUMBER": "Konsultationsnr:",

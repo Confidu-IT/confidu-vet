@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {CommonService} from '../../services/common.service';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -56,8 +56,8 @@ export class PetCareCardPage {
 
     this.subscription = this.userAuth.user$.pipe(
       tap(user => user),
-      switchMap( user => {
-        if(!user) {
+      switchMap(user => {
+        if (!user) {
           this.router.navigateByUrl('/');
         }
         this.user = user;
@@ -72,8 +72,7 @@ export class PetCareCardPage {
       console.log('content', content);
       this.panels = content.data;
       this.pet = content.pet;
-      console.log('pet', this.pet)
-      const species = this.pet.pet.species.value === 'dog' ? 'hermann_gelb' : 'paula_gelb';
+      const species = this.pet.pet.species.value === 'dog' ? 'basedata_dog' : 'basedata_cat';
       // eslint-disable-next-line no-eval
       this.isCastrated = eval(this.pet.pet.castration.value);
       this.hasId = this.pet.pet.petIdent;

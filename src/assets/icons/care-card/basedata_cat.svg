@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Gruppe_24889" data-name="Gruppe 24889" transform="translate(2504 24041)">
+    <rect id="Rechteck_3857" data-name="Rechteck 3857" width="40" height="40" transform="translate(-2504 -24041)" fill="none"/>
+    <g id="Gruppe_24868" data-name="Gruppe 24868" transform="translate(-2498 -24031.998)">
+      <g id="Gruppe_24867" data-name="Gruppe 24867" transform="translate(0 0)">
+        <g id="Gruppe_24864" data-name="Gruppe 24864" transform="translate(8.298 10.029)">
+          <circle id="Ellipse_5469" data-name="Ellipse 5469" cx="1.167" cy="1.167" r="1.167" fill="#ffbc00"/>
+          <circle id="Ellipse_5470" data-name="Ellipse 5470" cx="1.167" cy="1.167" r="1.167" transform="translate(9.2)" fill="#ffbc00"/>
+        </g>
+        <ellipse id="Ellipse_5471" data-name="Ellipse 5471" cx="1.756" cy="1.327" rx="1.756" ry="1.327" transform="translate(12.309 13.258)" fill="#ffbc00"/>
+        <path id="Pfad_27908" data-name="Pfad 27908" d="M305.417,1641.315v4.146" transform="translate(-291.351 -1626.716)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <g id="Gruppe_24865" data-name="Gruppe 24865" transform="translate(0 11.884)">
+          <line id="Linie_7317" data-name="Linie 7317" y1="2.747" x2="6.044" transform="translate(21.79)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linie_7318" data-name="Linie 7318" x2="6.639" y2="0.086" transform="translate(21.492 5.999)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linie_7319" data-name="Linie 7319" x1="6.044" y1="2.747" transform="translate(0.297)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linie_7320" data-name="Linie 7320" x1="6.639" y2="0.086" transform="translate(0 5.999)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Gruppe_24866" data-name="Gruppe 24866" transform="translate(1.516)">
+          <path id="Pfad_27909" data-name="Pfad 27909" d="M308.841,1648.667c0,2.226-2.662,4.03-5.9,4.03-7.347,0-7.257-6.212-6.012-11.178l.012-.169V1630.7l5.136,3.75h.117a11.9,11.9,0,0,1,13.28,0h.128l5.136-3.75v10.652l.016.24c1.25,4.954,1.315,11.107-6.073,11.107-3.238,0-5.84-1.8-5.84-4.03" transform="translate(-296.29 -1630.697)" fill="none" stroke="#ffbc00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

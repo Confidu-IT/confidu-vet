@@ -452,6 +452,30 @@
         <ion-card class="vet-form-card">
           <ion-card-content>
             <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'VET_FORM.TICKET.HEADLINE' | translate }}</h3>
+                <p class="body-text">{{ 'VET_FORM.TICKET.BODY_TEXT' | translate }}</p>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-textarea rows="8" cols="20"
+                              auto-grow="true"
+                              [(ngModel)]="ticketText"
+                              (ionChange)="ticketText = $event.target['value']"
+                              placeholder="{{ 'VET_FORM.ENTER_TEXT' | translate }}"
+                ></ion-textarea>
+                <div class="ticket-length">{{ 'VET_FORM.TICKET.LENGTH' | translate }}</div>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
               <ion-col>
                 <div class="footer">
                   <div class="cons-nr">

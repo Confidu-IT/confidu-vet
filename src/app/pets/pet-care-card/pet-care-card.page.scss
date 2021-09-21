@@ -17,6 +17,7 @@
       max-height: 100%;
       width: 85px;
     }
+
     &-label {
       h2 {
         //color: rgb(102, 102, 102);
@@ -49,6 +50,7 @@
 .panel-title-content {
   display: flex;
   align-items: center;
+
   .img {
     width: 60px;
   }
@@ -133,7 +135,7 @@
   }
 
   ion-icon {
-    color: rgb(102,102,102);
+    color: rgb(102, 102, 102);
     font-size: 16px;
     margin-top: 2px;
   }
@@ -206,7 +208,7 @@ mat-panel-title {
 }
 
 .export {
-  color: rgba(0,0,0,0.87);
+  color: rgba(0, 0, 0, 0.87);
   font-family: Roboto, "Helvetica Neue", sans-serif;
   margin: 0;
   width: 100%;
@@ -304,7 +306,7 @@ mat-panel-title {
 
   .panel-title-content {
     img {
-      height: 30px;
+      height: 40px;
     }
   }
 
