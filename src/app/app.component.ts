@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {AngularFireAuth} from '@angular/fire/auth';
 import {TranslateService} from '@ngx-translate/core';
 import {MenuController, Platform} from '@ionic/angular';
-import {CommonService} from './services/common.service';
+import {AuthService} from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +15,9 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private router: Router,
-    private afAuth: AngularFireAuth,
     public translate: TranslateService,
     public menuCtrl: MenuController,
-    private commonService: CommonService
+    private authService: AuthService
   ) {
     this.initializeApp();
     translate.addLangs(['en', 'de']);
@@ -30,7 +28,7 @@ export class AppComponent {
   }
 
   public onLogout(): void {
-    this.commonService.logOut()
+    this.authService.logOut()
       .then(() => {
         this.menuCtrl.close()
           .then(() => {

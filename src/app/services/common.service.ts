@@ -48,13 +48,6 @@ export class CommonService {
       .catch(e => e);
   }
 
-  public logOut(): Promise<any> {
-    return this.afAuth.signOut()
-      .then(() => {
-        localStorage.clear();
-      });
-  }
-
   public sendApprovalOrDenial(token: string, id: string, req: string, obj: any): Observable<any> {
     const url = `${this.baseUrl}/${this.language}/vet/orders/${id}/save-content`;
     const headers = {
