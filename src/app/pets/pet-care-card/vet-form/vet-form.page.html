@@ -82,7 +82,7 @@
                     <span class="lower-case">{{ pet?.gender.label.de }}, </span>
                     <span class="lower-case">{{ pet?.castration.label.de }}, </span>
                     <span>{{ 'VET_FORM.USER.BIRTHDAY' | translate }} </span>
-                    <span>{{ pet?.birthday | date:'dd.mm.yyyy' }} </span>
+                    <span>{{ pet?.birthday | date:'dd.MM.yyyy' }} </span>
                   </div>
                 </li>
                 <li *ngIf="owner?.notes" (click)="toggleAnnotations()">
