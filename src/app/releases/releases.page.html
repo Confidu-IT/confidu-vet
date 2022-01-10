@@ -33,7 +33,9 @@
       <ion-col sizeXs="12" sizeMd="6">
         <ion-card class="vet-form-card double-card first-card">
           <ion-card-content>
-            <h3>{{ 'RELEASE_PAGE.DIAG' | translate }}</h3>
+            <h3>
+              {{ 'RELEASE_PAGE.DIAG' | translate }} <span>({{result?.diseaseKey }})</span>
+            </h3>
             <p class="body-text top" *ngIf="result?.header.headerHeadlineH2">
               {{ result?.header.headerHeadlineH2 }}
             </p>
