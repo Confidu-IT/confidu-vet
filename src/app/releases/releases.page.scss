@@ -126,7 +126,7 @@
   align-items: center;
 
   .vet, .buttons {
-    width: 50%;
+    width: 70%;
   }
 
   .buttons {
@@ -148,6 +148,42 @@
 
     span {
       font-weight: 400;
+      font-size: 22px;
     }
   }
+}
+
+.address {
+  font-size: 20px;
+
+  span {
+  }
+}
+
+.doc-list {
+  img {
+    padding-right: 6px;
+  }
+
+  li {
+    display: inline-block;
+    border: none;
+    margin-right: 20px;
+    padding-bottom: 0;
+  }
+
+  li:last-of-type {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.image-toolbar {
+  background: #fff;
+  color: rgba(0, 0, 0, .87);
+  border-bottom: 1px solid #cecece;
+  font-size: 36px;
+  padding: 20px;
+  justify-content: flex-end;
+  display: flex;
 }

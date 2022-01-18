@@ -106,12 +106,22 @@
           </ng-container>
         </ng-container>
         <ion-button
+          *ngIf="params.appointmentId"
           class="export-button"
           color="secondary"
           expand="full"
           (click)="goToForm()"
         >
           {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
+        </ion-button>
+        <ion-button
+          *ngIf="params.releaseId"
+          class="export-button"
+          color="secondary"
+          expand="full"
+          (click)="goToRelease()"
+        >
+          {{ 'CARE_CARD_PAGE.TO_RELEASE' | translate }}
         </ion-button>
       </ion-col>
     </ion-row>
@@ -199,12 +209,22 @@
           </ng-container>
         </div>
         <ion-button
+          *ngIf="params.appointmentId"
           class="export-button"
           color="secondary"
           expand="full"
           (click)="goToForm()"
         >
           {{ 'CARE_CARD_PAGE.TO_FORM' | translate }}
+        </ion-button>
+        <ion-button
+          *ngIf="params.releaseId"
+          class="export-button"
+          color="secondary"
+          expand="full"
+          (click)="goToRelease()"
+        >
+          {{ 'CARE_CARD_PAGE.TO_RELEASE' | translate }}
         </ion-button>
       </ion-col>
       <ion-col size="6">

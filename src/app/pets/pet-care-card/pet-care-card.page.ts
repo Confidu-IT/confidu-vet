@@ -45,6 +45,7 @@ export class PetCareCardPage {
     this.routeSub = this.activatedRoute.params
       .subscribe(params => {
         this.params = params;
+        console.log('this.params', this.params);
       });
   }
 
@@ -88,7 +89,11 @@ export class PetCareCardPage {
   }
 
   public goToForm(): void {
-    const url = `pets/vet-form/${this.params.userId}/${this.params.petId}/${this.params.appointmentId}`;
+    this.router.navigateByUrl(`pets/vet-form/${this.params.userId}/${this.params.petId}/${this.params.appointmentId}`);
+  }
+
+  public goToRelease(): void {
+    const url = `releases/${this.params.releaseId}`;
     this.router.navigateByUrl(url);
   }
 

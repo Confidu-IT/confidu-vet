@@ -16,9 +16,11 @@ const routes: Routes = [
     loadChildren: () => import('./signin/signin.module').then(m => m.SigninPageModule)
   },
   {
-    path: 'pet-care-card/:userId/:petId/:appointmentId' +
-      '' +
-      '',
+    path: 'pet-care-card/release/:userId/:petId/:releaseId',
+    loadChildren: () => import('./pets/pet-care-card/pet-care-card.module').then(m => m.PetCareCardPageModule)
+  },
+  {
+    path: 'pet-care-card/:userId/:petId/:appointmentId',
     loadChildren: () => import('./pets/pet-care-card/pet-care-card.module').then(m => m.PetCareCardPageModule)
   },
   {

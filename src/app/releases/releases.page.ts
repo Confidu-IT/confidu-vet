@@ -7,6 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {Subscription} from 'rxjs';
 import {switchMap, tap} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-releases',
@@ -19,7 +20,14 @@ export class ReleasesPage {
   public isLoading: boolean;
   public logo = environment.logo;
   public headerImage = '../../../../assets/icons/stethoskop.svg';
+  public clip = '../../../../assets/icons/care-card/clip.svg';
   public result: any;
+
+  public imageZoom: boolean;
+  public enlargedImg: string;
+  public enlargedPdf: any;
+  public isImg: boolean;
+  public isPdf: boolean;
 
   private subscription: Subscription;
   private readonly routeSub: Subscription;
@@ -32,7 +40,8 @@ export class ReleasesPage {
     private firebaseService: FirebaseService,
     private translateService: TranslateService,
     private commonService: CommonService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private sanitizer: DomSanitizer
   ) {
     this.routeSub = this.activatedRoute.params
       .subscribe(params => {
@@ -65,6 +74,36 @@ export class ReleasesPage {
     });
   }
 
+  public onOpenDocument(link: string) {
+    console.log('link', link);
+    this.commonService.getSecureLink(
+      link,
+      `user-docs`,
+      this.result.petId,
+      this.result.uid,
+      this.user.za
+    ).subscribe(data => {
+      if (data) {
+        const str = data.url;
+        const x = str.search('pdf');
+        if (x !== -1) {
+          this.isPdf = true;
+          this.enlargedPdf = this.sanitizer.bypassSecurityTrustResourceUrl(data.url);
+        } else {
+          this.isImg = true;
+          this.enlargedImg = data.url;
+        }
+        this.imageZoom = true;
+      }
+    });
+
+  }
+
+  public closeImage(): void {
+    this.imageZoom = false;
+    this.enlargedImg = null;
+  }
+
   public onApprove(): void {
     this.commonService.sendApprovalOrDenial(this.user.za, this.params.id, 'complete', this.result)
       .subscribe(data => {
@@ -72,6 +111,10 @@ export class ReleasesPage {
           this.router.navigateByUrl('/');
         }
       });
+  }
+
+  public toCareCard(): void {
+    this.router.navigateByUrl(`pet-care-card/release/${this.result.uid}/${this.result.petId}/${this.params.id}`);
   }
 
   public onDeny(): void {

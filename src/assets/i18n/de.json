@@ -516,6 +516,7 @@
   },
   "CARE_CARD_PAGE": {
     "TO_FORM": "Zum Formular",
+    "TO_RELEASE": "Zur Freigabe",
     "NO_DATA": "Keine Angabe",
     "BASE_DATA": {
       "TITLE": "Stammdaten",
@@ -1239,10 +1240,17 @@
     "PET_INFO": "Informationen zum Tier",
     "OWNER_DATA": "Besitzer:innenangaben",
     "MEDS": "Medikamente",
+    "FINDING_PDF": "Anhang",
+    "OWNER_ADDRESS": "Halter:in",
+    "INVOICE_ADDRESS": "Rechnungsadresse",
+    "SHIPPING_ADDRESS": "Lieferadresse",
+    "DOCUMENTS": "Dokumente",
     "VET": "Tierarzt",
     "ORDERED": "gekauft",
+    "ORDER_ID": "Bestell-Nr.",
     "NOT_ORDERED": "nicht gekauft",
     "CANCEL": "Ablehnen",
-    "CONFIRM": "Freigeben"
+    "CONFIRM": "Freigeben",
+    "CARECARD": "Carecard"
   }
 }

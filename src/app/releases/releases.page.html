@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar *ngIf="!imageZoom">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
       <ion-menu-button menu="start" auto-hide="false"></ion-menu-button>
@@ -8,13 +8,19 @@
       <img [src]="logo" alt="" height="60">
     </ion-title>
   </ion-toolbar>
+
+  <div *ngIf="imageZoom" class="image-toolbar">
+    <div class="close-button" (click)="closeImage()">
+      x
+    </div>
+  </div>
 </ion-header>
 
 <ion-content>
   <div *ngIf="isLoading" class="ion-text-center">
     <ion-spinner color="primary"></ion-spinner>
   </div>
-  <ion-grid *ngIf="!isLoading" class="vet-form">
+  <ion-grid *ngIf="!isLoading && !imageZoom" class="vet-form">
 
     <ion-row>
       <ion-col>
@@ -47,9 +53,53 @@
           <ion-card-content>
             <h3>{{ 'RELEASE_PAGE.PET_INFO' | translate }}</h3>
             <p class="body-text top">
-              {{ result?.pet?.species }}, {{ result?.pet?.gender }}, {{ result?.pet?.castration }},
+              {{ result?.pet?.name }}, {{ result?.pet?.species }}, {{ result?.pet?.gender }}, {{
+              result?.pet?.castration }},
               {{ result?.pet?.age }}
             </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col sizeXs="12" sizeMd="3">
+                <h3>{{ 'RELEASE_PAGE.OWNER_ADDRESS' | translate }}:</h3>
+                <div class="address">
+                  {{ result?.orderCustomer?.firstName }} {{ result?.orderCustomer?.lastName }}<br>
+                  {{ 'RELEASE_PAGE.ORDER_ID' | translate }}: {{ result?.orderCustomer?.customerNumber }}<br>
+                  {{ result?.orderCustomer?.email }}
+                </div>
+              </ion-col>
+              <ion-col sizeXs="12" sizeMd="3">
+                <h3>{{ 'RELEASE_PAGE.SHIPPING_ADDRESS' | translate }}:</h3>
+                <div class="address">
+                  <span>{{ result?.shippingAddress?.firstName }} {{ result?.shippingAddress?.lastName }}</span><br>
+                  {{ result?.shippingAddress?.street }}<br>
+                  {{ result?.shippingAddress?.zipcode }} {{ result?.shippingAddress?.city }}
+                </div>
+              </ion-col>
+              <ion-col sizeXs="12" sizeMd="3">
+                <h3>{{ 'RELEASE_PAGE.INVOICE_ADDRESS' | translate }}:</h3>
+                <div class="address">
+                  <span>{{ result?.billingAddress?.firstName }} {{ result?.billingAddress?.lastName }}</span><br>
+                  {{ result?.billingAddress?.street }}<br>
+                  {{ result?.billingAddress?.zipcode }} {{ result?.billingAddress?.city }}
+                </div>
+              </ion-col>
+              <ion-col sizeXs="12" sizeMd="3">
+                <h3>{{ 'RELEASE_PAGE.DOCUMENTS' | translate }}:</h3>
+                <ul class="doc-list">
+                  <li *ngFor="let file of result?.images; let i = index" (click)="onOpenDocument(file)">
+                    <img [src]="clip" alt="" height="18">
+                    {{ 'VET_FORM.ATTACHMENT' | translate }} {{ i + 1 }}
+                  </li>
+                </ul>
+              </ion-col>
+            </ion-row>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -104,6 +154,12 @@
               </div>
               <div class="buttons">
                 <ion-button color="primary"
+                            (click)="toCareCard()">
+                  {{ 'RELEASE_PAGE.CARECARD' | translate }}
+                </ion-button>
+
+                <ion-button color="danger"
+                            class="release-button"
                             (click)="onDeny()">
                   {{ 'RELEASE_PAGE.CANCEL' | translate }}
                 </ion-button>
@@ -117,6 +173,18 @@
             </div>
           </ion-card-content>
         </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="imageZoom">
+    <ion-row>
+      <ion-col offsetSm="2" sizeSm="8">
+        <img *ngIf="isImg" [src]="enlargedImg" alt="" class="zoomed-image">
+        <ng-container *ngIf="isPdf">
+          <object [data]="enlargedPdf" type="application/pdf">
+          </object>
+        </ng-container>
       </ion-col>
     </ion-row>
   </ion-grid>
