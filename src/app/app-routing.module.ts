@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: () => import('./pets/pet-care-card/care-card-detail/care-card-detail.module').then(m => m.CareCardDetailPageModule)
   },
   {
+    path: 'pets/vet-form/photo/:userId/:petId/:orderId',
+    loadChildren: () => import('./pets/pet-care-card/vet-form/vet-form.module').then(m => m.VetFormPageModule)
+  },
+  {
     path: 'pets/vet-form/:userId/:petId/:appointmentId',
     loadChildren: () => import('./pets/pet-care-card/vet-form/vet-form.module').then(m => m.VetFormPageModule)
   },

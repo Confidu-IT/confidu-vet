@@ -99,6 +99,10 @@
       margin-bottom: 18px;
       padding-bottom: 18px;
 
+      &.prescription {
+        display: block;
+      }
+
       .question {
         margin-right: 64px;
         width: 85%;
@@ -138,7 +142,7 @@
     width: calc(50% - 16px);
   }
 
-  .release-button {
+  .release-button, .form-button {
     margin-left: 32px;
   }
 
@@ -186,4 +190,9 @@
   padding: 20px;
   justify-content: flex-end;
   display: flex;
+}
+
+.medication-text {
+  font-size: 20px;
+  margin-top: 6px;
 }

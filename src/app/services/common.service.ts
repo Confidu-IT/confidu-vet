@@ -80,6 +80,21 @@ export class CommonService {
     return this.http.get(url, {headers});
   }
 
+  public getVetFormPhotoContent(pet: string, user: string, order: string, token: string): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/vet-form`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': token,
+    };
+    const body = {
+      uid: user,
+      petId: pet,
+      orderId: order
+    };
+
+    return this.http.post(url, body, {headers});
+  }
+
   public getCareCardContent(pet: string, user: string, token: string): Observable<any> {
     const url = `${this.baseUrl}/${this.language}/carecard`;
     const headers = {
@@ -162,6 +177,26 @@ export class CommonService {
     };
     return this.http.post(url, body, {headers});
   }
+
+  public submitPhotoForm(
+    params: any,
+    user: any,
+    result: any
+  ): Observable<any> {
+    const url = `${this.baseUrl}/${this.language}/vet-submit`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'firebase-context-token': user.za
+    };
+    const body = {
+      appointmentId: params.orderId,
+      petId: params.petId,
+      uid: params.userId,
+      data: result
+    };
+    return this.http.post(url, body, {headers});
+  }
+
 
   public submitForm(
     params: any,

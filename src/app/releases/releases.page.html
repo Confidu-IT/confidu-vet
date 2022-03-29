@@ -29,38 +29,41 @@
             <ion-img [src]="headerImage" alt=""></ion-img>
           </div>
           <div class="vet-form-header-description">
-            <h3>{{ 'RELEASE_PAGE.REQUEST' | translate }}</h3>
+            <h3 *ngIf="!result?.fotodiag">{{ 'RELEASE_PAGE.REQUEST' | translate }}</h3>
+            <h3 *ngIf="result?.fotodiag">{{ 'RELEASE_PAGE.PHOTO_DIAG' | translate }}</h3>
           </div>
         </div>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col sizeXs="12" sizeMd="6">
-        <ion-card class="vet-form-card double-card first-card">
+      <ion-col>
+        <ion-card class="vet-form-card first-card">
           <ion-card-content>
-            <h3>
-              {{ 'RELEASE_PAGE.DIAG' | translate }} <span>({{result?.diseaseKey }})</span>
-            </h3>
-            <p class="body-text top" *ngIf="result?.header.headerHeadlineH2">
-              {{ result?.header.headerHeadlineH2 }}
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col sizeXs="12" sizeMd="6">
-        <ion-card class="vet-form-card double-card first-card">
-          <ion-card-content>
-            <h3>{{ 'RELEASE_PAGE.PET_INFO' | translate }}</h3>
-            <p class="body-text top">
-              {{ result?.pet?.name }}, {{ result?.pet?.species }}, {{ result?.pet?.gender }}, {{
-              result?.pet?.castration }},
-              {{ result?.pet?.age }}
-            </p>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>
+                  {{ 'RELEASE_PAGE.DIAG' | translate }} <span>({{result?.diseaseKey }})</span>
+                </h3>
+                <p class="body-text top" *ngIf="result?.header.headerHeadlineH2">
+                  {{ result?.header.headerHeadlineH2 }}
+                </p>
+                <p class="medication-text">{{ result?.medicationText }}</p>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <h3>{{ 'RELEASE_PAGE.PET_INFO' | translate }}</h3>
+                <p class="body-text top">
+                  {{ result?.pet?.name }}, {{ result?.pet?.species }}, {{ result?.pet?.gender }}, {{
+                  result?.pet?.castration }},
+                  {{ result?.pet?.age }}
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col>
         <ion-card class="vet-form-card">
@@ -70,7 +73,7 @@
                 <h3>{{ 'RELEASE_PAGE.OWNER_ADDRESS' | translate }}:</h3>
                 <div class="address">
                   {{ result?.orderCustomer?.firstName }} {{ result?.orderCustomer?.lastName }}<br>
-                  {{ 'RELEASE_PAGE.ORDER_ID' | translate }}: {{ result?.orderCustomer?.customerNumber }}<br>
+                  {{ 'RELEASE_PAGE.CUSTOMER_ID' | translate }}: {{ result?.orderCustomer?.customerNumber }}<br>
                   {{ result?.orderCustomer?.email }}
                 </div>
               </ion-col>
@@ -124,7 +127,7 @@
       <ion-col>
         <ion-card class="vet-form-card">
           <ion-card-content>
-            <h3>{{ 'RELEASE_PAGE.MEDS' | translate }}</h3>
+            <h3>{{ 'RELEASE_PAGE.PRODUCTS' | translate }}</h3>
             <ul class="answer-list">
               <li *ngFor="let item of result?.medications">
                 <div class="question">
@@ -134,6 +137,30 @@
                   <span *ngIf="item.ordered">{{ 'RELEASE_PAGE.ORDERED' | translate }}</span>
                   <span *ngIf="!item.ordered">{{ 'RELEASE_PAGE.NOT_ORDERED' | translate }}</span>
                 </div>
+              </li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="result?.prescibed && result?.prescibed.length > 0">
+      <ion-col>
+        <ion-card class="vet-form-card">
+          <ion-card-content>
+            <h3>{{ 'RELEASE_PAGE.MEDS' | translate }}</h3>
+            <ul class="answer-list">
+              <li class="prescription" *ngFor="let item of result?.prescibed">
+                <ng-container *ngFor="let txt of item">
+                  <div>{{ txt }}</div>
+                </ng-container>
+                <!--                <div class="question">-->
+                <!--                  {{ item.med_amount }} x {{ item.med_name }}, {{ item.med_package_ges }}-->
+                <!--                </div>-->
+                <!--                <div class="answer">-->
+                <!--                  <span *ngIf="item.ordered">{{ 'RELEASE_PAGE.ORDERED' | translate }}</span>-->
+                <!--                  <span *ngIf="!item.ordered">{{ 'RELEASE_PAGE.NOT_ORDERED' | translate }}</span>-->
+                <!--                </div>-->
               </li>
             </ul>
           </ion-card-content>
@@ -158,14 +185,23 @@
                   {{ 'RELEASE_PAGE.CARECARD' | translate }}
                 </ion-button>
 
+                <ion-button color="secondary"
+                            *ngIf="result?.fotodiag"
+                            class="form-button"
+                            (click)="toForm()">
+                  {{ 'RELEASE_PAGE.FORM' | translate }}
+                </ion-button>
+
                 <ion-button color="danger"
                             class="release-button"
+                            *ngIf="!result?.fotodiag"
                             (click)="onDeny()">
                   {{ 'RELEASE_PAGE.CANCEL' | translate }}
                 </ion-button>
 
                 <ion-button color="secondary"
                             class="release-button"
+                            *ngIf="!result?.fotodiag"
                             (click)="onApprove()">
                   {{ 'RELEASE_PAGE.CONFIRM' | translate }}
                 </ion-button>

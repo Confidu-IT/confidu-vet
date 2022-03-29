@@ -95,6 +95,7 @@ export class VetFormPage {
     this.routeSub = this.activatedRoute.params
       .subscribe(params => {
         this.params = params;
+        console.log('params', this.params);
 
         this.diagnosisForm = new FormGroup({
           diagnosis: new FormControl(null, {
@@ -128,9 +129,17 @@ export class VetFormPage {
         if (!user) {
           return this.router.navigateByUrl('/');
         }
-        this.user = user;
+        return this.user = user;
       }),
-      switchMap(() => this.commonService.getVetFormContent(this.params, this.user))
+      switchMap(user => {
+        if (this.params.appointmentId) {
+          return this.commonService.getVetFormContent(this.params, this.user);
+        } else if (this.params.orderId) {
+          return this.commonService.getVetFormPhotoContent(
+            this.params.petId, this.params.userId, this.params.orderId, user.za
+          );
+        }
+      })
     ).subscribe(result => {
       console.log('result', result);
       this.pet = result?.data?.pet;
@@ -213,34 +222,67 @@ export class VetFormPage {
     }
 
     console.log('this.answer', this.answer);
-    this.commonService.submitForm(
-      this.params,
-      this.user,
-      this.owner.appointmentID,
-      this.answer
-    ).subscribe(response => {
-      this.showEndState = true;
-      this.answer = {
-        diagnosis: null,
-        urgency: null,
-        therapy: null,
-        ownerText: null,
-        petWeight: null,
-        products: null,
-        medicationText: null,
-        ticketText: null,
-        diet: {
-          type: null,
-          text: null
-        },
-        activity: {
-          type: null,
-          text: null
-        },
-        monitoringText: null,
-        managementText: null
-      };
-    });
+
+    if (this.params.appointmentId) {
+      this.commonService.submitForm(
+        this.params,
+        this.user,
+        this.owner.appointmentID,
+        this.answer
+      ).subscribe(response => {
+        this.showEndState = true;
+        this.answer = {
+          diagnosis: null,
+          urgency: null,
+          therapy: null,
+          ownerText: null,
+          petWeight: null,
+          products: null,
+          medicationText: null,
+          ticketText: null,
+          diet: {
+            type: null,
+            text: null
+          },
+          activity: {
+            type: null,
+            text: null
+          },
+          monitoringText: null,
+          managementText: null
+        };
+      });
+    } else if (this.params.orderId) {
+      this.commonService.submitPhotoForm(
+        this.params,
+        this.user,
+        this.answer
+      ).subscribe(response => {
+        this.showEndState = true;
+        this.answer = {
+          diagnosis: null,
+          urgency: null,
+          therapy: null,
+          ownerText: null,
+          petWeight: null,
+          products: null,
+          medicationText: null,
+          ticketText: null,
+          diet: {
+            type: null,
+            text: null
+          },
+          activity: {
+            type: null,
+            text: null
+          },
+          monitoringText: null,
+          managementText: null
+        };
+      });
+    }
+
+
   }
 
   public onOpenDocument(link: string) {

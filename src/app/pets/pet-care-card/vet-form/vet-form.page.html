@@ -486,7 +486,7 @@
                     <span>{{ 'VET_FORM.FOOTER.VET' | translate }}</span>
                     {{ vet?.firstName }} {{ vet?.lastName }}
                   </div>
-                  <div class="date">
+                  <div class="date" *ngIf="owner?.appointmentDate">
                     <span>{{ 'VET_FORM.FOOTER.DATE' | translate }}</span>
                     {{ owner?.appointmentDate }}, {{ owner?.appointmentTime }}-{{ owner?.appointmentEndTime }} {{
                     'VET_FORM.FOOTER.TIME' | translate }}

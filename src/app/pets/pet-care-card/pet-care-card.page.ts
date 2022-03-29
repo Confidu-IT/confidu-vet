@@ -29,9 +29,9 @@ export class PetCareCardPage {
   public breed: any;
   public logo = environment.logo;
 
+  public params: any;
   private subscription: Subscription;
   private readonly routeSub: Subscription;
-  private params: any;
 
 
   constructor(

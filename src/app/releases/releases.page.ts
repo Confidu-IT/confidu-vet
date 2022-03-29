@@ -113,6 +113,10 @@ export class ReleasesPage {
       });
   }
 
+  public toForm() {
+    this.router.navigateByUrl(`pets/vet-form/photo/${this.result.uid}/${this.result.petId}/${this.result.orderId}`);
+  }
+
   public toCareCard(): void {
     this.router.navigateByUrl(`pet-care-card/release/${this.result.uid}/${this.result.petId}/${this.params.id}`);
   }
