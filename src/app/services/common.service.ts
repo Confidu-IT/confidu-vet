@@ -189,7 +189,7 @@ export class CommonService {
       'firebase-context-token': user.za
     };
     const body = {
-      appointmentId: params.orderId,
+      orderId: params.orderId,
       petId: params.petId,
       uid: params.userId,
       data: result

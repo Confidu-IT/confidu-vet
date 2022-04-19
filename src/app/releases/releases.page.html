@@ -55,7 +55,7 @@
                 <p class="body-text top">
                   {{ result?.pet?.name }}, {{ result?.pet?.species }}, {{ result?.pet?.gender }}, {{
                   result?.pet?.castration }},
-                  {{ result?.pet?.age }}
+                  {{ result?.pet?.birthday }}
                 </p>
               </ion-col>
             </ion-row>
@@ -69,15 +69,15 @@
         <ion-card class="vet-form-card">
           <ion-card-content>
             <ion-row>
-              <ion-col sizeXs="12" sizeMd="3">
+              <ion-col sizeXs="12" sizeMd="4">
                 <h3>{{ 'RELEASE_PAGE.OWNER_ADDRESS' | translate }}:</h3>
                 <div class="address">
                   {{ result?.orderCustomer?.firstName }} {{ result?.orderCustomer?.lastName }}<br>
-                  {{ 'RELEASE_PAGE.CUSTOMER_ID' | translate }}: {{ result?.orderCustomer?.customerNumber }}<br>
-                  {{ result?.orderCustomer?.email }}
+                  {{ result?.orderCustomer?.email }}<br>
+                  {{ 'RELEASE_PAGE.ORDER_ID' | translate }}: {{ result?.orderId }}
                 </div>
               </ion-col>
-              <ion-col sizeXs="12" sizeMd="3">
+              <ion-col sizeXs="12" sizeMd="2">
                 <h3>{{ 'RELEASE_PAGE.SHIPPING_ADDRESS' | translate }}:</h3>
                 <div class="address">
                   <span>{{ result?.shippingAddress?.firstName }} {{ result?.shippingAddress?.lastName }}</span><br>
@@ -85,7 +85,7 @@
                   {{ result?.shippingAddress?.zipcode }} {{ result?.shippingAddress?.city }}
                 </div>
               </ion-col>
-              <ion-col sizeXs="12" sizeMd="3">
+              <ion-col sizeXs="12" sizeMd="2">
                 <h3>{{ 'RELEASE_PAGE.INVOICE_ADDRESS' | translate }}:</h3>
                 <div class="address">
                   <span>{{ result?.billingAddress?.firstName }} {{ result?.billingAddress?.lastName }}</span><br>
@@ -93,12 +93,23 @@
                   {{ result?.billingAddress?.zipcode }} {{ result?.billingAddress?.city }}
                 </div>
               </ion-col>
-              <ion-col sizeXs="12" sizeMd="3">
+              <ion-col sizeXs="12" sizeMd="2">
                 <h3>{{ 'RELEASE_PAGE.DOCUMENTS' | translate }}:</h3>
                 <ul class="doc-list">
                   <li *ngFor="let file of result?.images; let i = index" (click)="onOpenDocument(file)">
                     <img [src]="clip" alt="" height="18">
                     {{ 'VET_FORM.ATTACHMENT' | translate }} {{ i + 1 }}
+                  </li>
+                </ul>
+              </ion-col>
+              <ion-col sizeXs="12" sizeMd="2">
+                <h3>{{ 'RELEASE_PAGE.RECIPES' | translate }}:</h3>
+                <ul class="doc-list">
+                  <li *ngFor="let link of result?.prescription; let i = index">
+                    <a [href]="link" target="blank">
+                      <img [src]="clip" alt="" height="18">
+                      {{ 'RELEASE_PAGE.RECIPE' | translate }} {{ i + 1 }}
+                    </a>
                   </li>
                 </ul>
               </ion-col>
