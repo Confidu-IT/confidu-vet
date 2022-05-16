@@ -69,12 +69,12 @@
         <ion-card class="vet-form-card">
           <ion-card-content>
             <ion-row>
-              <ion-col sizeXs="12" sizeMd="4">
+              <ion-col sizeXs="12" sizeMd="2">
                 <h3>{{ 'RELEASE_PAGE.OWNER_ADDRESS' | translate }}:</h3>
                 <div class="address">
                   {{ result?.orderCustomer?.firstName }} {{ result?.orderCustomer?.lastName }}<br>
                   {{ result?.orderCustomer?.email }}<br>
-                  {{ 'RELEASE_PAGE.ORDER_ID' | translate }}: {{ result?.orderId }}
+                  {{ 'RELEASE_PAGE.ORDER_ID' | translate }}: {{ result?.orderNumber }}
                 </div>
               </ion-col>
               <ion-col sizeXs="12" sizeMd="2">
@@ -82,7 +82,8 @@
                 <div class="address">
                   <span>{{ result?.shippingAddress?.firstName }} {{ result?.shippingAddress?.lastName }}</span><br>
                   {{ result?.shippingAddress?.street }}<br>
-                  {{ result?.shippingAddress?.zipcode }} {{ result?.shippingAddress?.city }}
+                  {{ result?.shippingAddress?.zipcode }} {{ result?.shippingAddress?.city }}<br>
+                  {{ 'RELEASE_PAGE.PHONE' | translate }}: {{ result?.shippingAddress?.phoneNumber }}
                 </div>
               </ion-col>
               <ion-col sizeXs="12" sizeMd="2">
@@ -91,6 +92,15 @@
                   <span>{{ result?.billingAddress?.firstName }} {{ result?.billingAddress?.lastName }}</span><br>
                   {{ result?.billingAddress?.street }}<br>
                   {{ result?.billingAddress?.zipcode }} {{ result?.billingAddress?.city }}
+                </div>
+              </ion-col>
+              <ion-col sizeXs="12" sizeMd="2">
+                <h3>{{ 'RELEASE_PAGE.PHARMACY' | translate }}:</h3>
+                <div class="address">
+                  <span>{{ result?.pharmacy?.pharmacyName }}</span><br>
+                  {{ result?.pharmacy?.street }}<br>
+                  {{ result?.pharmacy?.zipcode }} {{ result?.pharmacy?.city }}<br>
+                  {{ result?.pharmacy?.email }}
                 </div>
               </ion-col>
               <ion-col sizeXs="12" sizeMd="2">
