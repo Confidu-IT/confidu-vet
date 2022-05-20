@@ -478,7 +478,7 @@
             <ion-row>
               <ion-col>
                 <div class="footer">
-                  <div class="cons-nr">
+                  <div class="cons-nr" *ngIf="owner?.appointmentID">
                     <span>{{ 'VET_FORM.FOOTER.CONS_NUMBER' | translate }}</span>
                     {{ owner?.appointmentID }}
                   </div>
@@ -503,7 +503,7 @@
       <ion-col sizeXs="12" sizeSm="8" offsetSm="2">
         <ion-button expand="full" color="secondary"
                     (click)="onSaveDocument()"
-                    [disabled]="!petWeight || !diagnosis"
+                    [disabled]="!petWeight || !diagnosis || disableButton"
         >
           {{ 'VET_FORM.SAVE_BUTTON' | translate }}
         </ion-button>

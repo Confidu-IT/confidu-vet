@@ -77,6 +77,8 @@ export class VetFormPage {
   public isImg: boolean;
   public isPdf: boolean;
 
+  public disableButton = false;
+
   private subscription: Subscription;
   private readonly routeSub: Subscription;
   private params: any;
@@ -224,6 +226,7 @@ export class VetFormPage {
     console.log('this.answer', this.answer);
 
     if (this.params.appointmentId) {
+      this.disableButton = true;
       this.commonService.submitForm(
         this.params,
         this.user,
@@ -231,6 +234,7 @@ export class VetFormPage {
         this.answer
       ).subscribe(response => {
         this.showEndState = true;
+        this.disableButton = true;
         this.answer = {
           diagnosis: null,
           urgency: null,
@@ -253,12 +257,14 @@ export class VetFormPage {
         };
       });
     } else if (this.params.orderId) {
+      this.disableButton = true;
       this.commonService.submitPhotoForm(
         this.params,
         this.user,
         this.answer
       ).subscribe(response => {
         this.showEndState = true;
+        this.disableButton = false;
         this.answer = {
           diagnosis: null,
           urgency: null,
