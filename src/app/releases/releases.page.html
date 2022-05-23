@@ -100,7 +100,7 @@
                   <span>{{ result?.pharmacy?.pharmacyName }}</span><br>
                   {{ result?.pharmacy?.street }}<br>
                   {{ result?.pharmacy?.zipcode }} {{ result?.pharmacy?.city }}<br>
-                  {{ result?.pharmacy?.email }}
+                  <a [href]="'mailto:' + result?.pharmacy?.email">{{ result?.pharmacy?.email }}</a>
                 </div>
               </ion-col>
               <ion-col sizeXs="12" sizeMd="2">
